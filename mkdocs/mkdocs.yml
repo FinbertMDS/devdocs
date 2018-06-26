@@ -1,0 +1,45 @@
+site_name: Developer Documentation
+theme:
+  name: 'material'
+pages:
+  - index.md
+  - Magento:
+    - Overview: magento.md
+    - Installation: magento/install.md
+    - Magento Functional Testing Framework:
+      - Overview: magento/test/index.md
+      - Functional Testing:
+        - Overview: magento/test/functional/index.md
+        - Installation: magento/test/functional/install.md
+        - Test Run: magento/test/functional/run.md
+        - Create a Test - Theory: magento/test/functional/create_test_theory.md
+        - Create a Test - Practice: magento/test/functional/create_test_practice.md
+        - Functional Testing Framework Entities: magento/test/functional/entities.md
+  - Mkdocs: mkdocs.md
+
+markdown_extensions:
+  - codehilite
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
