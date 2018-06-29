@@ -15,6 +15,9 @@ pages:
         - Create a Test - Theory: magento/test/functional/create_test_theory.md
         - Create a Test - Practice: magento/test/functional/create_test_practice.md
         - Functional Testing Framework Entities: magento/test/functional/entities.md
+  - Ubuntu:
+    - Overview: ubuntu.md
+    - SSH: ubuntu/ssh.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:
