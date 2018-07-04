@@ -5,11 +5,13 @@ Use a generateFixtureXml.php to create a new fixture.
 cd <magento2_root_dir>/dev/tests/functional/utils
 php -f generateFixtureXml.php -- --name synonym --entity_type search_synonyms --collection Magento\\Search\\Model\\ResourceModel\\Query\\Collection
 ```
+
 | Parameter     | Value                                                    | Explanation                                                                                                                                                             |
 |---------------|----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | --name        | synonym                                                  | A name of the fixture. It can have any name. synonym seems to be logical.                                                                                               |
 | --entity_type | search_synonyms                                          | Database table name where entity data is stored. You can track database input when you perform a manual testing. A new record will be created in a table that you need. |
 | --collection  | Magento\\Search\\Model\\ResourceModel\\Query\\Collection | Collection to generate data sets. Synonyms are the entities of a Magento_Search module. A collection can always be found in model resources.                            |
+
 As a result of previous commands, a brand new fixture can be found in the <magento2_root_dir>/dev/tests/functional/tests/app/Magento/Search/Test/Fixture directory.
 
 https://devdocs.magento.com/guides/v2.2/mtf/create_test/create_new_test.html
