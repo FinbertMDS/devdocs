@@ -74,7 +74,7 @@ Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
 ```
 [Server Info](https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507)
 ## SSH to server
-- Use Putty
+### Use Putty
 1. Install Putty
     - On Windows: https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/
     - On Ubuntu: https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/
@@ -83,7 +83,7 @@ Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
     - Host name or Ip
     - Port
     - Connection > SSH > Auth then press Browse… to file server.ppk 
-- Use command line on Ubuntu
+### Use command line on Ubuntu
 1. Install SSH
     - https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
 2. Create file **server.pem** with info about Private key
