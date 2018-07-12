@@ -6,8 +6,9 @@ pages:
   - Magento:
     - Overview: magento.md
     - Installation: magento/install.md
+    - Command line: magento/command.md
     - Magento Functional Testing Framework:
-      - Overview: magento/test/index.md
+      - Overview: magento/test.md
       - Functional Testing:
         - Overview: magento/test/functional/index.md
         - Installation: magento/test/functional/install.md

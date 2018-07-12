@@ -117,11 +117,11 @@ copy it to **/var/www/html/magento**. Then open link in browser [http://127.0.0.
 - Run commands:
 ```bash
 cd /var/www/html/magento
-sudo php bin/magento setup:di:compile
-sudo php bin/magento setup:upgrade
-sudo php bin/magento setup:static-content:deploy
-sudo php bin/magento cache:flush
-sudo php bin/magento deploy:mode:set developer
-sudo php bin/magento cache:flush
+php bin/magento setup:di:compile
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+php bin/magento cache:flush
+php bin/magento deploy:mode:set developer
+php bin/magento cache:flush
 sudo chmod -R 777 ./
 ```

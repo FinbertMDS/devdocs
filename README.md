@@ -1,5 +1,5 @@
 # Magestore DevDocs Source
-This repo is source code of Magestore Developer Guide
+This repo is source code of Developer Guide
 
 ## Write the docs
 Follow this [userguide](http://www.mkdocs.org/user-guide/writing-your-docs/) to write `md` file.
