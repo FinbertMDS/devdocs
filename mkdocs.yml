@@ -18,6 +18,7 @@ pages:
         - Functional Testing Framework Entities: magento/test/functional/entities.md
   - Ubuntu:
     - Overview: ubuntu.md
+    - Command line: ubuntu/command.md
     - SSH: ubuntu/ssh.md
   - Mkdocs: mkdocs.md
 
