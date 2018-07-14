@@ -1,8 +1,22 @@
 #!/bin/bash
+# only allow install versions in array versions: ce1938 | ce223
+MAGENTO_VERSION=("ce1938" "ce223" "ce225")
+MAGENTO_URL=""
+if [[ ! " ${MAGENTO_VERSION[@]} " =~ $1 ]]; then
+    exit
+fi
+if [ $MAGENTO_VERSION = "ce1938" ]; then
+    MAGENTO_URL="http://pubfiles.nexcess.net/magento/ce-packages/magento-1.9.3.8.tar.gz"
+else if  [ $MAGENTO_VERSION = "ce223" ]; then
+    MAGENTO_URL="http://pubfiles.nexcess.net/magento/ce-packages/magento2-with-samples-2.2.3.tar.gz"
+else if  [ $MAGENTO_VERSION = "ce225" ]; then
+    MAGENTO_URL="http://pubfiles.nexcess.net/magento/ce-packages/magento2-with-samples-2.2.5.tar.gz"
+fi
+
 echo "install magento version $1"
 
 echo "install database"
-DBNAME="magento_""$1"
+DB_NAME="magento_"$1
 # mysql -u root -p -e "CREATE DATABASE $DBNAME;"
 # mysql -u root -p $DBNAME < /media/finbert/DATA2/documents/install_magento/magento_2.1.sql
 
@@ -30,7 +44,7 @@ sudo php bin/magento setup:install \
     --admin-password="admin123" \
     --use-rewrites=1 \
     --admin-use-security-key=0 \
-    --db-name="${DBNAME}" \
+    --db-name="${DB_NAME}" \
     --db-user="root" \
     --db-password="root"
 sudo chmod -R 777 ./

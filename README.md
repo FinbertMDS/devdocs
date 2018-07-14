@@ -6,12 +6,17 @@ Docker image for Dev docs written by mkdocs.
 sudo docker-compose -f docker-compose.yaml build
 ```
 
-### Run service
+## Run service
 ```bash
 sudo docker-compose -f docker-compose.yaml up -d
 ```
 
-### SSH
+## Stop service
+```bash
+sudo docker-compose -f docker-compose.yaml down
+```
+
+## SSH
 ```bash
 docker exec -u {username} -it {container_name} /bin/bash
 ```
