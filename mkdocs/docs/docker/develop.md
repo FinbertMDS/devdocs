@@ -67,10 +67,13 @@ This is our developer docs about Docker. Our docs includes:
 
     If you do not want to use the cache at all, you can use the --no-cache=true option on the docker build command.
 ## Dockerfile instructions
+
 - [FROM](https://docs.docker.com/engine/reference/builder/#from)
 
     Whenever possible, use current official repositories as the basis for your images. We recommend the [Alpine image](https://hub.docker.com/_/alpine/) as it is tightly controlled and small in size (currently under 5 MB), while still being a full Linux distribution.
+    
 - [LABEL](https://docs.docker.com/config/labels-custom-metadata/)
+
 - [RUN](https://docs.docker.com/engine/reference/builder/#run)
 
     - Split long or complex RUN statements on multiple lines separated with backslashes to make your Dockerfile more readable, understandable, and maintainable.
@@ -102,16 +105,20 @@ This is our developer docs about Docker. Our docs includes:
 - [CMD](https://docs.docker.com/engine/reference/builder/#cmd)
     
     The CMD instruction should be used to run the software contained by your image, along with any arguments. CMD should almost always be used in the form of CMD [“executable”, “param1”, “param2”…].
+    
 - [EXPOSE](https://docs.docker.com/engine/reference/builder/#expose)
 
     The EXPOSE instruction indicates the ports on which a container listens for connections. Consequently, you should use the common, traditional port for your application.
+    
 - [ENV](https://docs.docker.com/engine/reference/builder/#env)
 
     The ENV instruction is also useful for providing required environment variables specific to services you wish to containerize.
+    
 - [ADD or COPY](https://docs.docker.com/engine/reference/builder/#add)
     
     - COPY only supports the basic copying of local files into the container, while ADD has some features (like local-only tar extraction and remote URL support) that are not immediately obvious.
     - If you have multiple Dockerfile steps that use different files from your context, COPY them individually, rather than all at once.
+    
 - [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint)
 
     The best use for ENTRYPOINT is to set the image’s main command, allowing that image to be run as though it was that command (and then use CMD as the default flags).
@@ -123,5 +130,7 @@ This is our developer docs about Docker. Our docs includes:
 - [USER](https://docs.docker.com/engine/reference/builder/#user)
 
     If a service can run without privileges, use USER to change to a non-root user.
+    
 - [WORKDIR](https://docs.docker.com/engine/reference/builder/#workdir)
+
 - [ONBUILD](https://docs.docker.com/engine/reference/builder/#onbuild)

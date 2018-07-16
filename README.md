@@ -3,17 +3,17 @@ Docker image for Dev docs written by mkdocs.
 
 ## Build images
 ```bash
-sudo docker-compose -f docker-compose.yaml build
+sudo docker-compose build
 ```
 
 ## Run service
 ```bash
-sudo docker-compose -f docker-compose.yaml up -d
+sudo docker-compose up -d
 ```
 
 ## Stop service
 ```bash
-sudo docker-compose -f docker-compose.yaml down
+sudo docker-compose down
 ```
 
 ## SSH

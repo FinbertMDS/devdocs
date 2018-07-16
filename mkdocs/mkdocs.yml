@@ -10,8 +10,12 @@ pages:
   - Magento:
     - Overview: magento.md
     - Installation: magento/install.md
+    - SSL for Magento site:
+      - Overview: magento/ssl.md
+      - Create SSL: magento/ssl/ssl_create.md
+      - Setup SSL for Magento site: magento/ssl/ssl_magento_setup.md
     - Command line: magento/command.md
-    - Magento Functional Testing Framework:
+    - MFTF:
       - Overview: magento/test.md
       - Functional Testing:
         - Overview: magento/test/functional/index.md
