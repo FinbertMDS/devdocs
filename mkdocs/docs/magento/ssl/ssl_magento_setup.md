@@ -2,7 +2,12 @@
 Setup SSL for Magento site after install
 
 ## Create site available for apache2
-Create file /etc/apache2/sites-available/m223.conf
+1. Copy ssl to apache2
+```bash
+sudo cp server.crt /etc/ssl/certs/ssl-cert-snakeoil.pem
+sudo cp server.key /etc/ssl/private/ssl-cert-snakeoil.key
+```
+2. Create file /etc/apache2/sites-available/m223.conf
 ```text
 <VirtualHost *:80>
     ServerName m223.com
@@ -48,7 +53,7 @@ sudo service apache2 reload
 - Flush cache magento after ensite apache, Clear cache of browser.
     - Clear the cache in both the cases by deleting /var/cache
 - Error cannot call Rest API Magento
-    Uncomment 2 line: 
+    Uncomment 2 line in file .htaccess in server magento: Ex: /var/www/html/ce223/.htaccess
     ```txt
     Options -MultiViews
     RewriteRule ^api/rest api.php?type=rest [QSA,L]
