@@ -113,6 +113,10 @@ mkdir /var/www/html/magento
 ```
 copy it to **/var/www/html/magento**. Then open link in browser [http://127.0.0.1/magento/setup](http://127.0.0.1/magento/setup) to setup magento.
 ## Install extension
+### Magento 1
+- Copy extension to magento root folder.
+- Flush cache in backend or remove folder "var/cache"
+### Magento 2
 - Copy extension to magento root folder.
 - Run commands:
 ```bash
@@ -125,3 +129,15 @@ php bin/magento deploy:mode:set developer
 php bin/magento cache:flush
 sudo chmod -R 777 ./
 ```
+## Reinstall
+After install magento want reinstall magento
+### Magento 1: 
+- Comment all info in file "app/etc/local.xml".
+- Enter link [http://127.0.0.1/magento](http://127.0.0.1/magento/setup) in browser auto run setup again.
+- Note: If not want reinstall after comment file "local.xml" then need uncomment file "local.xml" and then remove all file in "var/cache" by command line
+```bash
+rm -rf /var/www/html/magento/var/cache
+```
+### Magento 2
+- Comment all info in file "app/etc/env.php".
+- Enter link [http://127.0.0.1/magento/setup](http://127.0.0.1/magento/setup) in browser auto run setup again.
