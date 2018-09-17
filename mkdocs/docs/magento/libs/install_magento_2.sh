@@ -1,7 +1,7 @@
 #!/bin/bash
-# only allow install versions in array versions: ce1938 | ce223 | ce225
+# only allow install versions in array versions: ce223 | ce225 | pwa
 MAGENTO_DIR='/var/www/html/'$1
-MAGENTO_VERSIONS=("ce223" "ce225")
+MAGENTO_VERSIONS=("ce223" "ce225" "pwa")
 MAGENTO_HOST_NAME="localhost/$1"
 MAGENTO_DOWNLOAD_URL=""
 MAGENTO_DOWNLOAD_FILENAME=$1".tar.gz"
@@ -16,10 +16,13 @@ echo "setup database"
 DB_NAME="magento_"$1
 
 if  [ $1 = "ce223" ]; then
-    mysql -u root -p -e "DROP DATABASE IF EXISTS magento_ce223; CREATE DATABASE magento_ce223"
+    mysql -u root -p -e "DROP DATABASE IF EXISTS magento_ce223; CREATE DATABASE IF NOT EXISTS magento_ce223"
 fi
 if  [ $1 = "ce225" ]; then
-    mysql -u root -p -e "DROP DATABASE IF EXISTS magento_ce225; CREATE DATABASE magento_ce225"
+    mysql -u root -p -e "DROP DATABASE IF EXISTS magento_ce225; CREATE DATABASE IF NOT EXISTS magento_ce225"
+fi
+if  [ $1 = "pwa" ]; then
+    mysql -u root -p -e "DROP DATABASE IF EXISTS magento_pwa; CREATE DATABASE IF NOT EXISTS magento_pwa"
 fi
 echo "copy magento to server"
 if  [ $1 = "ce223" ]; then
@@ -29,6 +32,11 @@ fi
 if  [ $1 = "ce225" ]; then
     MAGENTO_DOWNLOAD_URL="http://pubfiles.nexcess.net/magento/ce-packages/magento2-with-samples-2.2.5.tar.gz"
     MAGENTO_HOST_NAME="m225.com"
+fi
+if  [ $1 = "pwa" ]; then
+    MAGENTO_DOWNLOAD_URL="http://pubfiles.nexcess.net/magento/ce-packages/magento2-latest-with-samples.tar.gz"
+    MAGENTO_HOST_NAME="pwa.com"
+    MAGENTO_DOWNLOAD_FILENAME="magento2-latest-with-samples.tar.gz"
 fi
 
 if [ ! -f "/var/www/html/"$MAGENTO_DOWNLOAD_FILENAME ]; then
@@ -66,11 +74,13 @@ sudo php bin/magento deploy:mode:set developer
 sudo php bin/magento cache:flush
 sudo chmod -R 777 ./
 
-echo "install extension"
+echo "install extension magento 2"
 cd /media/finbert/DATA/projects/magestore/m2/
 cp -a OS-Inventorysuccess-M2/* $MAGENTO_DIR
 cp -a PurchaseOrderSuccess-M2/* $MAGENTO_DIR
-cp -a WebPOS-Magento2-New/* $MAGENTO_DIR
+if  [ $1 != "pwa" ]; then
+    cp -a WebPOS-Magento2-New/* $MAGENTO_DIR
+fi
 cp -a ReportSuccess-M2/* $MAGENTO_DIR
 DIRECTORY=$MAGENTO_DIR"/app/code/Magestore/OrderSuccess/"
 if [ ! -d "$DIRECTORY" ]; then
@@ -92,6 +102,13 @@ cp -a Storecredit-Magento2/* $MAGENTO_DIR
 cp -a Giftcard-Magento2/* $MAGENTO_DIR
 cp -a Storepickup-Magento2/* $MAGENTO_DIR
 cp -a Rewardpoints-Standard-Magento2/* $MAGENTO_DIR
+
+echo "install extension pwa"
+if  [ $1 = "pwa" ]; then
+   cd /media/finbert/DATA/projects/magestore/pwa/
+   cp -a omc-2.0/* $MAGENTO_DIR
+   cp -a pwapos-omc-2.0/* $MAGENTO_DIR
+fi
 
 cd $MAGENTO_DIR
 sudo chmod -R 777 ./

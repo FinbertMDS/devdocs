@@ -9,7 +9,7 @@ MAGENTO_SAMPLE_DATA_URL="https://nchc.dl.sourceforge.net/project/mageloads/asset
 MAGENTO_SAMPLE_DATA_FILENAME="magento-sample-data-1.9.1.0.tar.gz"
 
 echo "installing magento version $1"
-if [[ ! " ${MAGENTO_VERSIONS[@]} " =~ $1 ]]; then
+if [[ ! " ${MAGENTO_VERSIONS[@]} " == $1 ]]; then
     echo "this version $1 not support install";
     exit
 fi
