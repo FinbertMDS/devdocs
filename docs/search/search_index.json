@@ -362,12 +362,12 @@
         }, 
         {
             "location": "/docker/", 
-            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking", 
+            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking\n\n\nSample use Docker in product", 
             "title": "Overview"
         }, 
         {
             "location": "/docker/#overview", 
-            "text": "This is our developer docs about Docker. Our docs includes:   Get started  Develop with Docker  Configure networking", 
+            "text": "This is our developer docs about Docker. Our docs includes:   Get started  Develop with Docker  Configure networking  Sample use Docker in product", 
             "title": "Overview"
         }, 
         {
@@ -439,6 +439,31 @@
             "location": "/docker/config-network/", 
             "text": "", 
             "title": "Configure networking"
+        }, 
+        {
+            "location": "/docker/sample/", 
+            "text": "Sample use Docker\n\n\nMagento 2\n\n\nDocker Magento 2\n\n\nDocker compose with: Magento 2 + PHP 7.1 + Apache2 + MariaDb + PhpMyAdmin\n\n\nMkdocs\n\n\nDocker Mkdocs\n\n\nDocker compose with: Alpine\n\n\nEducation Social Network (ESN)\n\n\nDocker ESN\n\n\nDocker: \n\n\n\n\nDocker file for Service\n\n\nDocker file for Web App", 
+            "title": "Sample"
+        }, 
+        {
+            "location": "/docker/sample/#sample-use-docker", 
+            "text": "", 
+            "title": "Sample use Docker"
+        }, 
+        {
+            "location": "/docker/sample/#magento-2", 
+            "text": "Docker Magento 2  Docker compose with: Magento 2 + PHP 7.1 + Apache2 + MariaDb + PhpMyAdmin", 
+            "title": "Magento 2"
+        }, 
+        {
+            "location": "/docker/sample/#mkdocs", 
+            "text": "Docker Mkdocs  Docker compose with: Alpine", 
+            "title": "Mkdocs"
+        }, 
+        {
+            "location": "/docker/sample/#education-social-network-esn", 
+            "text": "Docker ESN  Docker:    Docker file for Service  Docker file for Web App", 
+            "title": "Education Social Network (ESN)"
         }, 
         {
             "location": "/mkdocs/", 
