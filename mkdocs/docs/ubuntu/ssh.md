@@ -91,3 +91,29 @@ Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
 ```bash
 ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
 ```
+## Command line with ssh
+
+1. Connect to server
+    ```bash
+    ssh <user>@<remote_host> -p <port>
+    ```
+2. Copy file from local host to to remote host
+    ```bash
+    scp <file_path> <user>@<remote_host>:<remote_dir>
+    ```
+3. Copy file from remote host to local host
+    ```bash
+    scp <user>@<remote_host>:<remote_file_path> <local_dir>
+    ```
+4. Multiple files from Local host to the Remote host
+    ```bash
+    scp <file_path> <file_path> <user>@<remote_host>:<remote_dir>
+    ```
+5. Directory from Local host to the Remote host
+    ```bash
+    scp -r <local_dir> <user>@<remote_host>:<remote_dir>
+    ```
+6. Directory from Remote host to the Local host
+    ```bash
+    scp -r <user>@<remote_host>:<remote_dir> <local_dir>
+    ```
