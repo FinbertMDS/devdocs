@@ -285,6 +285,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-line-with-ssh" title="Command line with ssh" class="md-nav__link">
+    Command line with ssh
+  </a>
+  
+</li>
+      
       
       
       
@@ -554,6 +561,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../magento/composer/" title="Install extension Magento by composer" class="md-nav__link">
+      Install extension Magento by composer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../magento/note/" title="Note about Magento" class="md-nav__link">
       Note about Magento
     </a>
@@ -715,6 +734,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-line-with-ssh" title="Command line with ssh" class="md-nav__link">
+    Command line with ssh
+  </a>
+  
+</li>
+      
       
       
       
@@ -829,6 +855,27 @@ Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
 <li>Create file <strong>server.pem</strong> with info about Private key</li>
 <li>Connect to server by command
 <div class="codehilite"><pre><span></span>ssh -i server.pem ubuntu@demo-omc1.magestore.com -p <span class="m">2213</span>
+</pre></div></li>
+</ol>
+<h2 id="command-line-with-ssh">Command line with ssh<a class="headerlink" href="#command-line-with-ssh" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Connect to server
+    <div class="codehilite"><pre><span></span>ssh &lt;user&gt;@&lt;remote_host&gt; -p &lt;port&gt;
+</pre></div></li>
+<li>Copy file from local host to to remote host
+    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Copy file from remote host to local host
+    <div class="codehilite"><pre><span></span>scp &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_file_path&gt; &lt;local_dir&gt;
+</pre></div></li>
+<li>Multiple files from Local host to the Remote host
+    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Directory from Local host to the Remote host
+    <div class="codehilite"><pre><span></span>scp -r &lt;local_dir&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Directory from Remote host to the Local host
+    <div class="codehilite"><pre><span></span>scp -r &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt; &lt;local_dir&gt;
 </pre></div></li>
 </ol>
                 

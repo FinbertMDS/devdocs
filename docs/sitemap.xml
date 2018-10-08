@@ -2,122 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/ubuntu/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/ubuntu/command/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/ubuntu/ssh/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/install/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/ssl/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/ssl/ssl_create/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/ssl/ssl_magento_setup/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/command/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/install/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/run/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/create_test_theory/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/create_test_practice/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/test/functional/entities/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/magento/composer/</loc>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/magento/note/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/docker/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/docker/get-started/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/docker/develop/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/docker/config-network/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/docker/sample/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/mkdocs/</loc>
-     <lastmod>2018-09-28</lastmod>
+     <lastmod>2018-10-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
