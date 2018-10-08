@@ -21,5 +21,5 @@ then
 fi
 git commit -m "$COMMIT_MESSAGE"
 git remote rm origin
-git remote add origin https://d3d70a423a734dc258827e409fa2dedbf9511edd:x-oauth-basic@github.com/FinbertMagestore/devdocs.git
+git remote add origin https://27a8d3e708bc801c5ed7f082856d835a5ac66263:x-oauth-basic@github.com/FinbertMagestore/devdocs.git
 git push origin master
