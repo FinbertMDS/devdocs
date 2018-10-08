@@ -2,6 +2,10 @@
 
 cd mkdocs
 mkdocs build -d ../docs
+while [ ! -f ../docs/index.html ]
+do
+  sleep 1
+done
 cd ../
 rm -rf /tmp/docs/
 cp -a docs/ /tmp/
@@ -13,6 +17,7 @@ git add .
 COMMIT_MESSAGE=$1
 if [ -z "$COMMIT_MESSAGE" ];
 then
-	COMMIT_MESSAGE="commit from bash script"
+	COMMIT_MESSAGE="deploy code to github page"
 fi
-git commit -m $1
+git commit -m "$COMMIT_MESSAGE"
+git push origin master
