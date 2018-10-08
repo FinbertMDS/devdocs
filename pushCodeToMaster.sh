@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd mkdocs
 mkdocs build -d ../docs
 cd ../
 rm -rf /tmp/docs/
