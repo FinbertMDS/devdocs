@@ -20,6 +20,5 @@ then
 	COMMIT_MESSAGE="deploy code to github page"
 fi
 git commit -m "$COMMIT_MESSAGE"
-git remote rm origin
-git remote add origin https://27a8d3e708bc801c5ed7f082856d835a5ac66263:x-oauth-basic@github.com/FinbertMagestore/devdocs.git
+git remote add origin https://687fc417bb24918b2ccb2226daf73199235dbd3c@github.com/FinbertMagestore/devdocs.git > /dev/null 2>&1
 git push origin master
