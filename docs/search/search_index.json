@@ -12,12 +12,12 @@
         }, 
         {
             "location": "/ubuntu/", 
-            "text": "Overview\n\n\nThis is our developer docs about Ubuntu. Our docs includes:\n\n\n\n\nCommand line\n\n\nSSH\n\n\nDocument Linux", 
+            "text": "Overview\n\n\nThis is our developer docs about Ubuntu. Our docs includes:\n\n\n\n\nCommand line\n\n\nSSH\n\n\nSSL\n\n\nNote\n\n\nDocument Linux", 
             "title": "Overview"
         }, 
         {
             "location": "/ubuntu/#overview", 
-            "text": "This is our developer docs about Ubuntu. Our docs includes:   Command line  SSH  Document Linux", 
+            "text": "This is our developer docs about Ubuntu. Our docs includes:   Command line  SSH  SSL  Note  Document Linux", 
             "title": "Overview"
         }, 
         {
@@ -69,6 +69,71 @@
             "location": "/ubuntu/ssh/#command-line-with-ssh", 
             "text": "Connect to server\n     ssh  user @ remote_host  -p  port   Copy file from local host to to remote host\n     scp  file_path   user @ remote_host : remote_dir   Copy file from remote host to local host\n     scp  user @ remote_host : remote_file_path   local_dir   Multiple files from Local host to the Remote host\n     scp  file_path   file_path   user @ remote_host : remote_dir   Directory from Local host to the Remote host\n     scp -r  local_dir   user @ remote_host : remote_dir   Directory from Remote host to the Local host\n     scp -r  user @ remote_host : remote_dir   local_dir", 
             "title": "Command line with ssh"
+        }, 
+        {
+            "location": "/ubuntu/ssl/", 
+            "text": "Overview\n\n\nThis is our developer docs about Setup SSL for Magento site after install. Our docs includes:\n\n\n\n\nCreate SSL\n\n\nSetup SSL for Magento site after install", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/ubuntu/ssl/#overview", 
+            "text": "This is our developer docs about Setup SSL for Magento site after install. Our docs includes:   Create SSL  Setup SSL for Magento site after install", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_create/", 
+            "text": "New SSL style\n\n\nCreate ROOT CA\n\n\nopenssl genrsa -des3 -out rootCA.key \n2048\n\nopenssl req -x509 -new -nodes -key rootCA.key -sha256 -days \n3658\n -out rootCA.pem\n\n\n\n\nCreate SSL\n\n\nCreate file \nv3.ext\n\n\nauthorityKeyIdentifier=keyid,issuer\nbasicConstraints=CA:FALSE\nkeyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\nsubjectAltName = @alt_names\n\n[alt_names]\nDNS.1 = x.o\nDNS.2 = *.x.o      \nDNS.3 = localhost\nDNS.4 = localhost.com\nDNS.5 = *.localhost.com\nIP.1 = 127.0.0.1\nIP.2 = 192.168.1.5\n\n\n\n\nopenssl req -new -nodes -out server.csr -newkey rsa:2048 -keyout server.key\nopenssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days \n3658\n -sha256 -extfile v3.ext\n\n\n\n\nAdd Trusted Certificate\n\n\nInstall Root Cert\n\n\nOR\n\n\nsudo apt-get install libnss3-tools\n\n[\n -d ~/.pki/nssdb \n]\n \n||\n mkdir -p ~/.pki/nssdb\ncertutil -d sql:\n$HOME\n/.pki/nssdb -A -n \nrootCA\n -i rootCA.pem -t TCP,TCP,TCP", 
+            "title": "Create SSL"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_create/#new-ssl-style", 
+            "text": "", 
+            "title": "New SSL style"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_create/#create-root-ca", 
+            "text": "openssl genrsa -des3 -out rootCA.key  2048 \nopenssl req -x509 -new -nodes -key rootCA.key -sha256 -days  3658  -out rootCA.pem", 
+            "title": "Create ROOT CA"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_create/#create-ssl", 
+            "text": "Create file  v3.ext  authorityKeyIdentifier=keyid,issuer\nbasicConstraints=CA:FALSE\nkeyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\nsubjectAltName = @alt_names\n\n[alt_names]\nDNS.1 = x.o\nDNS.2 = *.x.o      \nDNS.3 = localhost\nDNS.4 = localhost.com\nDNS.5 = *.localhost.com\nIP.1 = 127.0.0.1\nIP.2 = 192.168.1.5  openssl req -new -nodes -out server.csr -newkey rsa:2048 -keyout server.key\nopenssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days  3658  -sha256 -extfile v3.ext", 
+            "title": "Create SSL"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_create/#add-trusted-certificate", 
+            "text": "Install Root Cert  OR  sudo apt-get install libnss3-tools [  -d ~/.pki/nssdb  ]   ||  mkdir -p ~/.pki/nssdb\ncertutil -d sql: $HOME /.pki/nssdb -A -n  rootCA  -i rootCA.pem -t TCP,TCP,TCP", 
+            "title": "Add Trusted Certificate"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_magento_setup/", 
+            "text": "Overview\n\n\nSetup SSL for Magento site after install\n\n\nCreate site available for apache2\n\n\n\n\nCopy ssl to apache2\n\nsudo cp server.crt /etc/ssl/certs/ssl-cert-snakeoil.pem\nsudo cp server.key /etc/ssl/private/ssl-cert-snakeoil.key\n\n\n\nCreate file /etc/apache2/sites-available/m223.conf\n\nVirtualHost *:80\n\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    \nDirectory \n/var/www/html/ce223\n\n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n    \n/Directory\n\n\n\n/VirtualHost\n\n\n\nVirtualHost _default_:443\n\n    ServerAdmin admin@example.com\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n    SSLEngine on\n    SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem\n    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key\n    \nDirectory \n/var/www/html/ce223\n\n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n    \n/Directory\n\n\n/VirtualHost\n\n\n\n\nsudo a2ensite m223.conf\nsudo service apache2 reload\n\n\n\n\n\nNote\n\n\n\n\nView website \nhttps://magenticians.com/magento-ssl-configuration-issues-resolved/\n to setup in mysql\n\n\nMysql: In database in table 'core_config_data' set web/secure/use_in_frontend and web/secure/use_in_adminhtml = 1\n\n\n\n\n\n\nFlush cache magento after ensite apache, Clear cache of browser.\n\n\nClear the cache in both the cases by deleting /var/cache\n\n\n\n\n\n\n\n\nError cannot call Rest API Magento\n\n\nUncomment 2 line in file .htaccess in server magento: \n\n\nEx: /var/www/html/ce223/.htaccess\n\nOptions -MultiViews\nRewriteRule ^api/rest api.php?type=rest [QSA,L]", 
+            "title": "SSL for Magento site"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_magento_setup/#overview", 
+            "text": "Setup SSL for Magento site after install", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_magento_setup/#create-site-available-for-apache2", 
+            "text": "Copy ssl to apache2 sudo cp server.crt /etc/ssl/certs/ssl-cert-snakeoil.pem\nsudo cp server.key /etc/ssl/private/ssl-cert-snakeoil.key  Create file /etc/apache2/sites-available/m223.conf VirtualHost *:80 \n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n     Directory  /var/www/html/ce223 \n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n     /Directory  /VirtualHost  VirtualHost _default_:443 \n    ServerAdmin admin@example.com\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n    SSLEngine on\n    SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem\n    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key\n     Directory  /var/www/html/ce223 \n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n     /Directory  /VirtualHost   sudo a2ensite m223.conf\nsudo service apache2 reload", 
+            "title": "Create site available for apache2"
+        }, 
+        {
+            "location": "/ubuntu/ssl/ssl_magento_setup/#note", 
+            "text": "View website  https://magenticians.com/magento-ssl-configuration-issues-resolved/  to setup in mysql  Mysql: In database in table 'core_config_data' set web/secure/use_in_frontend and web/secure/use_in_adminhtml = 1    Flush cache magento after ensite apache, Clear cache of browser.  Clear the cache in both the cases by deleting /var/cache     Error cannot call Rest API Magento  Uncomment 2 line in file .htaccess in server magento:   Ex: /var/www/html/ce223/.htaccess Options -MultiViews\nRewriteRule ^api/rest api.php?type=rest [QSA,L]", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/ubuntu/note/", 
+            "text": "Note about Ubuntu\n\n\n\n\n\n\nSome libs for Ubuntu\n\n\nExample:\n\n\n\n\nScript create certificate SSL for site", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/ubuntu/note/#note-about-ubuntu", 
+            "text": "Some libs for Ubuntu  Example:   Script create certificate SSL for site", 
+            "title": "Note about Ubuntu"
         }, 
         {
             "location": "/magento/", 
@@ -131,61 +196,6 @@
             "title": "Magento 2"
         }, 
         {
-            "location": "/magento/ssl/", 
-            "text": "Overview\n\n\nThis is our developer docs about Setup SSL for Magento site after install. Our docs includes:\n\n\n\n\nCreate SSL\n\n\nSetup SSL for Magento site after install", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/magento/ssl/#overview", 
-            "text": "This is our developer docs about Setup SSL for Magento site after install. Our docs includes:   Create SSL  Setup SSL for Magento site after install", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_create/", 
-            "text": "New SSL style\n\n\nCreate ROOT CA\n\n\nopenssl genrsa -des3 -out rootCA.key \n2048\n\nopenssl req -x509 -new -nodes -key rootCA.key -sha256 -days \n3658\n -out rootCA.pem\n\n\n\n\nCreate SSL\n\n\nCreate file \nv3.ext\n\n\nauthorityKeyIdentifier=keyid,issuer\nbasicConstraints=CA:FALSE\nkeyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\nsubjectAltName = @alt_names\n\n[alt_names]\nDNS.1 = x.o\nDNS.2 = *.x.o\nDNS.3 = localhost\nDNS.4 = localhost.com\nDNS.5 = *.localhost.com\nIP.1 = 127.0.0.1\nIP.2 = 192.168.1.5\n\n\n\n\nopenssl req -new -nodes -out server.csr -newkey rsa:2048 -keyout server.key\nopenssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days \n3658\n -sha256 -extfile v3.ext\n\n\n\n\nAdd Trusted Certificate\n\n\nInstall Root Cert\n\n\nOR\n\n\nsudo apt-get install libnss3-tools\n\n[\n -d ~/.pki/nssdb \n]\n \n||\n mkdir -p ~/.pki/nssdb\ncertutil -d sql:\n$HOME\n/.pki/nssdb -A -n \nrootCA\n -i rootCA.pem -t TCP,TCP,TCP", 
-            "title": "Create SSL"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_create/#new-ssl-style", 
-            "text": "", 
-            "title": "New SSL style"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_create/#create-root-ca", 
-            "text": "openssl genrsa -des3 -out rootCA.key  2048 \nopenssl req -x509 -new -nodes -key rootCA.key -sha256 -days  3658  -out rootCA.pem", 
-            "title": "Create ROOT CA"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_create/#create-ssl", 
-            "text": "Create file  v3.ext  authorityKeyIdentifier=keyid,issuer\nbasicConstraints=CA:FALSE\nkeyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\nsubjectAltName = @alt_names\n\n[alt_names]\nDNS.1 = x.o\nDNS.2 = *.x.o\nDNS.3 = localhost\nDNS.4 = localhost.com\nDNS.5 = *.localhost.com\nIP.1 = 127.0.0.1\nIP.2 = 192.168.1.5  openssl req -new -nodes -out server.csr -newkey rsa:2048 -keyout server.key\nopenssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days  3658  -sha256 -extfile v3.ext", 
-            "title": "Create SSL"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_create/#add-trusted-certificate", 
-            "text": "Install Root Cert  OR  sudo apt-get install libnss3-tools [  -d ~/.pki/nssdb  ]   ||  mkdir -p ~/.pki/nssdb\ncertutil -d sql: $HOME /.pki/nssdb -A -n  rootCA  -i rootCA.pem -t TCP,TCP,TCP", 
-            "title": "Add Trusted Certificate"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_magento_setup/", 
-            "text": "Overview\n\n\nSetup SSL for Magento site after install\n\n\nCreate site available for apache2\n\n\n\n\nCopy ssl to apache2\n\nsudo cp server.crt /etc/ssl/certs/ssl-cert-snakeoil.pem\nsudo cp server.key /etc/ssl/private/ssl-cert-snakeoil.key\n\n\n\nCreate file /etc/apache2/sites-available/m223.conf\n\nVirtualHost *:80\n\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n    \nDirectory \n/var/www/html/ce223\n\n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n    \n/Directory\n\n\n\n/VirtualHost\n\n\n\nVirtualHost _default_:443\n\n    ServerAdmin admin@example.com\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n    SSLEngine on\n    SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem\n    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key\n    \nDirectory \n/var/www/html/ce223\n\n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n    \n/Directory\n\n\n/VirtualHost\n\n\n\n\nsudo a2ensite m223.conf\nsudo service apache2 reload\n\n\n\n\n\nNote\n\n\n\n\nView website \nhttps://magenticians.com/magento-ssl-configuration-issues-resolved/\n to setup in mysql\n\n\nMysql: In database in table 'core_config_data' set web/secure/use_in_frontend and web/secure/use_in_adminhtml = 1\n\n\n\n\n\n\nFlush cache magento after ensite apache, Clear cache of browser.\n\n\nClear the cache in both the cases by deleting /var/cache\n\n\n\n\n\n\nError cannot call Rest API Magento\n    Uncomment 2 line in file .htaccess in server magento: Ex: /var/www/html/ce223/.htaccess\n    \nOptions -MultiViews\nRewriteRule ^api/rest api.php?type=rest [QSA,L]", 
-            "title": "Setup SSL for Magento site"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_magento_setup/#overview", 
-            "text": "Setup SSL for Magento site after install", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_magento_setup/#create-site-available-for-apache2", 
-            "text": "Copy ssl to apache2 sudo cp server.crt /etc/ssl/certs/ssl-cert-snakeoil.pem\nsudo cp server.key /etc/ssl/private/ssl-cert-snakeoil.key  Create file /etc/apache2/sites-available/m223.conf VirtualHost *:80 \n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n     Directory  /var/www/html/ce223 \n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n     /Directory  /VirtualHost  VirtualHost _default_:443 \n    ServerAdmin admin@example.com\n    ServerName m223.com\n    ServerAlias www.m223.com\n    ServerAlias *.m223.com\n    ServerAdmin magento@localhost\n    DocumentRoot /var/www/html/ce223\n    ErrorLog ${APACHE_LOG_DIR}/error.log\n    CustomLog ${APACHE_LOG_DIR}/access.log combined\n    SSLEngine on\n    SSLCertificateFile  /etc/ssl/certs/ssl-cert-snakeoil.pem\n    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key\n     Directory  /var/www/html/ce223 \n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n     /Directory  /VirtualHost   sudo a2ensite m223.conf\nsudo service apache2 reload", 
-            "title": "Create site available for apache2"
-        }, 
-        {
-            "location": "/magento/ssl/ssl_magento_setup/#note", 
-            "text": "View website  https://magenticians.com/magento-ssl-configuration-issues-resolved/  to setup in mysql  Mysql: In database in table 'core_config_data' set web/secure/use_in_frontend and web/secure/use_in_adminhtml = 1    Flush cache magento after ensite apache, Clear cache of browser.  Clear the cache in both the cases by deleting /var/cache    Error cannot call Rest API Magento\n    Uncomment 2 line in file .htaccess in server magento: Ex: /var/www/html/ce223/.htaccess\n     Options -MultiViews\nRewriteRule ^api/rest api.php?type=rest [QSA,L]", 
-            "title": "Note"
-        }, 
-        {
             "location": "/magento/command/", 
             "text": "Overview\n\n\nThis is our developer docs about \nCommand line Magento\n:\n\n\nCommand summary\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nmagento setup:cache:{enable\n\n\ndisable\n\n\n\n\n\n\nmagento setup:indexer:{status\n\n\nshow-mode\n\n\n\n\n\n\nmagento cron:run\n\n\nRuns Magento cron jobs\n\n\n\n\n\n\nmagento setup:di:compile-multi-tenant\n\n\nUse only if you have multiple independent Magento applications (in other words, one common Magento code base but more than one independent instance of the Magento application).Compiles all non-existent proxies and factories; and pre-compiles class definitions, inheritance information, and plugin definitions for multiple stores or websites.\n\n\n\n\n\n\nmagento setup:di:compile\n\n\nUse if you have one instance of the Magento application.Compiles all non-existent proxies and factories; and pre-compiles class definitions, inheritance information, and plugin definitions for one store and website.\n\n\n\n\n\n\nmagento info:dependencies:{show-modules\n\n\nshow-modules-circular\n\n\n\n\n\n\n\n\nCommands\n\n\nThe following sections discuss the available commands.\n\n\n\n\nManage the cache\n\n\nManage the indexers\n\n\nConfigure and run cron\n\n\nCode compiler\n\n\nSet the Magento mode\n\n\nURN highlighter\n\n\nDependency reports\n\n\nTranslation dictionaries and language packages\n\n\nDeploy static view files\n\n\nCreate symlinks to LESS files\n\n\nRun unit tests\n\n\nConvert layout XML files\n\n\nGenerate data for performance testing", 
             "title": "Command line"
@@ -227,13 +237,13 @@
         }, 
         {
             "location": "/magento/test/functional/install/", 
-            "text": "Install\n\n\n\n\nPrepare install\n\n\nDownload \nSelenium Standalone Server\n\n\nSELENIUM_STANDALONE_VERSION\n=\n3\n.4.0\nwget -N http://selenium-release.storage.googleapis.com/\n$SELENIUM_SUBDIR\n/selenium-server-standalone-\n$SELENIUM_STANDALONE_VERSION\n.jar -P ~/\nsudo mv -f ~/selenium-server-standalone-\n$SELENIUM_STANDALONE_VERSION\n.jar /usr/local/bin/selenium-server-standalone.jar\nsudo chmod \n777\n /usr/local/bin/selenium-server-standalone.jar\njava -jar /usr/local/bin/selenium-server-standalone.jar \n ~/selenium.log \n\n\n\n\nDownload Chrome driver\n\nCHROME_DRIVER_VERSION\n=\n`\ncurl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE\n`\n\nwget -N http://chromedriver.storage.googleapis.com/\n$CHROME_DRIVER_VERSION\n/chromedriver_linux64.zip -P ~/\nunzip ~/chromedriver_linux64.zip -d ~/\nrm ~/chromedriver_linux64.zip\nsudo mv -f ~/chromedriver /usr/local/bin/chromedriver\nsudo chmod \n777\n /usr/local/bin/chromedriver\n\n\n\n\n\n\n\nInstallation\n\ncd\n \nmagento2_root_dir\n/dev/tests/functional/\ncomposer install\n\n\n\nAdjust configuration\n\n\nEdit phpunit.xml to configure PHPUnit: \n/dev/tests/functional/phpunit.xml.dist\n    \napp_frontend_url\napp_backend_url\n\n\n\nEdit config.xml to configure Functional Testing Framework: \n/dev/tests/functional/etc/config.xml.dist\n    \napplication\n\n    \nreopenBrowser\ntestCase\n/reopenBrowser\n\n    \nbackendLogin\nadmin\n/backendLogin\n\n    \nbackendPassword\nadmin123\n/backendPassword\n\n    \nappBackendUrl\nhttp://127.0.0.1/ce223/admin/\n/appBackendUrl\n\n    \nbackendLoginUrl\nadmin/auth/login\n/backendLoginUrl\n\n\n/application\n\n\nisolation\n\n    \nresetUrlPath\ndev/tests/functional/isolation.php\n/resetUrlPath\n\n    \ntestSuite\nnone\n/testSuite\n\n    \ntestCase\nnone\n/testCase\n\n    \ntest\nnone\n/test\n\n\n/isolation\n\n\ninstall\n\n    \nhost\n127.0.0.1\n/host\n\n    \nuser\nroot\n/user\n\n    \npassword\nroot\n/password\n\n    \ndbName\nmagento_ce223\n/dbName\n\n    \nbaseUrl\nhttp://127.0.0.1/ce223/\n/baseUrl\n\n    \nbackendName\nadmin\n/backendName\n\n\n/install\n\n\nserver\n\n    \nitem\n \nname=\nselenium\n \ntype=\ndefault\n \nbrowser=\nGoogle Chrome\n \nbrowserName=\nchrome\n \nhost=\nlocalhost\n \nport=\n4444\n \nseleniumServerRequestsTimeout=\n15\n \nsessionStrategy=\nshared\n\n        \ndesiredCapabilities\n\n            \nplatform\nANY\n/platform\n\n        \n/desiredCapabilities\n\n    \n/item\n\n\n/server\n\n\n\n\n\n\n\n\nPrepare Magento application\n\n\nChange WYSIWYG settings\n\n\nLog in to the Magento Admin as an administrator.\n\n\nFollow Stores \n Configuration \n General \n Content Management \n WYSIWYG Options.\n\n\nSet Enable WYSIWYG Editor to Disabled Completely.\n\n\nClick Save Config.\n\n\n\n\n\n\nChange security settings\n\n\nFollow Stores \n Configuration \n Advanced \n Admin \n Security.\n\n\nSet Admin Account Sharing to Yes.\n\n\nSet Add Secret Key to URLs to No.\n\n\n\n\n\n\nRefresh page cache\n\n\nApache: Copy /dev/tests/functional/.htaccess.sample to /dev/tests/functional/.htaccess.\n\n\n\n\n\n\nRun generator\n\ncd\n \nmagento2_root_dir\n/dev/tests/functional/utils\nphp generate.php", 
+            "text": "Installation\n\n\n\n\nPrepare install\n\n\nDownload \nSelenium Standalone Server\n\n\nSELENIUM_STANDALONE_VERSION\n=\n3\n.4.0\nwget -N http://selenium-release.storage.googleapis.com/\n$SELENIUM_SUBDIR\n/selenium-server-standalone-\n$SELENIUM_STANDALONE_VERSION\n.jar -P ~/\nsudo mv -f ~/selenium-server-standalone-\n$SELENIUM_STANDALONE_VERSION\n.jar /usr/local/bin/selenium-server-standalone.jar\nsudo chmod \n777\n /usr/local/bin/selenium-server-standalone.jar\njava -jar /usr/local/bin/selenium-server-standalone.jar \n ~/selenium.log \n\n\n\n\nDownload Chrome driver\n\nCHROME_DRIVER_VERSION\n=\n`\ncurl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE\n`\n\nwget -N http://chromedriver.storage.googleapis.com/\n$CHROME_DRIVER_VERSION\n/chromedriver_linux64.zip -P ~/\nunzip ~/chromedriver_linux64.zip -d ~/\nrm ~/chromedriver_linux64.zip\nsudo mv -f ~/chromedriver /usr/local/bin/chromedriver\nsudo chmod \n777\n /usr/local/bin/chromedriver\n\n\n\n\n\n\n\nInstallation\n\ncd\n \nmagento2_root_dir\n/dev/tests/functional/\ncomposer install\n\n\n\nAdjust configuration\n\n\nEdit phpunit.xml to configure PHPUnit: \n/dev/tests/functional/phpunit.xml.dist\n    \napp_frontend_url\napp_backend_url\n\n\n\nEdit config.xml to configure Functional Testing Framework: \n/dev/tests/functional/etc/config.xml.dist\n    \napplication\n\n    \nreopenBrowser\ntestCase\n/reopenBrowser\n\n    \nbackendLogin\nadmin\n/backendLogin\n\n    \nbackendPassword\nadmin123\n/backendPassword\n\n    \nappBackendUrl\nhttp://127.0.0.1/ce223/admin/\n/appBackendUrl\n\n    \nbackendLoginUrl\nadmin/auth/login\n/backendLoginUrl\n\n\n/application\n\n\nisolation\n\n    \nresetUrlPath\ndev/tests/functional/isolation.php\n/resetUrlPath\n\n    \ntestSuite\nnone\n/testSuite\n\n    \ntestCase\nnone\n/testCase\n\n    \ntest\nnone\n/test\n\n\n/isolation\n\n\ninstall\n\n    \nhost\n127.0.0.1\n/host\n\n    \nuser\nroot\n/user\n\n    \npassword\nroot\n/password\n\n    \ndbName\nmagento_ce223\n/dbName\n\n    \nbaseUrl\nhttp://127.0.0.1/ce223/\n/baseUrl\n\n    \nbackendName\nadmin\n/backendName\n\n\n/install\n\n\nserver\n\n    \nitem\n \nname=\nselenium\n \ntype=\ndefault\n \nbrowser=\nGoogle Chrome\n \nbrowserName=\nchrome\n \nhost=\nlocalhost\n \nport=\n4444\n \nseleniumServerRequestsTimeout=\n15\n \nsessionStrategy=\nshared\n\n        \ndesiredCapabilities\n\n            \nplatform\nANY\n/platform\n\n        \n/desiredCapabilities\n\n    \n/item\n\n\n/server\n\n\n\n\n\n\n\n\nPrepare Magento application\n\n\nChange WYSIWYG settings\n\n\nLog in to the Magento Admin as an administrator.\n\n\nFollow Stores \n Configuration \n General \n Content Management \n WYSIWYG Options.\n\n\nSet Enable WYSIWYG Editor to Disabled Completely.\n\n\nClick Save Config.\n\n\n\n\n\n\nChange security settings\n\n\nFollow Stores \n Configuration \n Advanced \n Admin \n Security.\n\n\nSet Admin Account Sharing to Yes.\n\n\nSet Add Secret Key to URLs to No.\n\n\n\n\n\n\nRefresh page cache\n\n\nApache: Copy /dev/tests/functional/.htaccess.sample to /dev/tests/functional/.htaccess.\n\n\n\n\n\n\nRun generator\n\ncd\n \nmagento2_root_dir\n/dev/tests/functional/utils\nphp generate.php", 
             "title": "Installation"
         }, 
         {
-            "location": "/magento/test/functional/install/#install", 
+            "location": "/magento/test/functional/install/#installation", 
             "text": "Prepare install  Download  Selenium Standalone Server  SELENIUM_STANDALONE_VERSION = 3 .4.0\nwget -N http://selenium-release.storage.googleapis.com/ $SELENIUM_SUBDIR /selenium-server-standalone- $SELENIUM_STANDALONE_VERSION .jar -P ~/\nsudo mv -f ~/selenium-server-standalone- $SELENIUM_STANDALONE_VERSION .jar /usr/local/bin/selenium-server-standalone.jar\nsudo chmod  777  /usr/local/bin/selenium-server-standalone.jar\njava -jar /usr/local/bin/selenium-server-standalone.jar   ~/selenium.log    Download Chrome driver CHROME_DRIVER_VERSION = ` curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE ` \nwget -N http://chromedriver.storage.googleapis.com/ $CHROME_DRIVER_VERSION /chromedriver_linux64.zip -P ~/\nunzip ~/chromedriver_linux64.zip -d ~/\nrm ~/chromedriver_linux64.zip\nsudo mv -f ~/chromedriver /usr/local/bin/chromedriver\nsudo chmod  777  /usr/local/bin/chromedriver    Installation cd   magento2_root_dir /dev/tests/functional/\ncomposer install  Adjust configuration  Edit phpunit.xml to configure PHPUnit:  /dev/tests/functional/phpunit.xml.dist\n     app_frontend_url\napp_backend_url  Edit config.xml to configure Functional Testing Framework:  /dev/tests/functional/etc/config.xml.dist\n     application \n     reopenBrowser testCase /reopenBrowser \n     backendLogin admin /backendLogin \n     backendPassword admin123 /backendPassword \n     appBackendUrl http://127.0.0.1/ce223/admin/ /appBackendUrl \n     backendLoginUrl admin/auth/login /backendLoginUrl  /application  isolation \n     resetUrlPath dev/tests/functional/isolation.php /resetUrlPath \n     testSuite none /testSuite \n     testCase none /testCase \n     test none /test  /isolation  install \n     host 127.0.0.1 /host \n     user root /user \n     password root /password \n     dbName magento_ce223 /dbName \n     baseUrl http://127.0.0.1/ce223/ /baseUrl \n     backendName admin /backendName  /install  server \n     item   name= selenium   type= default   browser= Google Chrome   browserName= chrome   host= localhost   port= 4444   seleniumServerRequestsTimeout= 15   sessionStrategy= shared \n         desiredCapabilities \n             platform ANY /platform \n         /desiredCapabilities \n     /item  /server     Prepare Magento application  Change WYSIWYG settings  Log in to the Magento Admin as an administrator.  Follow Stores   Configuration   General   Content Management   WYSIWYG Options.  Set Enable WYSIWYG Editor to Disabled Completely.  Click Save Config.    Change security settings  Follow Stores   Configuration   Advanced   Admin   Security.  Set Admin Account Sharing to Yes.  Set Add Secret Key to URLs to No.    Refresh page cache  Apache: Copy /dev/tests/functional/.htaccess.sample to /dev/tests/functional/.htaccess.    Run generator cd   magento2_root_dir /dev/tests/functional/utils\nphp generate.php", 
-            "title": "Install"
+            "title": "Installation"
         }, 
         {
             "location": "/magento/test/functional/run/", 
@@ -357,37 +367,27 @@
         }, 
         {
             "location": "/magento/note/", 
-            "text": "Note about Magento\n\n\nWork in site online\n\n\n\n\nPermission: \n\ntr\u01b0\u1edbc khi work em n\u00ean check mode\nphp bin/magento deploy:mode:show\nth\u01b0\u1eddng c\u00e0i xong s\u1ebd \u0111\u1ec3 default\nn\u00ean chuy\u1ec3n qua developer\nphp bin/magento deploy:mode:set developer\n\u0111\u1ec3 e s\u1eeda code em kh\u00f4ng ph\u1ea3i ch\u1ea1y l\u1ec7nh compile l\u1ea1i\nv\u1eeba r\u1ed3i site b\u1ecb chuy\u1ec3n qua mode production\nn\u1ebfu chuy\u1ec3n qua m\u00e0 em ch\u1ea1y setup upgrade\nth\u00ec e p ch\u1ea1y th\u00eam deploy content n\u1eefa\nsite kh\u00e1ch th\u00ec \u0111\u1ec3 b\u1ea3o \u0111\u1ea3m v\u1ec1 m\u1eb7t security th\u00ec e ch\u1ec9 c\u1ea7n d\u00f9ng 755 th\u00f4i\n\n\n\n\n\nConfig permission for folder and file in root magento dir\n\n\n(Faster)\n\nfind . -type f -print0 \n|\n xargs -I % -0 chmod \n644\n %\nfind . -type d -print0 \n|\n xargs -I % -0 chmod \n755\n %\n\n\nor\n\nfind . -type d -exec chmod \n755\n \n{}\n \n\\;\n\nfind . -type f -exec chmod \n644\n \n{}\n \n\\;\n\n\n\n\nDebug\n\n\nvar_dump($item-\ndebug());\n\n\ndie();", 
-            "title": "Note about Magento"
+            "text": "Note about Magento\n\n\n\n\n\n\nSome libs for Magento\n\n\nExample:\n\n\n\n\nBash script install magento 1, 2\n\n\nFile database export mysql\n\n\n\n\n\n\n\n\nWork in site online\n\n\n\n\n\n\nPermission: \n\ntr\u01b0\u1edbc khi work em n\u00ean check mode\nphp bin/magento deploy:mode:show\nth\u01b0\u1eddng c\u00e0i xong s\u1ebd \u0111\u1ec3 default\nn\u00ean chuy\u1ec3n qua developer\nphp bin/magento deploy:mode:set developer\n\u0111\u1ec3 e s\u1eeda code em kh\u00f4ng ph\u1ea3i ch\u1ea1y l\u1ec7nh compile l\u1ea1i\nv\u1eeba r\u1ed3i site b\u1ecb chuy\u1ec3n qua mode production\nn\u1ebfu chuy\u1ec3n qua m\u00e0 em ch\u1ea1y setup upgrade\nth\u00ec e p ch\u1ea1y th\u00eam deploy content n\u1eefa\nsite kh\u00e1ch th\u00ec \u0111\u1ec3 b\u1ea3o \u0111\u1ea3m v\u1ec1 m\u1eb7t security th\u00ec e ch\u1ec9 c\u1ea7n d\u00f9ng 755 th\u00f4i\n\n\n\n\n\n\n\nConfig permission for folder and file in root magento dir\n\n\n(Faster)\n\nfind . -type f -print0 \n|\n xargs -I % -0 chmod \n644\n %\nfind . -type d -print0 \n|\n xargs -I % -0 chmod \n755\n %\n\n\nor\n\nfind . -type d -exec chmod \n755\n \n{}\n \n\\;\n\nfind . -type f -exec chmod \n644\n \n{}\n \n\\;\n\n\n\n\n\n\n\n\n\n\n\n\nDebug\n    \nvar_dump($item-\ndebug());\n\n\ndie();", 
+            "title": "Note"
         }, 
         {
             "location": "/magento/note/#note-about-magento", 
-            "text": "", 
+            "text": "Some libs for Magento  Example:   Bash script install magento 1, 2  File database export mysql     Work in site online    Permission:  tr\u01b0\u1edbc khi work em n\u00ean check mode\nphp bin/magento deploy:mode:show\nth\u01b0\u1eddng c\u00e0i xong s\u1ebd \u0111\u1ec3 default\nn\u00ean chuy\u1ec3n qua developer\nphp bin/magento deploy:mode:set developer\n\u0111\u1ec3 e s\u1eeda code em kh\u00f4ng ph\u1ea3i ch\u1ea1y l\u1ec7nh compile l\u1ea1i\nv\u1eeba r\u1ed3i site b\u1ecb chuy\u1ec3n qua mode production\nn\u1ebfu chuy\u1ec3n qua m\u00e0 em ch\u1ea1y setup upgrade\nth\u00ec e p ch\u1ea1y th\u00eam deploy content n\u1eefa\nsite kh\u00e1ch th\u00ec \u0111\u1ec3 b\u1ea3o \u0111\u1ea3m v\u1ec1 m\u1eb7t security th\u00ec e ch\u1ec9 c\u1ea7n d\u00f9ng 755 th\u00f4i    Config permission for folder and file in root magento dir  (Faster) find . -type f -print0  |  xargs -I % -0 chmod  644  %\nfind . -type d -print0  |  xargs -I % -0 chmod  755  % \nor find . -type d -exec chmod  755   {}   \\; \nfind . -type f -exec chmod  644   {}   \\;       Debug\n     var_dump($item- debug());  die();", 
             "title": "Note about Magento"
         }, 
         {
-            "location": "/magento/note/#work-in-site-online", 
-            "text": "Permission:  tr\u01b0\u1edbc khi work em n\u00ean check mode\nphp bin/magento deploy:mode:show\nth\u01b0\u1eddng c\u00e0i xong s\u1ebd \u0111\u1ec3 default\nn\u00ean chuy\u1ec3n qua developer\nphp bin/magento deploy:mode:set developer\n\u0111\u1ec3 e s\u1eeda code em kh\u00f4ng ph\u1ea3i ch\u1ea1y l\u1ec7nh compile l\u1ea1i\nv\u1eeba r\u1ed3i site b\u1ecb chuy\u1ec3n qua mode production\nn\u1ebfu chuy\u1ec3n qua m\u00e0 em ch\u1ea1y setup upgrade\nth\u00ec e p ch\u1ea1y th\u00eam deploy content n\u1eefa\nsite kh\u00e1ch th\u00ec \u0111\u1ec3 b\u1ea3o \u0111\u1ea3m v\u1ec1 m\u1eb7t security th\u00ec e ch\u1ec9 c\u1ea7n d\u00f9ng 755 th\u00f4i   Config permission for folder and file in root magento dir  (Faster) find . -type f -print0  |  xargs -I % -0 chmod  644  %\nfind . -type d -print0  |  xargs -I % -0 chmod  755  % \nor find . -type d -exec chmod  755   {}   \\; \nfind . -type f -exec chmod  644   {}   \\;", 
-            "title": "Work in site online"
-        }, 
-        {
-            "location": "/magento/note/#debug", 
-            "text": "var_dump($item- debug());  die();", 
-            "title": "Debug"
-        }, 
-        {
             "location": "/docker/", 
-            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking\n\n\nSample use Docker in product", 
+            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking\n\n\nSample use Docker\n\n\nNote", 
             "title": "Overview"
         }, 
         {
             "location": "/docker/#overview", 
-            "text": "This is our developer docs about Docker. Our docs includes:   Get started  Develop with Docker  Configure networking  Sample use Docker in product", 
+            "text": "This is our developer docs about Docker. Our docs includes:   Get started  Develop with Docker  Configure networking  Sample use Docker  Note", 
             "title": "Overview"
         }, 
         {
             "location": "/docker/get-started/", 
-            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\nPart 1: Orientation and setup\n\n\nContent: \n- Images and containers\n- Install Docker\n\n\nPart 2: Containers\n\n\nContent:\n- Define a container with Dockerfile\n- Build the app\n- Run the app\n- Share your image\n\n\nPart 3: Services\n\n\nContent: \n- About services\n- docker-compose.yml file\n\n\nPart 4: Swarms\n\n\nContent: \n- Understanding Swarm clusters\n- Set up your swarm\n- Deploy your app on the swarm cluster\n\n\nPart 5: Stacks\n\n\nContent: \n- Add a new service and redeploy\n- Persist the data\n\n\nPart 6: Deploy your app", 
+            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\nPart 1: Orientation and setup\n\n\n\n\nImages and containers\n\n\nInstall Docker\n\n\n\n\nPart 2: Containers\n\n\n\n\nDefine a container with Dockerfile\n\n\nBuild the app\n\n\nRun the app\n\n\nShare your image\n\n\n\n\nPart 3: Services\n\n\n\n\nAbout services\n\n\ndocker-compose.yml file\n\n\n\n\nPart 4: Swarms\n\n\n\n\nUnderstanding Swarm clusters\n\n\nSet up your swarm\n\n\nDeploy your app on the swarm cluster\n\n\n\n\nPart 5: Stacks\n\n\n\n\nAdd a new service and redeploy\n\n\nPersist the data\n\n\n\n\nPart 6: Deploy your app", 
             "title": "Get started"
         }, 
         {
@@ -397,27 +397,27 @@
         }, 
         {
             "location": "/docker/get-started/#part-1-orientation-and-setup", 
-            "text": "Content: \n- Images and containers\n- Install Docker", 
+            "text": "Images and containers  Install Docker", 
             "title": "Part 1: Orientation and setup"
         }, 
         {
             "location": "/docker/get-started/#part-2-containers", 
-            "text": "Content:\n- Define a container with Dockerfile\n- Build the app\n- Run the app\n- Share your image", 
+            "text": "Define a container with Dockerfile  Build the app  Run the app  Share your image", 
             "title": "Part 2: Containers"
         }, 
         {
             "location": "/docker/get-started/#part-3-services", 
-            "text": "Content: \n- About services\n- docker-compose.yml file", 
+            "text": "About services  docker-compose.yml file", 
             "title": "Part 3: Services"
         }, 
         {
             "location": "/docker/get-started/#part-4-swarms", 
-            "text": "Content: \n- Understanding Swarm clusters\n- Set up your swarm\n- Deploy your app on the swarm cluster", 
+            "text": "Understanding Swarm clusters  Set up your swarm  Deploy your app on the swarm cluster", 
             "title": "Part 4: Swarms"
         }, 
         {
             "location": "/docker/get-started/#part-5-stacks", 
-            "text": "Content: \n- Add a new service and redeploy\n- Persist the data", 
+            "text": "Add a new service and redeploy  Persist the data", 
             "title": "Part 5: Stacks"
         }, 
         {
@@ -481,8 +481,18 @@
             "title": "Education Social Network (ESN)"
         }, 
         {
+            "location": "/docker/note/", 
+            "text": "Note about Docker\n\n\n\n\nOn Docker container, if you want install module: Ex: unzip\n    \napt update \n apt install unzip\n\n\n\n\n\nHow to use Docker without sudo on Ubuntu\n\n\nCreate new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.\n\n\nsudo groupadd docker\n\n\nNext we need to add current user to the group.\n\nsudo gpasswd -a \n$USER\n docker\n\n\nLastly we need to reload shell in order to have new group settings applied.\n\nnewgrp docker\n\n\n\n\n\n\n\n3.", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/docker/note/#note-about-docker", 
+            "text": "On Docker container, if you want install module: Ex: unzip\n     apt update   apt install unzip   How to use Docker without sudo on Ubuntu  Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.  sudo groupadd docker \nNext we need to add current user to the group. sudo gpasswd -a  $USER  docker \nLastly we need to reload shell in order to have new group settings applied. newgrp docker    3.", 
+            "title": "Note about Docker"
+        }, 
+        {
             "location": "/mkdocs/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\n\n\nThemes\n\n\n\n\nhttps://squidfunk.github.io/mkdocs-material/", 
             "title": "Mkdocs"
         }, 
         {
@@ -499,6 +509,11 @@
             "location": "/mkdocs/#project-layout", 
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
             "title": "Project layout"
+        }, 
+        {
+            "location": "/mkdocs/#themes", 
+            "text": "https://squidfunk.github.io/mkdocs-material/", 
+            "title": "Themes"
         }
     ]
 }
