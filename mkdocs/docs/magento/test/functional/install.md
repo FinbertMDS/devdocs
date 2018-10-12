@@ -1,4 +1,4 @@
-## Install
+## Installation
 - Prepare install
     - Download [Selenium Standalone Server](https://www.seleniumhq.org/download/)
 ```bash

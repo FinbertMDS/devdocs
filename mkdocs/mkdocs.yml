@@ -7,13 +7,14 @@ pages:
     - Overview: ubuntu.md
     - Command line: ubuntu/command.md
     - SSH: ubuntu/ssh.md
+    - SSL:
+      - Overview: ubuntu/ssl.md
+      - Create SSL: ubuntu/ssl/ssl_create.md
+      - SSL for Magento site: ubuntu/ssl/ssl_magento_setup.md
+    - Note: ubuntu/note.md
   - Magento:
     - Overview: magento.md
     - Installation: magento/install.md
-    - SSL for Magento site:
-      - Overview: magento/ssl.md
-      - Create SSL: magento/ssl/ssl_create.md
-      - Setup SSL for Magento site: magento/ssl/ssl_magento_setup.md
     - Command line: magento/command.md
     - MFTF:
       - Overview: magento/test.md
@@ -25,14 +26,14 @@ pages:
         - Create a Test - Practice: magento/test/functional/create_test_practice.md
         - Functional Testing Framework Entities: magento/test/functional/entities.md
     - Install extension Magento by composer: magento/composer.md
-    - Note about Magento: magento/note.md
+    - Note: magento/note.md
   - Docker:
     - Overview: docker.md
     - Get started: docker/get-started.md
     - Develop with Docker: docker/develop.md
     - Configure networking: docker/config-network.md
     - Sample: docker/sample.md
-    - Note about Docker: docker/note.md
+    - Note: docker/note.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:

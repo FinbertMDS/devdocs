@@ -53,7 +53,10 @@ sudo service apache2 reload
 - Flush cache magento after ensite apache, Clear cache of browser.
     - Clear the cache in both the cases by deleting /var/cache
 - Error cannot call Rest API Magento
-    Uncomment 2 line in file .htaccess in server magento: Ex: /var/www/html/ce223/.htaccess
+
+    Uncomment 2 line in file .htaccess in server magento: 
+    
+    Ex: /var/www/html/ce223/.htaccess
     ```txt
     Options -MultiViews
     RewriteRule ^api/rest api.php?type=rest [QSA,L]
