@@ -72,12 +72,12 @@
         }, 
         {
             "location": "/ubuntu/ssl/", 
-            "text": "Overview\n\n\nThis is our developer docs about Setup SSL for Magento site after install. Our docs includes:\n\n\n\n\nCreate SSL\n\n\nSetup SSL for Magento site after install", 
+            "text": "Overview\n\n\nThis is our developer docs about Setup SSL for Magento site after install. Our docs includes:\n\n\n\n\nCreate SSL\n\n\nScript generate certificate SSL for site\n\n\nSetup SSL for Magento site", 
             "title": "Overview"
         }, 
         {
             "location": "/ubuntu/ssl/#overview", 
-            "text": "This is our developer docs about Setup SSL for Magento site after install. Our docs includes:   Create SSL  Setup SSL for Magento site after install", 
+            "text": "This is our developer docs about Setup SSL for Magento site after install. Our docs includes:   Create SSL  Script generate certificate SSL for site  Setup SSL for Magento site", 
             "title": "Overview"
         }, 
         {
