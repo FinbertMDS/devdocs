@@ -17,8 +17,8 @@ git add .
 COMMIT_MESSAGE=$1
 if [ -z "$COMMIT_MESSAGE" ];
 then
-	COMMIT_MESSAGE="deploy code to github page"
+    COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
 fi
 git commit -m "$COMMIT_MESSAGE"
-git remote add origin https://687fc417bb24918b2ccb2226daf73199235dbd3c@github.com/FinbertMagestore/devdocs.git > /dev/null 2>&1
+git remote add origin https://finbertmagestore:d29475b4c8be96f90cfc2ef7c3ade2242989a4d2@github.com/FinbertMagestore/devdocs.git > /dev/null 2>&1
 git push origin master
