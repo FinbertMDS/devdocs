@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./.env
+
 cd mkdocs
 mkdocs build -d ../docs
 while [ ! -f ../docs/index.html ]
@@ -20,5 +22,6 @@ then
     COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
 fi
 git commit -m "$COMMIT_MESSAGE"
-git remote add origin https://finbertmagestore:d29475b4c8be96f90cfc2ef7c3ade2242989a4d2@github.com/FinbertMagestore/devdocs.git > /dev/null 2>&1
+URL_GITHUB='https://FinbertMagestore:'$TOKEN_GITHUB'@github.com/FinbertMagestore/devdocs.git'
+git remote set-url origin $URL_GITHUB
 git push origin master

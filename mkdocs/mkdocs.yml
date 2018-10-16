@@ -12,6 +12,10 @@ pages:
       - Create SSL: ubuntu/ssl/ssl_create.md
       - SSL for Magento site: ubuntu/ssl/ssl_magento_setup.md
     - Note: ubuntu/note.md
+  - Git:
+    - Overview: git.md
+    - Git Internals: git/internals.md
+    - Note: git/note.md
   - Magento:
     - Overview: magento.md
     - Installation: magento/install.md
