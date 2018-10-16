@@ -25,3 +25,4 @@ git commit -m "$COMMIT_MESSAGE"
 URL_GITHUB='https://FinbertMagestore:'$TOKEN_GITHUB'@github.com/FinbertMagestore/devdocs.git'
 git remote set-url origin $URL_GITHUB
 git push origin master
+git checkout develop
