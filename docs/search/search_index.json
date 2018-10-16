@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Overview\n\n\nThis is our developer docs. Our docs includes:\n\n\n\n\nUbuntu\n\n\nMagento\n\n\nDocker\n\n\nMkdocs", 
+            "text": "Overview\n\n\nThis is our developer docs. Our docs includes:\n\n\n\n\nUbuntu\n\n\nGit\n\n\nMagento\n\n\nDocker\n\n\nMkdocs", 
             "title": "Overview"
         }, 
         {
             "location": "/#overview", 
-            "text": "This is our developer docs. Our docs includes:   Ubuntu  Magento  Docker  Mkdocs", 
+            "text": "This is our developer docs. Our docs includes:   Ubuntu  Git  Magento  Docker  Mkdocs", 
             "title": "Overview"
         }, 
         {
@@ -134,6 +134,51 @@
             "location": "/ubuntu/note/#note-about-ubuntu", 
             "text": "Some libs for Ubuntu  Example:   Script create certificate SSL for site", 
             "title": "Note about Ubuntu"
+        }, 
+        {
+            "location": "/git/", 
+            "text": "Overview\n\n\nThis is our developer docs about Git. Our docs includes:\n\n\n\n\nGit Internals\n\n\nNote", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/git/#overview", 
+            "text": "This is our developer docs about Git. Our docs includes:   Git Internals  Note", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/git/internals/", 
+            "text": "Overview\n\n\nThis is our developer docs about \nGit Internals\n\n\nGit Objects\n\n\n\n\nDocuments:\n\n\nhttps://hackernoon.com/https-medium-com-zspajich-understanding-git-data-model-95eb16cc99f5\n\n\nhttps://git-scm.com/book/id/v2/Git-Internals-Git-Objects\n\n\n\n\n\n\n\n\nPackfiles\n\n\n\n\nDocuments:\n\n\nhttps://git-scm.com/book/id/v2/Git-Internals-Packfiles", 
+            "title": "Git Internals"
+        }, 
+        {
+            "location": "/git/internals/#overview", 
+            "text": "This is our developer docs about  Git Internals", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/git/internals/#git-objects", 
+            "text": "Documents:  https://hackernoon.com/https-medium-com-zspajich-understanding-git-data-model-95eb16cc99f5  https://git-scm.com/book/id/v2/Git-Internals-Git-Objects", 
+            "title": "Git Objects"
+        }, 
+        {
+            "location": "/git/internals/#packfiles", 
+            "text": "Documents:  https://git-scm.com/book/id/v2/Git-Internals-Packfiles", 
+            "title": "Packfiles"
+        }, 
+        {
+            "location": "/git/note/", 
+            "text": "Note about Git\n\n\nGithub\n\n\n\n\nUse Github Personal access token\n\n\nCreate and use token\n\n\nUse token to commit: \n    \nrepo-url=https://[username]:[token]@github.com/[username]/[repository_name].git\n\n\n    \ngit remote set-url origin \n[\nrepo-url\n]\n\n\n\n\nNote:\n\n\nIf token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".\n\n\nShould keep token in env and add it to remote.", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/git/note/#note-about-git", 
+            "text": "", 
+            "title": "Note about Git"
+        }, 
+        {
+            "location": "/git/note/#github", 
+            "text": "Use Github Personal access token  Create and use token  Use token to commit: \n     repo-url=https://[username]:[token]@github.com/[username]/[repository_name].git \n     git remote set-url origin  [ repo-url ]   Note:  If token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".  Should keep token in env and add it to remote.", 
+            "title": "Github"
         }, 
         {
             "location": "/magento/", 
