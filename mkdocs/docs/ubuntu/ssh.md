@@ -1,7 +1,58 @@
 # Overview
 This is our developer docs about How to remote to server Ubuntu
 
+## SSH to server
+### Use Putty
+1. Install Putty
+    - On Windows: https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/
+    - On Ubuntu: https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/
+2. Create file server.ppk with info about Putty Key
+3. Fill info about server
+    - Host name or Ip
+    - Port
+    - Connection > SSH > Auth then press Browse… to file server.ppk 
+### Use command line on Ubuntu
+1. Install SSH
+    - https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
+2. Create file **server.pem** with info about Private key
+3. Connect to server by command
+```bash
+ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
+```
+## Command line with ssh
+
+1. Connect to server
+    ```bash
+    ssh <user>@<remote_host> -p <port>
+    ```
+2. Copy file from local host to to remote host
+    ```bash
+    scp <file_path> <user>@<remote_host>:<remote_dir>
+    ```
+3. Copy file from remote host to local host
+    ```bash
+    scp <user>@<remote_host>:<remote_file_path> <local_dir>
+    ```
+4. Multiple files from Local host to the Remote host
+    ```bash
+    scp <file_path> <file_path> <user>@<remote_host>:<remote_dir>
+    ```
+5. Directory from Local host to the Remote host
+    ```bash
+    scp -r <local_dir> <user>@<remote_host>:<remote_dir>
+    ```
+6. Directory from Remote host to the Local host
+    ```bash
+    scp -r <user>@<remote_host>:<remote_dir> <local_dir>
+    ```
 ## Info server
+- Server:
+```text
+HOST: 45.77.42.74
+username: root
+pass: 1u,Z#+3d#?@b{.sx
+```
+[Server Info](https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507)
 - SSH
 ```text
 IP: 54.83.169.163
@@ -72,48 +123,3 @@ lEa/1vPM1FmeX0xmH/e9lCajkOQiNFyRSGK/FezZzZs/VHQosS4D0EInQuySWOGO
 9j42wsAPQyVDcIcsV9qXRY4yarxq0rpD9dnE8dFi4iKQxV8=
 Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
 ```
-[Server Info](https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507)
-## SSH to server
-### Use Putty
-1. Install Putty
-    - On Windows: https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/
-    - On Ubuntu: https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/
-2. Create file server.ppk with info about Putty Key
-3. Fill info about server
-    - Host name or Ip
-    - Port
-    - Connection > SSH > Auth then press Browse… to file server.ppk 
-### Use command line on Ubuntu
-1. Install SSH
-    - https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
-2. Create file **server.pem** with info about Private key
-3. Connect to server by command
-```bash
-ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
-```
-## Command line with ssh
-
-1. Connect to server
-    ```bash
-    ssh <user>@<remote_host> -p <port>
-    ```
-2. Copy file from local host to to remote host
-    ```bash
-    scp <file_path> <user>@<remote_host>:<remote_dir>
-    ```
-3. Copy file from remote host to local host
-    ```bash
-    scp <user>@<remote_host>:<remote_file_path> <local_dir>
-    ```
-4. Multiple files from Local host to the Remote host
-    ```bash
-    scp <file_path> <file_path> <user>@<remote_host>:<remote_dir>
-    ```
-5. Directory from Local host to the Remote host
-    ```bash
-    scp -r <local_dir> <user>@<remote_host>:<remote_dir>
-    ```
-6. Directory from Remote host to the Local host
-    ```bash
-    scp -r <user>@<remote_host>:<remote_dir> <local_dir>
-    ```
