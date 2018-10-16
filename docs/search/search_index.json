@@ -167,7 +167,7 @@
         }, 
         {
             "location": "/git/note/", 
-            "text": "Note about Git\n\n\nGithub\n\n\n\n\nUse Github Personal access token\n\n\nCreate and use token\n\n\nUse token to commit: \n    \nrepo-url=https://[username]:[token]@github.com/[username]/[repository_name].git\n\n\n    \ngit remote set-url origin \n[\nrepo-url\n]\n\n\n\n\nNote:\n\n\nIf token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".\n\n\nShould keep token in env and add it to remote.", 
+            "text": "Note about Git\n\n\nGithub\n\n\nUse Github Personal access token\n\n\n\n\nCreate and use token\n\n\nUse token to commit: \n    \nrepo-url=https://[username]:[token]@github.com/[username]/[repository_name].git\n\n\n    \ngit remote set-url origin \n[\nrepo-url\n]\n\n\n\n\nNote:\n\n\nIf token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".\n\n\nShould keep token in env and add it to remote.", 
             "title": "Note"
         }, 
         {
@@ -177,8 +177,13 @@
         }, 
         {
             "location": "/git/note/#github", 
-            "text": "Use Github Personal access token  Create and use token  Use token to commit: \n     repo-url=https://[username]:[token]@github.com/[username]/[repository_name].git \n     git remote set-url origin  [ repo-url ]   Note:  If token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".  Should keep token in env and add it to remote.", 
+            "text": "", 
             "title": "Github"
+        }, 
+        {
+            "location": "/git/note/#use-github-personal-access-token", 
+            "text": "Create and use token  Use token to commit: \n     repo-url=https://[username]:[token]@github.com/[username]/[repository_name].git \n     git remote set-url origin  [ repo-url ]   Note:  If token exist in any file when commit, GitHub can observe, remove token and then notice to email that \"This token removed\".  Should keep token in env and add it to remote.", 
+            "title": "Use Github Personal access token"
         }, 
         {
             "location": "/magento/", 
