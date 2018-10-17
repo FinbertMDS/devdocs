@@ -569,9 +569,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install extension Magento by composer
+      </label>
+    
     <a href="./" title="Install extension Magento by composer" class="md-nav__link md-nav__link--active">
       Install extension Magento by composer
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documents" title="Documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" title="Solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -718,6 +754,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documents" title="Documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" title="Solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -730,16 +789,25 @@
                 
                 
                 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>This is our developer docs about How to install Magento extension by Composer:</p>
-<p>Solution:
-1. Dùng <a href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md">Satis</a> để build 1 file packages.json tĩnh bao gồm tất cả các repository cần thiết</p>
+<p>This is our developer docs about How to install Magento extension by Composer</p>
+<h2 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Build Satis và đặt trên domain: <a href="https://packages.magestore.com">https://packages.magestore.com</a> Phần quyền server chỉ cho phép IP của Magestore đọc đến server này (đặc biệt là file packages.json)
+<li><a href="https://devdocs.magento.com/guides/v2.0/extension-dev-guide/package/package_module.html">https://devdocs.magento.com/guides/v2.0/extension-dev-guide/package/package_module.html</a></li>
+<li><a href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md">https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md</a></li>
+</ol>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Dùng <a href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md">Satis</a> để build 1 file packages.json tĩnh bao gồm tất cả các repository cần thiết</p>
+</li>
+<li>
+<p>Build Satis và đặt trên domain: <a href="https://packages.magestore.com">https://packages.magestore.com</a> Phần quyền server chỉ cho phép IP của Magestore đọc đến server này (đặc biệt là file packages.json)
 Ví dụ dùng .htaccess:
 <div class="codehilite"><pre><span></span>order deny,allow
 deny from all
 allow from 128.199.161.147
-</pre></div></li>
+</pre></div></p>
+</li>
 <li>
 <p>Trỏ domain : <a href="https://repo.magestore.com">https://repo.magestore.com</a> đến 1 thư mục chưa file packages.json rỗng dạng:
 <div class="codehilite"><pre><span></span>{

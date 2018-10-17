@@ -252,13 +252,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#info-server" title="Info server" class="md-nav__link">
-    Info server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ssh-to-server" title="SSH to server" class="md-nav__link">
     SSH to server
   </a>
@@ -288,6 +281,13 @@
         <li class="md-nav__item">
   <a href="#command-line-with-ssh" title="Command line with ssh" class="md-nav__link">
     Command line with ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#info-server" title="Info server" class="md-nav__link">
+    Info server
   </a>
   
 </li>
@@ -785,13 +785,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#info-server" title="Info server" class="md-nav__link">
-    Info server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ssh-to-server" title="SSH to server" class="md-nav__link">
     SSH to server
   </a>
@@ -825,6 +818,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#info-server" title="Info server" class="md-nav__link">
+    Info server
+  </a>
+  
+</li>
+      
       
       
       
@@ -844,8 +844,62 @@
                 
                 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <p>This is our developer docs about How to remote to server Ubuntu</p>
+<h2 id="ssh-to-server">SSH to server<a class="headerlink" href="#ssh-to-server" title="Permanent link">&para;</a></h2>
+<h3 id="use-putty">Use Putty<a class="headerlink" href="#use-putty" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install Putty<ul>
+<li>On Windows: <a href="https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/">https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/</a></li>
+<li>On Ubuntu: <a href="https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/">https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/</a></li>
+</ul>
+</li>
+<li>Create file server.ppk with info about Putty Key</li>
+<li>Fill info about server<ul>
+<li>Host name or Ip</li>
+<li>Port</li>
+<li>Connection &gt; SSH &gt; Auth then press Browse… to file server.ppk </li>
+</ul>
+</li>
+</ol>
+<h3 id="use-command-line-on-ubuntu">Use command line on Ubuntu<a class="headerlink" href="#use-command-line-on-ubuntu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install SSH<ul>
+<li><a href="https://help.ubuntu.com/lts/serverguide/openssh-server.html.en">https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</a></li>
+</ul>
+</li>
+<li>Create file <strong>server.pem</strong> with info about Private key</li>
+<li>Connect to server by command
+<div class="codehilite"><pre><span></span>ssh -i server.pem ubuntu@demo-omc1.magestore.com -p <span class="m">2213</span>
+</pre></div></li>
+</ol>
+<h2 id="command-line-with-ssh">Command line with ssh<a class="headerlink" href="#command-line-with-ssh" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Connect to server
+    <div class="codehilite"><pre><span></span>ssh &lt;user&gt;@&lt;remote_host&gt; -p &lt;port&gt;
+</pre></div></li>
+<li>Copy file from local host to to remote host
+    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Copy file from remote host to local host
+    <div class="codehilite"><pre><span></span>scp &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_file_path&gt; &lt;local_dir&gt;
+</pre></div></li>
+<li>Multiple files from Local host to the Remote host
+    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Directory from Local host to the Remote host
+    <div class="codehilite"><pre><span></span>scp -r &lt;local_dir&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
+</pre></div></li>
+<li>Directory from Remote host to the Local host
+    <div class="codehilite"><pre><span></span>scp -r &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt; &lt;local_dir&gt;
+</pre></div></li>
+</ol>
 <h2 id="info-server">Info server<a class="headerlink" href="#info-server" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Server:
+<div class="codehilite"><pre><span></span>HOST: 45.77.42.74
+username: root
+pass: 1u,Z#+3d#?@b{.sx
+</pre></div>
+<a href="https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507">Server Info</a></li>
 <li>SSH
 <div class="codehilite"><pre><span></span>IP: 54.83.169.163
 Port: 2213
@@ -912,56 +966,7 @@ AIEApQF9KzIpb32+2YvZ6xz3POtlZ3VK3qQpUcP8fwXsKqabIViCPKsn753OLW23
 lEa/1vPM1FmeX0xmH/e9lCajkOQiNFyRSGK/FezZzZs/VHQosS4D0EInQuySWOGO
 9j42wsAPQyVDcIcsV9qXRY4yarxq0rpD9dnE8dFi4iKQxV8=
 Private-MAC: d619c293fe0ac660bff38d6c8db7d73736a51826
-</pre></div>
-<a href="https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507">Server Info</a></p>
-<h2 id="ssh-to-server">SSH to server<a class="headerlink" href="#ssh-to-server" title="Permanent link">&para;</a></h2>
-<h3 id="use-putty">Use Putty<a class="headerlink" href="#use-putty" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Install Putty<ul>
-<li>On Windows: <a href="https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/">https://www.sitecuatui.com/tao-ssh-key-bang-puttygen/</a></li>
-<li>On Ubuntu: <a href="https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/">https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/</a></li>
-</ul>
-</li>
-<li>Create file server.ppk with info about Putty Key</li>
-<li>Fill info about server<ul>
-<li>Host name or Ip</li>
-<li>Port</li>
-<li>Connection &gt; SSH &gt; Auth then press Browse… to file server.ppk </li>
-</ul>
-</li>
-</ol>
-<h3 id="use-command-line-on-ubuntu">Use command line on Ubuntu<a class="headerlink" href="#use-command-line-on-ubuntu" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Install SSH<ul>
-<li><a href="https://help.ubuntu.com/lts/serverguide/openssh-server.html.en">https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</a></li>
-</ul>
-</li>
-<li>Create file <strong>server.pem</strong> with info about Private key</li>
-<li>Connect to server by command
-<div class="codehilite"><pre><span></span>ssh -i server.pem ubuntu@demo-omc1.magestore.com -p <span class="m">2213</span>
-</pre></div></li>
-</ol>
-<h2 id="command-line-with-ssh">Command line with ssh<a class="headerlink" href="#command-line-with-ssh" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Connect to server
-    <div class="codehilite"><pre><span></span>ssh &lt;user&gt;@&lt;remote_host&gt; -p &lt;port&gt;
-</pre></div></li>
-<li>Copy file from local host to to remote host
-    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
-</pre></div></li>
-<li>Copy file from remote host to local host
-    <div class="codehilite"><pre><span></span>scp &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_file_path&gt; &lt;local_dir&gt;
-</pre></div></li>
-<li>Multiple files from Local host to the Remote host
-    <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
-</pre></div></li>
-<li>Directory from Local host to the Remote host
-    <div class="codehilite"><pre><span></span>scp -r &lt;local_dir&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
-</pre></div></li>
-<li>Directory from Remote host to the Local host
-    <div class="codehilite"><pre><span></span>scp -r &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt; &lt;local_dir&gt;
-</pre></div></li>
-</ol>
+</pre></div></p>
                 
                   
                 
