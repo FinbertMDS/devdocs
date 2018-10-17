@@ -1,7 +1,11 @@
 # Overview
-This is our developer docs about How to install Magento extension by Composer:
+This is our developer docs about How to install Magento extension by Composer
 
-Solution:
+## Documents
+1. https://devdocs.magento.com/guides/v2.0/extension-dev-guide/package/package_module.html
+2. https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md
+
+## Solution
 1. Dùng [Satis](https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md) để build 1 file packages.json tĩnh bao gồm tất cả các repository cần thiết
 
 2. Build Satis và đặt trên domain: https://packages.magestore.com Phần quyền server chỉ cho phép IP của Magestore đọc đến server này (đặc biệt là file packages.json)
