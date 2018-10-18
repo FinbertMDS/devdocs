@@ -2,6 +2,7 @@
 This is our developer docs about Ubuntu. Our docs includes:
 
 - [Command line](ubuntu/command.md)
+- [Bash scripts](ubuntu/bash.md)
 - [SSH](ubuntu/ssh.md)
 - [SSL](ubuntu/ssl.md)
 - [Note](ubuntu/note.md)

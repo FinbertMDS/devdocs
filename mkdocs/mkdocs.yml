@@ -6,6 +6,7 @@ pages:
   - Ubuntu:
     - Overview: ubuntu.md
     - Command line: ubuntu/command.md
+    - Bash scripts: ubuntu/bash.md
     - SSH: ubuntu/ssh.md
     - SSL:
       - Overview: ubuntu/ssl.md
@@ -33,11 +34,16 @@ pages:
     - Note: magento/note.md
   - Docker:
     - Overview: docker.md
+    - Install: docker/install.md
     - Get started: docker/get-started.md
     - Develop with Docker: docker/develop.md
     - Configure networking: docker/config-network.md
     - Sample: docker/sample.md
     - Note: docker/note.md
+  - Jenkins:
+    - Overview: jenkins.md
+    - Install: jenkins/install.md
+    - Note: jenkins/note.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:
