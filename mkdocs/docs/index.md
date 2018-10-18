@@ -5,4 +5,5 @@ This is our developer docs. Our docs includes:
 - [Git](git.md)
 - [Magento](magento.md)
 - [Docker](docker.md)
+- [Jenkins](jenkins.md)
 - [Mkdocs](mkdocs.md)
