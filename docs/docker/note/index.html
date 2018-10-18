@@ -223,6 +223,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../ubuntu/bash/" title="Bash scripts" class="md-nav__link">
+      Bash scripts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../ubuntu/ssh/" title="SSH" class="md-nav__link">
       SSH
     </a>
@@ -236,13 +248,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
     
-    <label class="md-nav__link" for="nav-2-4">
+    <label class="md-nav__link" for="nav-2-5">
       SSL
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-4">
+      <label class="md-nav__title" for="nav-2-5">
         SSL
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -621,6 +633,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../install/" title="Install" class="md-nav__link">
+      Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../get-started/" title="Get started" class="md-nav__link">
       Get started
     </a>
@@ -694,6 +718,66 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Jenkins
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Jenkins
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jenkins/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jenkins/install/" title="Install" class="md-nav__link">
+      Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jenkins/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item">
     <a href="../../mkdocs/" title="Mkdocs" class="md-nav__link">
       Mkdocs
@@ -736,7 +820,13 @@
 </pre></div></li>
 <li>
 <p><a href="https://linoxide.com/linux-how-to/use-docker-without-sudo-ubuntu/">How to use Docker without sudo on Ubuntu</a></p>
-<p>Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.</p>
+<ul>
+<li><code class="codehilite">Method 1</code>: 
+    <div class="codehilite"><pre><span></span>sudo usermod -aG docker <span class="nv">$USER</span>
+</pre></div></li>
+<li>
+<p><code class="codehilite">Method 2</code>: 
+    Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.</p>
 <p><div class="codehilite"><pre><span></span>sudo groupadd docker
 </pre></div>
 Next we need to add current user to the group.
@@ -744,10 +834,12 @@ Next we need to add current user to the group.
 </pre></div>
 Lastly we need to reload shell in order to have new group settings applied.
 <div class="codehilite"><pre><span></span>newgrp docker
-</pre></div></p>
+</pre></div>
+3.</p>
+</li>
+</ul>
 </li>
 </ol>
-<p>3.</p>
                 
                   
                 
@@ -783,13 +875,13 @@ Lastly we need to reload shell in order to have new group settings applied.
           </a>
         
         
-          <a href="../../mkdocs/" title="Mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../jenkins/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mkdocs
+                Overview
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

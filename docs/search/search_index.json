@@ -2,22 +2,22 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Overview\n\n\nThis is our developer docs. Our docs includes:\n\n\n\n\nUbuntu\n\n\nGit\n\n\nMagento\n\n\nDocker\n\n\nMkdocs", 
+            "text": "Overview\n\n\nThis is our developer docs. Our docs includes:\n\n\n\n\nUbuntu\n\n\nGit\n\n\nMagento\n\n\nDocker\n\n\nJenkins\n\n\nMkdocs", 
             "title": "Overview"
         }, 
         {
             "location": "/#overview", 
-            "text": "This is our developer docs. Our docs includes:   Ubuntu  Git  Magento  Docker  Mkdocs", 
+            "text": "This is our developer docs. Our docs includes:   Ubuntu  Git  Magento  Docker  Jenkins  Mkdocs", 
             "title": "Overview"
         }, 
         {
             "location": "/ubuntu/", 
-            "text": "Overview\n\n\nThis is our developer docs about Ubuntu. Our docs includes:\n\n\n\n\nCommand line\n\n\nSSH\n\n\nSSL\n\n\nNote\n\n\nDocument Linux", 
+            "text": "Overview\n\n\nThis is our developer docs about Ubuntu. Our docs includes:\n\n\n\n\nCommand line\n\n\nBash scripts\n\n\nSSH\n\n\nSSL\n\n\nNote\n\n\nDocument Linux", 
             "title": "Overview"
         }, 
         {
             "location": "/ubuntu/#overview", 
-            "text": "This is our developer docs about Ubuntu. Our docs includes:   Command line  SSH  SSL  Note  Document Linux", 
+            "text": "This is our developer docs about Ubuntu. Our docs includes:   Command line  Bash scripts  SSH  SSL  Note  Document Linux", 
             "title": "Overview"
         }, 
         {
@@ -34,6 +34,21 @@
             "location": "/ubuntu/command/#network", 
             "text": "What ports are opened  sudo netstat -ntlp  |  grep LISTEN    Download file from link wget url\nwget -P directory url\nwget -O directory/fileName url", 
             "title": "Network"
+        }, 
+        {
+            "location": "/ubuntu/bash/", 
+            "text": "Overview\n\n\nThis is our developer docs about Bash file and command in bash file\n\n\nArray\n\n\n\n\n\n\nDeclare array\n\narray\n=(\nword \ntwo words\n words\n)\n\n\n\n\n\n\n\n\nCheck array contain element\n\nif\n \n[[\n \n \n${\narray\n[@]\n}\n \n \n=\n~ \n \n${\nvalue\n}\n \n \n]]\n;\n \nthen\n\n    \n# whatever you want to do when arr contains value\n\n\nfi\n\n\n\nif\n \n[[\n ! \n \n${\narray\n[@]\n}\n \n \n=\n~ \n \n${\nvalue\n}\n \n \n]]\n;\n \nthen\n\n    \n# whatever you want to do when arr doesn\nt contain value\n\n\nfi\n\n\n\n\narray\n=(\nword \ntwo words\n words\n)\n  \n\nsearch_string\n=\none\n  \n\nmatch\n=\n$(\necho\n \n${\narray\n[@]:\n0\n}\n \n|\n grep -o \n$search_string\n)\n  \n\n[[\n ! -z \n$match\n \n]]\n \n \necho\n \nfound !", 
+            "title": "Bash scripts"
+        }, 
+        {
+            "location": "/ubuntu/bash/#overview", 
+            "text": "This is our developer docs about Bash file and command in bash file", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/ubuntu/bash/#array", 
+            "text": "Declare array array =( word  two words  words )     Check array contain element if   [[     ${ array [@] }     = ~    ${ value }     ]] ;   then \n     # whatever you want to do when arr contains value  fi  if   [[  !    ${ array [@] }     = ~    ${ value }     ]] ;   then \n     # whatever you want to do when arr doesn t contain value  fi   array =( word  two words  words )    search_string = one    match = $( echo   ${ array [@]: 0 }   |  grep -o  $search_string )    [[  ! -z  $match   ]]     echo   found !", 
+            "title": "Array"
         }, 
         {
             "location": "/ubuntu/ssh/", 
@@ -437,13 +452,28 @@
         }, 
         {
             "location": "/docker/", 
-            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking\n\n\nSample use Docker\n\n\nNote", 
+            "text": "Overview\n\n\nThis is our developer docs about Docker. Our docs includes:\n\n\n\n\nInstall\n\n\nGet started\n\n\nDevelop with Docker\n\n\nConfigure networking\n\n\nSample use Docker\n\n\nNote", 
             "title": "Overview"
         }, 
         {
             "location": "/docker/#overview", 
-            "text": "This is our developer docs about Docker. Our docs includes:   Get started  Develop with Docker  Configure networking  Sample use Docker  Note", 
+            "text": "This is our developer docs about Docker. Our docs includes:   Install  Get started  Develop with Docker  Configure networking  Sample use Docker  Note", 
             "title": "Overview"
+        }, 
+        {
+            "location": "/docker/install/", 
+            "text": "Overview\n\n\nThis is our developer docs about \nHow to install Docker\n\n\nInstall Docker in Ubuntu\n\n\n\n\nUpdate the apt package index:\n    \nsudo apt-get update\n\n\n\nInstall packages to allow \napt\n to use a repository over HTTPS:\n    \nsudo apt-get install \n\\\n\n    apt-transport-https \n\\\n\n    ca-certificates \n\\\n\n    curl \n\\\n\n    software-properties-common\n\n\n\nAdd Docker\u2019s official GPG key:\n    \ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg \n|\n sudo apt-key add -\n\n\n\nSet up the stable repository:\n    \nsudo add-apt-repository \n\\\n\n   \ndeb [arch=amd64] https://download.docker.com/linux/ubuntu \\\n\n\n   \n$(\nlsb_release -cs\n)\n \\\n\n\n   stable\n\n\n\n\nInstall Docker CE\n    \nsudo apt-get update\n\n\n    \nsudo apt-get install docker-ce", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/docker/install/#overview", 
+            "text": "This is our developer docs about  How to install Docker", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/docker/install/#install-docker-in-ubuntu", 
+            "text": "Update the apt package index:\n     sudo apt-get update  Install packages to allow  apt  to use a repository over HTTPS:\n     sudo apt-get install  \\ \n    apt-transport-https  \\ \n    ca-certificates  \\ \n    curl  \\ \n    software-properties-common  Add Docker\u2019s official GPG key:\n     curl -fsSL https://download.docker.com/linux/ubuntu/gpg  |  sudo apt-key add -  Set up the stable repository:\n     sudo add-apt-repository  \\ \n    deb [arch=amd64] https://download.docker.com/linux/ubuntu \\      $( lsb_release -cs )  \\     stable   Install Docker CE\n     sudo apt-get update \n     sudo apt-get install docker-ce", 
+            "title": "Install Docker in Ubuntu"
         }, 
         {
             "location": "/docker/get-started/", 
@@ -542,13 +572,63 @@
         }, 
         {
             "location": "/docker/note/", 
-            "text": "Note about Docker\n\n\n\n\nOn Docker container, if you want install module: Ex: unzip\n    \napt update \n apt install unzip\n\n\n\n\n\nHow to use Docker without sudo on Ubuntu\n\n\nCreate new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.\n\n\nsudo groupadd docker\n\n\nNext we need to add current user to the group.\n\nsudo gpasswd -a \n$USER\n docker\n\n\nLastly we need to reload shell in order to have new group settings applied.\n\nnewgrp docker\n\n\n\n\n\n\n\n3.", 
+            "text": "Note about Docker\n\n\n\n\nOn Docker container, if you want install module: Ex: unzip\n    \napt update \n apt install unzip\n\n\n\n\n\nHow to use Docker without sudo on Ubuntu\n\n\n\n\nMethod 1\n: \n    \nsudo usermod -aG docker \n$USER\n\n\n\n\n\n\nMethod 2\n: \n    Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.\n\n\nsudo groupadd docker\n\n\nNext we need to add current user to the group.\n\nsudo gpasswd -a \n$USER\n docker\n\n\nLastly we need to reload shell in order to have new group settings applied.\n\nnewgrp docker\n\n\n3.", 
             "title": "Note"
         }, 
         {
             "location": "/docker/note/#note-about-docker", 
-            "text": "On Docker container, if you want install module: Ex: unzip\n     apt update   apt install unzip   How to use Docker without sudo on Ubuntu  Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.  sudo groupadd docker \nNext we need to add current user to the group. sudo gpasswd -a  $USER  docker \nLastly we need to reload shell in order to have new group settings applied. newgrp docker    3.", 
+            "text": "On Docker container, if you want install module: Ex: unzip\n     apt update   apt install unzip   How to use Docker without sudo on Ubuntu   Method 1 : \n     sudo usermod -aG docker  $USER    Method 2 : \n    Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.  sudo groupadd docker \nNext we need to add current user to the group. sudo gpasswd -a  $USER  docker \nLastly we need to reload shell in order to have new group settings applied. newgrp docker \n3.", 
             "title": "Note about Docker"
+        }, 
+        {
+            "location": "/jenkins/", 
+            "text": "Overview\n\n\nThis is our developer docs about Jenkins. Our docs inclues:\n\n\n\n\nInstall\n\n\nNote", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/jenkins/#overview", 
+            "text": "This is our developer docs about Jenkins. Our docs inclues:   Install  Note", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/jenkins/install/", 
+            "text": "Overview\n\n\nThis is our developer docs about How to install Jenkins\n\n\nInstall Jenkins\n\n\nDownload and run Jenkins\n\n\nRun Jenkins in Docker\n\n\n\n\nInstall Docker\n\n\nRun the \njenkinsci/blueocean\n image as a container in Docker using the following \ndocker run\n command (bearing in mind that this command automatically downloads the image if this hasn\u2019t been done):\n    \ndocker run \n\\\n\n  --rm \n\\\n\n  -u root \n\\\n\n  -p \n8080\n:8080 \n\\\n\n  -v jenkins-data:/var/jenkins_home \n\\\n\n  -v /var/run/docker.sock:/var/run/docker.sock \n\\\n\n  -v \n$HOME\n:/home \n\\\n\n  jenkinsci/blueocean\n\n\n\nProceed to the \nPost-installation setup wizard\n.", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/jenkins/install/#overview", 
+            "text": "This is our developer docs about How to install Jenkins", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/jenkins/install/#install-jenkins", 
+            "text": "", 
+            "title": "Install Jenkins"
+        }, 
+        {
+            "location": "/jenkins/install/#download-and-run-jenkins", 
+            "text": "", 
+            "title": "Download and run Jenkins"
+        }, 
+        {
+            "location": "/jenkins/install/#run-jenkins-in-docker", 
+            "text": "Install Docker  Run the  jenkinsci/blueocean  image as a container in Docker using the following  docker run  command (bearing in mind that this command automatically downloads the image if this hasn\u2019t been done):\n     docker run  \\ \n  --rm  \\ \n  -u root  \\ \n  -p  8080 :8080  \\ \n  -v jenkins-data:/var/jenkins_home  \\ \n  -v /var/run/docker.sock:/var/run/docker.sock  \\ \n  -v  $HOME :/home  \\ \n  jenkinsci/blueocean  Proceed to the  Post-installation setup wizard .", 
+            "title": "Run Jenkins in Docker"
+        }, 
+        {
+            "location": "/jenkins/note/", 
+            "text": "Note about Jenkins\n\n\nJenkins - Docker\n\n\n\n\nWhen run bash scripts Jenkins from Git directory show error \"Permission denied\"\n\n\nCause: File not permission excute\n\n\nHow to fix:\n\n\nIn command line, go to folder Git.\n\n\nProvide permission for all file are can excute then commit add file:\n    \n    sudo chmod -R \n777\n ./\n    git add .\n    git commit -m \nupdate permission of file", 
+            "title": "Note"
+        }, 
+        {
+            "location": "/jenkins/note/#note-about-jenkins", 
+            "text": "", 
+            "title": "Note about Jenkins"
+        }, 
+        {
+            "location": "/jenkins/note/#jenkins-docker", 
+            "text": "When run bash scripts Jenkins from Git directory show error \"Permission denied\"  Cause: File not permission excute  How to fix:  In command line, go to folder Git.  Provide permission for all file are can excute then commit add file:\n         sudo chmod -R  777  ./\n    git add .\n    git commit -m  update permission of file", 
+            "title": "Jenkins - Docker"
         }, 
         {
             "location": "/mkdocs/", 
