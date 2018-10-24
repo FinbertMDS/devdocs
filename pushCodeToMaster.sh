@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ ! -f ./env ]; then
+if [ ! -f .env ]; then
     cp .env.sample .env
     echo "init .env file from sample with token github"
     exit
