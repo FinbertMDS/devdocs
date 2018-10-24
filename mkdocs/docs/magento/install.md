@@ -1,5 +1,5 @@
 # Overview
-This is our developer docs about [How to install magento](https://devdocs.magento.com/guides/v2.2/install-gde/bk-install-guide.html):
+This is our developer docs about [How to install Magento](https://devdocs.magento.com/guides/v2.2/install-gde/bk-install-guide.html):
 
 ## Package
 - Magento CE: http://pubfiles.nexcess.net/magento/ce-packages/

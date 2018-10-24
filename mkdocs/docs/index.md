@@ -6,4 +6,6 @@ This is our developer docs. Our docs includes:
 - [Magento](magento.md)
 - [Docker](docker.md)
 - [Jenkins](jenkins.md)
+- [NodeJs](nodejs.md)
+- [ReactJs](reactjs.md)
 - [Mkdocs](mkdocs.md)

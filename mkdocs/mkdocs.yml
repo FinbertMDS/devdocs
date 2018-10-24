@@ -44,6 +44,12 @@ pages:
     - Overview: jenkins.md
     - Install: jenkins/install.md
     - Note: jenkins/note.md
+  - NodeJs:
+    - Overview: nodejs.md
+    - Install: nodejs/install.md
+  - ReactJs:
+    - Overview: reactjs.md
+    - Tools: reactjs/tools.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:
