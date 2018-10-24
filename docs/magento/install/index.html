@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.4f4f49e8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
       
     
@@ -48,8 +48,8 @@
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -152,11 +152,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <span class="md-nav__button md-logo">
+    <a href="../.." title="Developer Documentation" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     Developer Documentation
   </label>
   
@@ -1039,11 +1039,15 @@ sudo service apache2 reload
 <div class="codehilite"><pre><span></span>sudo nano /etc/php/7.0/apache2/php.ini
 </pre></div>
 Find and update info:
-<div class="codehilite"><pre><span></span>max_execution_time=300
+<div class="codehilite"><pre><span></span>max_execution_time=18000
+display_errors = On
 max_input_time=600
 post_max_size=80M
 max_file_uploads=200
 memory_limit=2048M
+session.cookie_lifetime = 3153600000
+session.gc_maxlifetime = 3153600000
+session.cache_expire = 52560000
 </pre></div>
 Install extension PHP:
 <div class="codehilite"><pre><span></span>sudo apt-get install php-mcrypt php-curl php-gd libcurl3 php-intl php-xsl
@@ -1065,8 +1069,8 @@ CREATE DATABASE magento<span class="p">;</span>
 <div class="codehilite"><pre><span></span>{
     &quot;http-basic&quot;: {
         &quot;repo.magento.com&quot;: {
-            &quot;username&quot;: &quot;a3380186b4ffb670466a01331a3fb375&quot;,
-            &quot;password&quot;: &quot;cfe4874a50552827da901971d249322a&quot;
+            &quot;username&quot;: &quot;5dea11c9af045103e3499cbcd050a661&quot;,
+            &quot;password&quot;: &quot;6d1cc610c68c1148063daa14b2d5b5a5&quot;
         }
     }
 }
@@ -1181,9 +1185,9 @@ sudo chmod -R <span class="m">777</span> ./
       
     </div>
     
-      <script src="../../assets/javascripts/application.a59e2a89.js"></script>
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
