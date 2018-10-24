@@ -8,7 +8,7 @@ fi
 source ./.env
 
 cd mkdocs
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 mkdocs build -d ../docs
 while [ ! -f ../docs/index.html ]
 do
