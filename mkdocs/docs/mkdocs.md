@@ -2,6 +2,22 @@
 
 For full documentation visit [mkdocs.org](http://mkdocs.org).
 
+## Install
+```bash
+sudo apt install python
+```
+```bash
+sudo apt install python-pip
+```
+```bash
+pip install --upgrade pip
+```
+```bash
+sudo python get-pip.py
+```
+```bash
+sudo pip install mkdocs
+```
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
