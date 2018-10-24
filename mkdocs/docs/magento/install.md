@@ -70,11 +70,15 @@ sudo nano /etc/php/7.0/apache2/php.ini
 ```
 Find and update info:
 ```text
-max_execution_time=300
+max_execution_time=18000
+display_errors = On
 max_input_time=600
 post_max_size=80M
 max_file_uploads=200
 memory_limit=2048M
+session.cookie_lifetime = 3153600000
+session.gc_maxlifetime = 3153600000
+session.cache_expire = 52560000
 ```
 Install extension PHP:
 ```bash
@@ -101,8 +105,8 @@ nano ~/.composer/auth.json
 {
     "http-basic": {
         "repo.magento.com": {
-            "username": "a3380186b4ffb670466a01331a3fb375",
-            "password": "cfe4874a50552827da901971d249322a"
+            "username": "5dea11c9af045103e3499cbcd050a661",
+            "password": "6d1cc610c68c1148063daa14b2d5b5a5"
         }
     }
 }
