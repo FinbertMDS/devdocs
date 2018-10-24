@@ -1,6 +1,7 @@
 # Overview
 This is our developer docs about Ubuntu. Our docs includes:
 
+- [Install software](https://docs.google.com/document/d/1jp3s2vgQ2tBHYLPfQEU2JAmUwQWS4FpnRl3uq11LGHo)
 - [Command line](ubuntu/command.md)
 - [Bash scripts](ubuntu/bash.md)
 - [SSH](ubuntu/ssh.md)
