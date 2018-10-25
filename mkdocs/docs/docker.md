@@ -6,4 +6,5 @@ This is our developer docs about Docker. Our docs includes:
 - [Develop with Docker](docker/develop.md)
 - [Configure networking](docker/config-network.md)
 - [Sample use Docker](docker/sample.md)
+- [Documents](docker/documents.md)
 - [Note](docker/note.md)
