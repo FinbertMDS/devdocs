@@ -279,8 +279,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-command-line-on-ubuntu" title="Use command line on Ubuntu" class="md-nav__link">
-    Use command line on Ubuntu
+  <a href="#use-command-line" title="Use command line" class="md-nav__link">
+    Use command line
   </a>
   
 </li>
@@ -295,12 +295,45 @@
     Command line with ssh
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-server" title="Connect to server" class="md-nav__link">
+    Connect to server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-files" title="Copy files" class="md-nav__link">
+    Copy files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#info-server" title="Info server" class="md-nav__link">
     Info server
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-file-ssh-pem-and-ssh-putty" title="Example file SSH Pem and SSH Putty" class="md-nav__link">
+    Example file SSH Pem and SSH Putty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -980,8 +1013,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-command-line-on-ubuntu" title="Use command line on Ubuntu" class="md-nav__link">
-    Use command line on Ubuntu
+  <a href="#use-command-line" title="Use command line" class="md-nav__link">
+    Use command line
   </a>
   
 </li>
@@ -996,12 +1029,45 @@
     Command line with ssh
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-server" title="Connect to server" class="md-nav__link">
+    Connect to server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-files" title="Copy files" class="md-nav__link">
+    Copy files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#info-server" title="Info server" class="md-nav__link">
     Info server
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-file-ssh-pem-and-ssh-putty" title="Example file SSH Pem and SSH Putty" class="md-nav__link">
+    Example file SSH Pem and SSH Putty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1040,22 +1106,32 @@
 </ul>
 </li>
 </ol>
-<h3 id="use-command-line-on-ubuntu">Use command line on Ubuntu<a class="headerlink" href="#use-command-line-on-ubuntu" title="Permanent link">&para;</a></h3>
+<h3 id="use-command-line">Use command line<a class="headerlink" href="#use-command-line" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Install SSH<ul>
 <li><a href="https://help.ubuntu.com/lts/serverguide/openssh-server.html.en">https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</a></li>
 </ul>
 </li>
 <li>Create file <strong>server.pem</strong> with info about Private key</li>
-<li>Connect to server by command
-<div class="codehilite"><pre><span></span>ssh -i server.pem ubuntu@demo-omc1.magestore.com -p <span class="m">2213</span>
+<li>Provide permission 400 for file <strong>server.pem</strong> to to make sure that your private key file isn't publicly viewable.
+    <div class="codehilite"><pre><span></span>chmod <span class="m">400</span> server.pem
 </pre></div></li>
+<li>
+<p>Connect to server by command
+    <div class="codehilite"><pre><span></span>ssh -i server.pem ubuntu@demo-omc1.magestore.com -p <span class="m">2213</span>
+</pre></div></p>
+<p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html</a></p>
+</li>
 </ol>
 <h2 id="command-line-with-ssh">Command line with ssh<a class="headerlink" href="#command-line-with-ssh" title="Permanent link">&para;</a></h2>
+<h3 id="connect-to-server">Connect to server<a class="headerlink" href="#connect-to-server" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Connect to server
     <div class="codehilite"><pre><span></span>ssh &lt;user&gt;@&lt;remote_host&gt; -p &lt;port&gt;
 </pre></div></li>
+</ol>
+<h3 id="copy-files">Copy files<a class="headerlink" href="#copy-files" title="Permanent link">&para;</a></h3>
+<ol>
 <li>Copy file from local host to to remote host
     <div class="codehilite"><pre><span></span>scp &lt;file_path&gt; &lt;user&gt;@&lt;remote_host&gt;:&lt;remote_dir&gt;
 </pre></div></li>
@@ -1075,16 +1151,23 @@
 <h2 id="info-server">Info server<a class="headerlink" href="#info-server" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Server:
-<div class="codehilite"><pre><span></span>HOST: 45.77.42.74
-username: root
-pass: 1u,Z#+3d#?@b{.sx
+<div class="codehilite"><pre><span></span>IP: 45.77.42.74
+Username: root
+Pass: 1u,Z#+3d#?@b{.sx
 </pre></div>
-<a href="https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507">Server Info</a></li>
+<div class="codehilite"><pre><span></span>ssh root@45.77.42.74
+</pre></div>
+<div class="codehilite"><pre><span></span>1u,Z#+3d#?@b{.sx
+</pre></div></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507">Server Info</a></li>
 <li>SSH
 <div class="codehilite"><pre><span></span>IP: 54.83.169.163
 Port: 2213
 Username: ubuntu
 </pre></div></li>
+</ul>
+<h3 id="example-file-ssh-pem-and-ssh-putty">Example file SSH Pem and SSH Putty<a class="headerlink" href="#example-file-ssh-pem-and-ssh-putty" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Private key:</li>
 </ul>
 <p>Create file <strong>server.pem</strong> with info about private key
