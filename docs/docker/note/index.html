@@ -691,6 +691,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../documents/" title="Documents" class="md-nav__link">
+      Documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -916,24 +928,17 @@
 </pre></div></li>
 <li>
 <p><a href="https://linoxide.com/linux-how-to/use-docker-without-sudo-ubuntu/">How to use Docker without sudo on Ubuntu</a></p>
-<ul>
-<li><code class="codehilite">Method 1</code>: 
-    <div class="codehilite"><pre><span></span>sudo usermod -aG docker <span class="nv">$USER</span>
+<ol>
+<li>Next we need to add current user to the group.
+    <div class="codehilite"><pre><span></span>sudo gpasswd -a <span class="nv">$USER</span> docker
 </pre></div></li>
-<li>
-<p><code class="codehilite">Method 2</code>: 
-    Create new group if it does not exist. This command will likely fail as group maybe already exist, but let's run it anyways.</p>
-<p><div class="codehilite"><pre><span></span>sudo groupadd docker
-</pre></div>
-Next we need to add current user to the group.
-<div class="codehilite"><pre><span></span>sudo gpasswd -a <span class="nv">$USER</span> docker
-</pre></div>
-Lastly we need to reload shell in order to have new group settings applied.
-<div class="codehilite"><pre><span></span>newgrp docker
-</pre></div>
-3.</p>
+<li>Lastly we need to reload shell in order to have new group settings applied.
+    <div class="codehilite"><pre><span></span>newgrp docker
+</pre></div></li>
+</ol>
 </li>
-</ul>
+<li>
+<p><a href="https://eggclub.org/thay-doi-owner-cua-mount-volume-khi-dev-voi-docker/">https://eggclub.org/thay-doi-owner-cua-mount-volume-khi-dev-voi-docker/</a></p>
 </li>
 </ol>
                 
@@ -956,7 +961,7 @@ Lastly we need to reload shell in order to have new group settings applied.
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sample/" title="Sample" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../documents/" title="Documents" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -965,7 +970,7 @@ Lastly we need to reload shell in order to have new group settings applied.
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sample
+                Documents
               </span>
             </div>
           </a>
