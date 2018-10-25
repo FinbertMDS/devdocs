@@ -11,54 +11,69 @@ This is our developer docs about How to remote to server Ubuntu
     - Host name or Ip
     - Port
     - Connection > SSH > Auth then press Browse… to file server.ppk 
-### Use command line on Ubuntu
+### Use command line
 1. Install SSH
     - https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
 2. Create file **server.pem** with info about Private key
-3. Connect to server by command
-```bash
-ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
-```
-## Command line with ssh
+3. Provide permission 400 for file **server.pem** to to make sure that your private key file isn't publicly viewable.
+    ```bash
+    chmod 400 server.pem
+    ```
+4. Connect to server by command
+    ```bash
+    ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
+    ```
+    
+    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
 
+## Command line with ssh
+### Connect to server
 1. Connect to server
     ```bash
     ssh <user>@<remote_host> -p <port>
     ```
-2. Copy file from local host to to remote host
+### Copy files
+1. Copy file from local host to to remote host
     ```bash
     scp <file_path> <user>@<remote_host>:<remote_dir>
     ```
-3. Copy file from remote host to local host
+2. Copy file from remote host to local host
     ```bash
     scp <user>@<remote_host>:<remote_file_path> <local_dir>
     ```
-4. Multiple files from Local host to the Remote host
+3. Multiple files from Local host to the Remote host
     ```bash
     scp <file_path> <file_path> <user>@<remote_host>:<remote_dir>
     ```
-5. Directory from Local host to the Remote host
+4. Directory from Local host to the Remote host
     ```bash
     scp -r <local_dir> <user>@<remote_host>:<remote_dir>
     ```
-6. Directory from Remote host to the Local host
+5. Directory from Remote host to the Local host
     ```bash
     scp -r <user>@<remote_host>:<remote_dir> <local_dir>
     ```
 ## Info server
 - Server:
 ```text
-HOST: 45.77.42.74
-username: root
-pass: 1u,Z#+3d#?@b{.sx
+IP: 45.77.42.74
+Username: root
+Pass: 1u,Z#+3d#?@b{.sx
 ```
-[Server Info](https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507)
+```bash
+ssh root@45.77.42.74
+```
+```text
+1u,Z#+3d#?@b{.sx
+```
+- [Server Info](https://docs.google.com/spreadsheets/d/1xN_hfrPmq4OXfR6_LpYkIwM9-3QUWJf7pZlcFPuA1O8/edit#gid=949537507)
 - SSH
 ```text
 IP: 54.83.169.163
 Port: 2213
 Username: ubuntu
 ```
+### Example file SSH Pem and SSH Putty 
 - Private key:
 
 Create file **server.pem** with info about private key
