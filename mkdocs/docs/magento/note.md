@@ -1,6 +1,6 @@
 # Note about Magento
 
-1. [Some libs for Magento](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/magento/libs)
+1. [Libs for Magento](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/magento/libs)
 
     Example:
     

@@ -12,3 +12,7 @@
                 git add .
                 git commit -m "update permission of file"
             ```
+2. Trigger Jenkins build
+    - From Url: https://humanwhocodes.com/blog/2015/10/triggering-jenkins-builds-by-url/
+    - From Post-commit local: https://www.youtube.com/watch?v=X74wqtmi4S8
+    - From Github push: https://medium.com/@marc_best/trigger-a-jenkins-build-from-a-github-push-b922468ef1ae

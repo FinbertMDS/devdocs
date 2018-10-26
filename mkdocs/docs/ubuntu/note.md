@@ -1,6 +1,6 @@
 # Note about Ubuntu
 
-1. [Some libs for Ubuntu](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/ubuntu/libs)
+1. [Libs for Ubuntu](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/ubuntu/libs)
 
     Example:
     

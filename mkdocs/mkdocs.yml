@@ -44,6 +44,8 @@ pages:
   - Jenkins:
     - Overview: jenkins.md
     - Install: jenkins/install.md
+    - Documents: jenkins/documents.md
+    - Sample: jenkins/sample.md
     - Note: jenkins/note.md
   - NodeJs:
     - Overview: nodejs.md
@@ -51,6 +53,9 @@ pages:
   - ReactJs:
     - Overview: reactjs.md
     - Tools: reactjs/tools.md
+  - Design Pattern:
+    - Overview: design_pattern.md
+    - Observer: design_pattern/observer.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:
