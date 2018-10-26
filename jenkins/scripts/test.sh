@@ -6,4 +6,4 @@ mkdocs serve -a $(ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/
 sleep 1
 echo $! > .pidfile
 set +x
-echo "Visit http://localhost:8000"
+echo "Visit page at port 8000 ex: http://localhost:8000 to test UI."

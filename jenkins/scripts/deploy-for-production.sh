@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
-FOLDER_GIT=/tmp/devdocs
+FOLDER_BUILD=/tmp/devdocs
 echo "Deploy to GitHub page"
 cd mkdocs
-mkdocs build
-while [ ! -f ./site/index.html ]
+mkdocs build -d ../docs
+while [ ! -f ../docs/index.html ]
 do
   sleep 1
 done
-rm -rf $FOLDER_GIT
-mkdir $FOLDER_GIT
-git clone https://github.com/FinbertMagestore/devdocs/ $FOLDER_GIT
-cp -a site/* $FOLDER_GIT
-cd $FOLDER_GIT
+cd ../
+rm -rf /tmp/docs/
+cp -a docs/ /tmp/
+rm -rf docs/
+git checkout master
+cp -a /tmp/docs/ ./
+rm -rf /tmp/docs/
+git add .
 COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
 git commit -m "$COMMIT_MESSAGE"
 git push origin master
