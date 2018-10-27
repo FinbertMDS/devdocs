@@ -11,5 +11,10 @@ cd ../
 rm -rf /tmp/docs/
 cp -a docs/ /tmp/
 rm -rf docs/
+rm -rf mkdocs/
 git checkout master
 cp -a /tmp/docs/ ./
+git add .
+COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
+git commit -m "$COMMIT_MESSAGE"
+git push origin master

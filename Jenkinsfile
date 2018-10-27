@@ -24,14 +24,6 @@ pipeline {
             steps {
                 input message: 'Deploy to Github page? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/deploy-for-production.sh'
-                sh 'rm -rf docs/'
-                sh 'rm -rf mkdocs/'
-                sh 'git checkout master'
-                sh 'cp -a /tmp/docs/ ./'
-                sh 'rm -rf /tmp/docs/'
-                sh 'git add .'
-                sh 'git commit -am $(git log -n 1 origin/develop --pretty=format:%s)'
-                sh 'git push origin master'
             }
         }
     }
