@@ -27,7 +27,9 @@ pipeline {
                 sh 'git checkout master'
                 sh 'cp -a /tmp/docs/ ./'
                 sh 'rm -rf /tmp/docs/'
-                sh 'git commit -am "Deploy to github page"'
+                sh 'git add .'
+                sh 'rm mkdocs'
+                sh 'git commit -am $(git log -n 1 origin/develop --pretty=format:%s)'
                 sh 'git push origin master'
             }
         }
