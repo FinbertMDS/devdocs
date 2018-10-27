@@ -11,7 +11,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'apt-get -y install sshpass'
                 sh './jenkins/scripts/build.sh'
             }
         }
