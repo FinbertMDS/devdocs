@@ -17,6 +17,3 @@ cp -a /tmp/docs/ ./
 git add .
 COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
 git commit -m "$COMMIT_MESSAGE"
-git config user.email "finbert@trueplus.vn"
-git config user.name "FinbertMagestore"
-git push origin master

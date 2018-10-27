@@ -24,6 +24,9 @@ pipeline {
             steps {
                 input message: 'Deploy to Github page? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/deploy-for-production.sh'
+                sh 'git config user.email "finbert@trueplus.vn"'
+                sh 'git config user.name "FinbertMagestore"'
+                sh 'git push origin master'
             }
         }
     }
