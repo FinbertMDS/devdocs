@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-git config --global user.email "finbert@trueplus.vn"
-git config --global user.name "FinbertMagestore"
 FOLDER_BUILD=/tmp/devdocs
 echo "Deploy to GitHub page"
 cd mkdocs
@@ -14,7 +12,9 @@ cd ../
 rm -rf /tmp/docs/
 cp -a docs/ /tmp/
 rm -rf docs/
-git fetch && git checkout origin/master
+git config --global user.email "finbert@trueplus.vn"
+git config --global user.name "finbert"
+git checkout master -f
 cp -a /tmp/docs/ ./
 rm -rf /tmp/docs/
 git add .

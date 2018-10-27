@@ -8,7 +8,7 @@ fi
 source ./.env
 
 cd mkdocs
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 mkdocs build -d ../docs
 while [ ! -f ../docs/index.html ]
 do
@@ -18,7 +18,7 @@ cd ../
 rm -rf /tmp/docs/
 cp -a docs/ /tmp/
 rm -rf docs/
-git fetch && git checkout -b master
+git checkout master -f
 cp -a /tmp/docs/ ./
 rm -rf /tmp/docs/
 git add .
