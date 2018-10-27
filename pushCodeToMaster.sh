@@ -18,7 +18,7 @@ cd ../
 rm -rf /tmp/docs/
 cp -a docs/ /tmp/
 rm -rf docs/
-git checkout master -f
+git checkout master
 cp -a /tmp/docs/ ./
 rm -rf /tmp/docs/
 git add .
