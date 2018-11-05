@@ -1,6 +1,7 @@
 # Overview
 This is our developer docs. Our docs includes:
 
+- [Agile](agile.md)
 - [Ubuntu](ubuntu.md)
 - [Server](server.md)
 - [Git](git.md)

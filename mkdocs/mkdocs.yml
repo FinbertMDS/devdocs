@@ -3,6 +3,11 @@ theme:
   name: 'material'
 pages:
   - index.md
+  - Agile:
+    - Overview: agile.md
+    - Principle: agile/principle.md
+    - Planning: agile/planning.md
+    - Success Story: agile/success_story.md
   - Ubuntu:
     - Overview: ubuntu.md
     - Command line: ubuntu/command.md
@@ -39,9 +44,8 @@ pages:
   - Docker:
     - Overview: docker.md
     - Install: docker/install.md
-    - Get started: docker/get-started.md
+    - Get started: docker/get_started.md
     - Develop with Docker: docker/develop.md
-    - Configure networking: docker/config-network.md
     - Sample: docker/sample.md
     - Documents: docker/documents.md
     - Note: docker/note.md
