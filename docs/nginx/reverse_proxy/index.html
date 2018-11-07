@@ -36,7 +36,7 @@
     
     
       
-        <title>Documents - Developer Documentation</title>
+        <title>Reverse Proxy - Developer Documentation</title>
       
     
     
@@ -97,7 +97,7 @@
                 Developer Documentation
               </span>
               <span class="md-header-nav__topic">
-                Documents
+                Reverse Proxy
               </span>
             
           
@@ -478,10 +478,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Nginx
@@ -499,7 +501,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nginx/" title="Overview" class="md-nav__link">
+    <a href="../" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -511,7 +513,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../nginx/web_server/" title="Web Server" class="md-nav__link">
+    <a href="../web_server/" title="Web Server" class="md-nav__link">
       Web Server
     </a>
   </li>
@@ -521,11 +523,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../nginx/reverse_proxy/" title="Reverse Proxy" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Reverse Proxy
+      </label>
+    
+    <a href="./" title="Reverse Proxy" class="md-nav__link md-nav__link--active">
       Reverse Proxy
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-reverse-proxy" title="Simple reverse proxy" class="md-nav__link">
+    Simple reverse proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy-redirect-http-to-https-for-site-magento-on-docker" title="Reverse proxy redirect HTTP to HTTPS for site Magento on Docker" class="md-nav__link">
+    Reverse proxy redirect HTTP to HTTPS for site Magento on Docker
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-ssl-to-folder-etcnginxssl" title="Add SSL to folder /etc/nginx/ssl/" class="md-nav__link">
+    Add SSL to folder /etc/nginx/ssl/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magento-1" title="Magento 1" class="md-nav__link">
+    Magento 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magento-2" title="Magento 2" class="md-nav__link">
+    Magento 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -814,12 +888,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
       Docker
@@ -837,7 +909,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Overview" class="md-nav__link">
+    <a href="../../docker/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -849,7 +921,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../install/" title="Install" class="md-nav__link">
+    <a href="../../docker/install/" title="Install" class="md-nav__link">
       Install
     </a>
   </li>
@@ -861,7 +933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../get_started/" title="Get started" class="md-nav__link">
+    <a href="../../docker/get_started/" title="Get started" class="md-nav__link">
       Get started
     </a>
   </li>
@@ -873,7 +945,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../develop/" title="Develop with Docker" class="md-nav__link">
+    <a href="../../docker/develop/" title="Develop with Docker" class="md-nav__link">
       Develop with Docker
     </a>
   </li>
@@ -885,7 +957,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../sample/" title="Sample" class="md-nav__link">
+    <a href="../../docker/sample/" title="Sample" class="md-nav__link">
       Sample
     </a>
   </li>
@@ -895,20 +967,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Documents" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../docker/documents/" title="Documents" class="md-nav__link">
       Documents
     </a>
-    
   </li>
 
         
@@ -918,7 +981,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../note/" title="Note" class="md-nav__link">
+    <a href="../../docker/note/" title="Note" class="md-nav__link">
       Note
     </a>
   </li>
@@ -1186,6 +1249,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-reverse-proxy" title="Simple reverse proxy" class="md-nav__link">
+    Simple reverse proxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy-redirect-http-to-https-for-site-magento-on-docker" title="Reverse proxy redirect HTTP to HTTPS for site Magento on Docker" class="md-nav__link">
+    Reverse proxy redirect HTTP to HTTPS for site Magento on Docker
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-ssl-to-folder-etcnginxssl" title="Add SSL to folder /etc/nginx/ssl/" class="md-nav__link">
+    Add SSL to folder /etc/nginx/ssl/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magento-1" title="Magento 1" class="md-nav__link">
+    Magento 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magento-2" title="Magento 2" class="md-nav__link">
+    Magento 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1198,12 +1311,93 @@
                 
                 
                 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p>This is our developer docs about Documents about Docker</p>
-<ul>
-<li><a href="https://kipalog.com/posts/He-sinh-thai-Docker">https://kipalog.com/posts/He-sinh-thai-Docker</a></li>
-<li><a href="https://github.com/cuongtransc/docker-training">https://github.com/cuongtransc/docker-training</a></li>
-<li><a href="https://github.com/wsargent/docker-cheat-sheet">https://github.com/wsargent/docker-cheat-sheet</a></li>
-</ul>
+<p>This is our developer docs about Use Nginx as Reverse Proxy.</p>
+<h2 id="simple-reverse-proxy">Simple reverse proxy<a class="headerlink" href="#simple-reverse-proxy" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nt">upstream</span> <span class="nt">jenkins</span> <span class="p">{</span>
+    <span class="err">server</span> <span class="err">172.17.0.1:8080</span> <span class="err">weight=1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+  <span class="err">listen</span>          <span class="err">80</span><span class="p">;</span>
+  <span class="err">server_name</span>     <span class="err">jenkins.example.com</span><span class="p">;</span>
+
+  <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
+    <span class="err">proxy_pass</span>      <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">jenkins</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+<h2 id="reverse-proxy-redirect-http-to-https-for-site-magento-on-docker">Reverse proxy redirect HTTP to HTTPS for site Magento on Docker<a class="headerlink" href="#reverse-proxy-redirect-http-to-https-for-site-magento-on-docker" title="Permanent link">&para;</a></h2>
+<h3 id="add-ssl-to-folder-etcnginxssl">Add SSL to folder <code class="codehilite">/etc/nginx/ssl/</code><a class="headerlink" href="#add-ssl-to-folder-etcnginxssl" title="Permanent link">&para;</a></h3>
+<h3 id="magento-1">Magento 1<a class="headerlink" href="#magento-1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nt">upstream</span> <span class="nt">magento1_ssl</span> <span class="p">{</span>
+    <span class="err">server</span> <span class="err">172.17.0.1:9096</span> <span class="err">weight=1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+    <span class="err">listen</span> <span class="err">80</span><span class="p">;</span>
+    <span class="err">server_name</span> <span class="err">magento1.com</span><span class="p">;</span>
+    <span class="err">return</span> <span class="err">301</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="n">host</span><span class="err">$</span><span class="n">request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+  <span class="err">listen</span> <span class="err">443</span><span class="p">;</span>
+  <span class="err">server_name</span> <span class="err">magento1.com</span><span class="p">;</span>
+  <span class="err">ssl_certificate</span> <span class="err">/etc/nginx/ssl/magento1_ssl.crt</span><span class="p">;</span>
+  <span class="err">ssl_certificate_key</span> <span class="err">/etc/nginx/ssl/magento1_ssl.key</span><span class="p">;</span>
+  <span class="err">ssl</span> <span class="err">on</span><span class="p">;</span>
+  <span class="err">ssl_session_cache</span>  <span class="n">builtin</span><span class="p">:</span><span class="mi">1000</span>  <span class="n">shared</span><span class="o">:</span><span class="n">SSL</span><span class="o">:</span><span class="mi">10</span><span class="n">m</span><span class="p">;</span>
+  <span class="err">ssl_protocols</span>  <span class="err">TLSv1</span> <span class="err">TLSv1.1</span> <span class="err">TLSv1.2</span><span class="p">;</span>
+  <span class="err">ssl_ciphers</span> <span class="n">HIGH</span><span class="p">:</span><span class="o">!</span><span class="n">aNULL</span><span class="o">:!</span><span class="n">eNULL</span><span class="o">:!</span><span class="n">EXPORT</span><span class="o">:!</span><span class="n">CAMELLIA</span><span class="o">:!</span><span class="n">DES</span><span class="o">:!</span><span class="n">MD5</span><span class="o">:!</span><span class="n">PSK</span><span class="o">:!</span><span class="n">RC4</span><span class="p">;</span>
+  <span class="err">ssl_prefer_server_ciphers</span> <span class="err">on</span><span class="p">;</span>
+
+  <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
+    <span class="err">proxy_set_header</span> <span class="err">Host</span> <span class="err">$host</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Real-IP</span> <span class="err">$remote_addr</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-For</span> <span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-Proto</span> <span class="err">$scheme</span><span class="p">;</span>
+
+    <span class="err">proxy_pass</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">magento1_ssl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">location</span> <span class="o">/</span><span class="nt">admin</span> <span class="p">{</span>
+    <span class="err">return</span> <span class="err">301</span> <span class="err">/index.php/admin</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+
+<h3 id="magento-2">Magento 2<a class="headerlink" href="#magento-2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nt">upstream</span> <span class="nt">magento2_ssl</span> <span class="p">{</span>
+    <span class="err">server</span> <span class="err">172.17.0.1:9092</span> <span class="err">weight=1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+    <span class="err">listen</span> <span class="err">80</span><span class="p">;</span>
+    <span class="err">server_name</span> <span class="err">magento2.com</span><span class="p">;</span>
+    <span class="err">return</span> <span class="err">301</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="n">host</span><span class="err">$</span><span class="n">request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">server</span> <span class="p">{</span>
+  <span class="err">listen</span> <span class="err">443</span><span class="p">;</span>
+  <span class="err">server_name</span> <span class="err">magento2.com</span><span class="p">;</span>
+  <span class="err">ssl_certificate</span> <span class="err">/etc/nginx/ssl/magento2_ssl.crt</span><span class="p">;</span>
+  <span class="err">ssl_certificate_key</span> <span class="err">/etc/nginx/ssl/magento2_ssl.key</span><span class="p">;</span>
+  <span class="err">ssl</span> <span class="err">on</span><span class="p">;</span>
+  <span class="err">ssl_session_cache</span>  <span class="n">builtin</span><span class="p">:</span><span class="mi">1000</span>  <span class="n">shared</span><span class="o">:</span><span class="n">SSL</span><span class="o">:</span><span class="mi">10</span><span class="n">m</span><span class="p">;</span>
+  <span class="err">ssl_protocols</span>  <span class="err">TLSv1</span> <span class="err">TLSv1.1</span> <span class="err">TLSv1.2</span><span class="p">;</span>
+  <span class="err">ssl_ciphers</span> <span class="n">HIGH</span><span class="p">:</span><span class="o">!</span><span class="n">aNULL</span><span class="o">:!</span><span class="n">eNULL</span><span class="o">:!</span><span class="n">EXPORT</span><span class="o">:!</span><span class="n">CAMELLIA</span><span class="o">:!</span><span class="n">DES</span><span class="o">:!</span><span class="n">MD5</span><span class="o">:!</span><span class="n">PSK</span><span class="o">:!</span><span class="n">RC4</span><span class="p">;</span>
+  <span class="err">ssl_prefer_server_ciphers</span> <span class="err">on</span><span class="p">;</span>
+
+  <span class="err">location</span> <span class="err">/</span> <span class="err">{</span>
+    <span class="err">proxy_set_header</span> <span class="err">Host</span> <span class="err">$host</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Real-IP</span> <span class="err">$remote_addr</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-For</span> <span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-Proto</span> <span class="err">$scheme</span><span class="p">;</span>
+
+    <span class="err">proxy_pass</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">magento2_ssl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
                 
                   
                 
@@ -1224,7 +1418,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sample/" title="Sample" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../web_server/" title="Web Server" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1233,19 +1427,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sample
+                Web Server
               </span>
             </div>
           </a>
         
         
-          <a href="../note/" title="Note" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../git/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Note
+                Overview
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
