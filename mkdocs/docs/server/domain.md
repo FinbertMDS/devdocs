@@ -11,3 +11,14 @@ This is our developer docs about Config domain for server.
     |------|------|-----|-------------|
     |      | A    | 300 | 45.77.42.74 |
     | www  | A    | 300 | 45.77.42.74 |
+    
+## Create server
+- Create droplet at Digital Ocean
+
+## Config server
+- Add domain
+- Config domain, add record in DNS Management
+
+    | Type  | Hostname              | IS AN ALIAS OF     | TTL (seconds) |
+    |-------|-----------------------|--------------------|---------------|
+    | CNAME | www.developer-test.ml | developer-test.ml. | 43200         |

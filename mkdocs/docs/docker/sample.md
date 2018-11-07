@@ -1,6 +1,11 @@
 # Sample
 This is our developer docs about Sample use Docker
 
+## Magento 1
+[Docker Magento 1](https://github.com/FinbertMagestore/docker-magento1/tree/develop)
+
+Docker compose with: Magento 1 + PHP 5.6 + Apache2 + MariaDb 10.0 + PhpMyAdmin
+
 ## Magento 2
 [Docker Magento 2](https://github.com/FinbertMagestore/docker-magento2/tree/develop)
 

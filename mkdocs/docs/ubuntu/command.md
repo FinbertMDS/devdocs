@@ -15,9 +15,10 @@ This is our developer docs about Command useful in Ubuntu
     ```
 
 ## User - Group
-1. Add user to group
+1. Add user
     ```bash
-    sudo usermod -aG group user
+    sudo adduser username
+    sudo usermod -aG group username
     ```
    
 2. Add user to group and not need input password when use command with group

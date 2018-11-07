@@ -22,6 +22,12 @@ pages:
     - Overview: server.md
     - Domain: server/domain.md
     - SSL: server/ssl.md
+    - SSH: server/ssh.md
+    - Note: server/note.md
+  - Nginx:
+    - Overview: nginx.md
+    - Web Server: nginx/web_server.md
+    - Reverse Proxy: nginx/reverse_proxy.md
   - Git:
     - Overview: git.md
     - Git Internals: git/internals.md

@@ -4,6 +4,7 @@ This is our developer docs. Our docs includes:
 - [Agile](agile.md)
 - [Ubuntu](ubuntu.md)
 - [Server](server.md)
+- [Nginx](nginx.md)
 - [Git](git.md)
 - [Magento](magento.md)
 - [Docker](docker.md)
