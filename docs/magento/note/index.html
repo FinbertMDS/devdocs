@@ -1023,106 +1023,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
     <label class="md-nav__link" for="nav-10">
-      NodeJs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        NodeJs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nodejs/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nodejs/install/" title="Install" class="md-nav__link">
-      Install
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      ReactJs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        ReactJs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../reactjs/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../reactjs/tools/" title="Tools" class="md-nav__link">
-      Tools
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
       Design Pattern
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-10">
         Design Pattern
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1210,9 +1114,8 @@
 <li>
 <p>Work in site online</p>
 <ul>
-<li>
-<p>Permission: 
-<div class="codehilite"><pre><span></span>trước khi work em nên check mode
+<li>Permission: 
+    <div class="codehilite"><pre><span></span>trước khi work em nên check mode
 php bin/magento deploy:mode:show
 thường cài xong sẽ để default
 nên chuyển qua developer
@@ -1222,7 +1125,17 @@ vừa rồi site bị chuyển qua mode production
 nếu chuyển qua mà em chạy setup upgrade
 thì e p chạy thêm deploy content nữa
 site khách thì để bảo đảm về mặt security thì e chỉ cần dùng 755 thôi
-</pre></div></p>
+</pre></div></li>
+<li>Trước khi làm kiểm tra xem site của khách hàng có bị chết không? Sau khi mình cài, lỗi phát hiện là trước hay sau khi mình cài vào site khách.<ol>
+<li>Chạy các lệnh của Magento: 
+    <div class="codehilite"><pre><span></span>php bin/magento s:upgrade
+php bin/magento s:di:compile
+php bin/magento s:static-content:deploy
+php bin/magento indexer:reindex
+php bin/magento c:c
+php bin/magento deploy:mode:show
+</pre></div></li>
+</ol>
 </li>
 <li>
 <p>Config permission for folder and file in root magento dir</p>
