@@ -9,19 +9,28 @@
     
 2. Work in site online
     - Permission: 
-    ```text
-    trước khi work em nên check mode
-    php bin/magento deploy:mode:show
-    thường cài xong sẽ để default
-    nên chuyển qua developer
-    php bin/magento deploy:mode:set developer
-    để e sửa code em không phải chạy lệnh compile lại
-    vừa rồi site bị chuyển qua mode production
-    nếu chuyển qua mà em chạy setup upgrade
-    thì e p chạy thêm deploy content nữa
-    site khách thì để bảo đảm về mặt security thì e chỉ cần dùng 755 thôi
-    ```
-    
+        ```text
+        trước khi work em nên check mode
+        php bin/magento deploy:mode:show
+        thường cài xong sẽ để default
+        nên chuyển qua developer
+        php bin/magento deploy:mode:set developer
+        để e sửa code em không phải chạy lệnh compile lại
+        vừa rồi site bị chuyển qua mode production
+        nếu chuyển qua mà em chạy setup upgrade
+        thì e p chạy thêm deploy content nữa
+        site khách thì để bảo đảm về mặt security thì e chỉ cần dùng 755 thôi
+        ```
+    - Trước khi làm kiểm tra xem site của khách hàng có bị chết không? Sau khi mình cài, lỗi phát hiện là trước hay sau khi mình cài vào site khách.
+        1. Chạy các lệnh của Magento: 
+            ```bash
+            php bin/magento s:upgrade
+            php bin/magento s:di:compile
+            php bin/magento s:static-content:deploy
+            php bin/magento indexer:reindex
+            php bin/magento c:c
+            php bin/magento deploy:mode:show
+            ```
     - Config permission for folder and file in root magento dir
     
         (Faster)

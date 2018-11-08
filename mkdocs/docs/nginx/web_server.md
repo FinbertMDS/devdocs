@@ -5,7 +5,7 @@ This is our developer docs about Use Nginx to Web server
 1. Install Nginx
     ```bash
     sudo apt update
-    sudo apt install nginx
+    sudo apt install nginx -y
     ```
 2. Adjusting the Firewall
     ```bash
@@ -25,7 +25,7 @@ This is our developer docs about Use Nginx to Web server
 ## Setting Up Server Blocks
 1. Installing PHP and Configuring Nginx to Use the PHP Processor 
 ```bash
-sudo apt install php-fpm php-mysql
+sudo apt install php-fpm php-mysql -y
 ```
 2. Config Site available nginx: */etc/nginx/sites-available/nginx-server*
 ```markdown

@@ -13,7 +13,7 @@ This is our developer docs about [How to install Docker](https://docs.docker.com
         apt-transport-https \
         ca-certificates \
         curl \
-        software-properties-common
+        software-properties-common -y
     ```
 3. Add Docker’s official GPG key:
     ```bash
@@ -31,6 +31,11 @@ This is our developer docs about [How to install Docker](https://docs.docker.com
     sudo apt-get update
     ```
     ```bash
-    sudo apt-get install docker-ce
+    sudo apt-get install docker-ce -y
+    ```
+6. [Use Docker without Sudo](./note.md)
+    ```bash
+    sudo gpasswd -a $USER docker
+    newgrp docker
     ```
 

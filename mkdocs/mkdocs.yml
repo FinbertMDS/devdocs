@@ -1,7 +1,7 @@
 site_name: Developer Documentation
 theme:
   name: 'material'
-pages:
+nav:
   - index.md
   - Agile:
     - Overview: agile.md
@@ -61,12 +61,6 @@ pages:
     - Documents: jenkins/documents.md
     - Sample: jenkins/sample.md
     - Note: jenkins/note.md
-  - NodeJs:
-    - Overview: nodejs.md
-    - Install: nodejs/install.md
-  - ReactJs:
-    - Overview: reactjs.md
-    - Tools: reactjs/tools.md
   - Design Pattern:
     - Overview: design_pattern.md
     - Observer: design_pattern/observer.md
