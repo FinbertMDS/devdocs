@@ -11,11 +11,17 @@ sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx 
+sudo apt-get install python-certbot-nginx  -y
 ```
 ```bash
-sudo certbot -a dns-plugin -i nginx -d "*.example.com" -d example.com --server https://acme-v02.api.letsencrypt.org/directory
+sudo certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --agree-tos --manual --preferred-challenges dns -d 'finbert-test.ml,*.finbert-test.ml'
 ```
 ```bash
 sudo certbot renew --dry-run
 ```
+### Note
+- If after install, you still not access SSL, can you disable SSL on server. You can enable SSL server with command
+    ```bash
+    sudo ufw allow 'Nginx Full'
+    sudo ufw delete allow 'Nginx HTTP'
+    ```
