@@ -38,4 +38,9 @@ This is our developer docs about [How to install Docker](https://docs.docker.com
     sudo gpasswd -a $USER docker
     newgrp docker
     ```
-
+    
+## Install Docker compose in Ubuntu
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
