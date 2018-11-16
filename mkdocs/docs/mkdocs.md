@@ -5,17 +5,10 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
 ## Install
 ```bash
 sudo apt install python
-```
-```bash
-sudo apt install python-pip
-```
-```bash
+sudo apt install python-pip -y
 pip install --upgrade pip
-```
-```bash
+wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
-```
-```bash
 sudo pip install mkdocs
 ```
 ## Commands
