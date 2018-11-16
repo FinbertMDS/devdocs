@@ -5,8 +5,10 @@ This is our developer docs about [How to install Magento](https://devdocs.magent
 - Magento CE: http://pubfiles.nexcess.net/magento/ce-packages/
 - Magento EE: https://drive.google.com/drive/u/1/folders/0B4o2mdOYLZI6bVNETzU0M0RBdFU
  
-## Install Magento
-Install Apache2, Mysql on Ubuntu 16.04: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+## [Install Magento on Docker](./../docker/sample.md#magento-2)
+
+## Install Magento on Ubuntu 16.04
+[Install Apache2, Mysql on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04)
 
 - Install Lamp server: 
 ```bash
@@ -19,7 +21,6 @@ sudo apt-get install apache2
 ```
 - Adjust the Firewall to Allow Web Traffic:
 ```bash
-sudo ufw app list
 sudo ufw allow in "Apache Full"
 ```
 - Install MySQL:

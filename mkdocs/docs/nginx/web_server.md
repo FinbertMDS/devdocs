@@ -9,21 +9,12 @@ This is our developer docs about Use Nginx to Web server
     ```
 2. Adjusting the Firewall
     ```bash
-    sudo ufw allow 'Nginx HTTP'
+    sudo ufw enable
+    sudo ufw allow ssh
+    sudo ufw allow 22  
+    sudo ufw allow 'Nginx Full'
     ```
-    
-    - Note:
-        - Check status *ufw*
-            ```bash
-            sudo ufw status
-            ```
             
-            If Status is _inactive_ then [Enable Ufw](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04) and default SSH is disabled. You can [Allow SSH connection](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04). 
-            ```bash
-            sudo ufw enable
-            sudo ufw allow ssh
-            sudo ufw allow 22  
-            ```
 ## Setting Up Server Blocks
 1. Installing PHP and Configuring Nginx to Use the PHP Processor 
 ```bash
