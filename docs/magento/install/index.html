@@ -667,8 +667,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-magento" title="Install Magento" class="md-nav__link">
-    Install Magento
+  <a href="#install-magento-on-docker" title="Install Magento on Docker" class="md-nav__link">
+    Install Magento on Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-magento-on-ubuntu-1604" title="Install Magento on Ubuntu 16.04" class="md-nav__link">
+    Install Magento on Ubuntu 16.04
   </a>
   
 </li>
@@ -1191,8 +1198,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-magento" title="Install Magento" class="md-nav__link">
-    Install Magento
+  <a href="#install-magento-on-docker" title="Install Magento on Docker" class="md-nav__link">
+    Install Magento on Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-magento-on-ubuntu-1604" title="Install Magento on Ubuntu 16.04" class="md-nav__link">
+    Install Magento on Ubuntu 16.04
   </a>
   
 </li>
@@ -1275,8 +1289,9 @@
 <li>Magento CE: <a href="http://pubfiles.nexcess.net/magento/ce-packages/">http://pubfiles.nexcess.net/magento/ce-packages/</a></li>
 <li>Magento EE: <a href="https://drive.google.com/drive/u/1/folders/0B4o2mdOYLZI6bVNETzU0M0RBdFU">https://drive.google.com/drive/u/1/folders/0B4o2mdOYLZI6bVNETzU0M0RBdFU</a></li>
 </ul>
-<h2 id="install-magento">Install Magento<a class="headerlink" href="#install-magento" title="Permanent link">&para;</a></h2>
-<p>Install Apache2, Mysql on Ubuntu 16.04: <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04</a></p>
+<h2 id="install-magento-on-docker"><a href="../../docker/sample/#magento-2">Install Magento on Docker</a><a class="headerlink" href="#install-magento-on-docker" title="Permanent link">&para;</a></h2>
+<h2 id="install-magento-on-ubuntu-1604">Install Magento on Ubuntu 16.04<a class="headerlink" href="#install-magento-on-ubuntu-1604" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04">Install Apache2, Mysql on Ubuntu 16.04</a></p>
 <ul>
 <li>Install Lamp server: 
 <div class="codehilite"><pre><span></span>sudo apt-get install lamp-server^
@@ -1286,8 +1301,7 @@
 sudo apt-get install apache2
 </pre></div></li>
 <li>Adjust the Firewall to Allow Web Traffic:
-<div class="codehilite"><pre><span></span>sudo ufw app list
-sudo ufw allow in <span class="s2">&quot;Apache Full&quot;</span>
+<div class="codehilite"><pre><span></span>sudo ufw allow in <span class="s2">&quot;Apache Full&quot;</span>
 </pre></div></li>
 <li>Install MySQL:
 <div class="codehilite"><pre><span></span>sudo apt-get install mysql-server

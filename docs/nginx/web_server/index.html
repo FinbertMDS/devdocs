@@ -1168,21 +1168,13 @@
     <div class="codehilite"><pre><span></span>sudo apt update
 sudo apt install nginx -y
 </pre></div></li>
-<li>
-<p>Adjusting the Firewall
-    <div class="codehilite"><pre><span></span>sudo ufw allow <span class="s1">&#39;Nginx HTTP&#39;</span>
-</pre></div></p>
-<ul>
-<li>Note:<ul>
-<li>
-<p>Check status <em>ufw</em>
-    <div class="codehilite"><pre><span></span>sudo ufw status
-</pre></div></p>
-<p>If Status is <em>inactive</em> then <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04">Enable Ufw</a> and default SSH is disabled. You can <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04">Allow SSH connection</a>. 
-<div class="codehilite"><pre><span></span>sudo ufw <span class="nb">enable</span>
+<li>Adjusting the Firewall
+    <div class="codehilite"><pre><span></span>sudo ufw <span class="nb">enable</span>
 sudo ufw allow ssh
 sudo ufw allow <span class="m">22</span>  
-</pre></div></p>
+sudo ufw allow <span class="s1">&#39;Nginx Full&#39;</span>
+</pre></div></li>
+</ol>
 <h2 id="setting-up-server-blocks">Setting Up Server Blocks<a class="headerlink" href="#setting-up-server-blocks" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Installing PHP and Configuring Nginx to Use the PHP Processor 
@@ -1217,12 +1209,6 @@ sudo ufw allow <span class="m">22</span>
 <div class="codehilite"><pre><span></span>sudo nginx -t
 sudo systemctl reload nginx
 </pre></div></li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ol>
                 
                   
