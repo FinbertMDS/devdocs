@@ -8,8 +8,8 @@ sudo apt install python
 sudo apt install python-pip -y
 pip install --upgrade pip
 wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-sudo pip install mkdocs
+python get-pip.py
+pip install mkdocs
 ```
 ## Commands
 
