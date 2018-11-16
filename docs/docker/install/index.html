@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
     
     
       
@@ -882,6 +882,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-docker-compose-in-ubuntu" title="Install Docker compose in Ubuntu" class="md-nav__link">
+    Install Docker compose in Ubuntu
+  </a>
+  
+</li>
+      
       
       
       
@@ -1129,6 +1136,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-docker-compose-in-ubuntu" title="Install Docker compose in Ubuntu" class="md-nav__link">
+    Install Docker compose in Ubuntu
+  </a>
+  
+</li>
+      
       
       
       
@@ -1152,33 +1166,28 @@
 <ol>
 <li>Update the apt package index:
     <div class="codehilite"><pre><span></span>sudo apt-get update
-</pre></div></li>
-<li>Install packages to allow <code class="codehilite">apt</code> to use a repository over HTTPS:
-    <div class="codehilite"><pre><span></span>sudo apt-get install <span class="se">\</span>
+sudo apt-get install <span class="se">\</span>
     apt-transport-https <span class="se">\</span>
     ca-certificates <span class="se">\</span>
     curl <span class="se">\</span>
     software-properties-common -y
-</pre></div></li>
-<li>Add Docker’s official GPG key:
-    <div class="codehilite"><pre><span></span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -
-</pre></div></li>
-<li>Set up the stable repository:
-    <div class="codehilite"><pre><span></span>sudo add-apt-repository <span class="se">\</span>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo apt-key add -
+sudo add-apt-repository <span class="se">\</span>
    <span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span>
 <span class="s2">   </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> \</span>
 <span class="s2">   stable&quot;</span>
-</pre></div></li>
-<li>Install Docker CE
-    <div class="codehilite"><pre><span></span>sudo apt-get update
-</pre></div>
-    <div class="codehilite"><pre><span></span>sudo apt-get install docker-ce -y
+sudo apt-get update
+sudo apt-get install docker-ce -y
 </pre></div></li>
 <li><a href="../note/">Use Docker without Sudo</a>
     <div class="codehilite"><pre><span></span>sudo gpasswd -a <span class="nv">$USER</span> docker
 newgrp docker
 </pre></div></li>
 </ol>
+<h2 id="install-docker-compose-in-ubuntu">Install Docker compose in Ubuntu<a class="headerlink" href="#install-docker-compose-in-ubuntu" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>sudo curl -L <span class="s2">&quot;https://github.com/docker/compose/releases/download/1.23.1/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+</pre></div>
                 
                   
                 
@@ -1250,7 +1259,7 @@ newgrp docker
       
     </div>
     
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
