@@ -23,14 +23,38 @@
         ```
     - Trước khi làm kiểm tra xem site của khách hàng có bị chết không? Sau khi mình cài, lỗi phát hiện là trước hay sau khi mình cài vào site khách.
         1. Chạy các lệnh của Magento: 
-            ```bash
-            php bin/magento s:upgrade
-            php bin/magento s:di:compile
-            php bin/magento s:static-content:deploy
-            php bin/magento indexer:reindex
-            php bin/magento c:c
-            php bin/magento deploy:mode:show
-            ```
+        ```bash
+        # remove code of Old Magestore Extension
+        rm -rf app/code/Magestore/*
+        # upload code of new Magestore Extension
+        ```
+        ```bash
+        # view deploy mode
+        php bin/magento deploy:mode:show
+        ```
+        ```bash
+        # set deploy mode is developer and set permission before process
+        php bin/magento deploy:mode:set developer
+        find app/code lib var pub/static pub/media vendor -type d -exec chmod 775 {} \;
+        find app/code lib var pub/static pub/media vendor -type f -exec chmod 664 {} \;
+        find app/code lib var pub/static pub/media vendor app/etc \( -type d -or -type f \) -exec chmod g+w {} + && chmod o+rwx app/etc/env.php
+        ```
+        ```bash
+        # process implement, upload my extension
+        php bin/magento s:upgrade
+        php bin/magento s:di:compile
+        php bin/magento s:static-content:deploy
+        php bin/magento indexer:reindex
+        php bin/magento c:c
+        ```
+        ```bash
+        # set back deploy mode production and set back permission
+        php bin/magento deploy:mode:set production --skip-compilation
+        php bin/magento s:static-content:deploy
+        find app/code lib var pub/static pub/media vendor -type d -exec chmod 755 {} \;
+        find app/code lib var pub/static pub/media vendor -type f -exec chmod 644 {} \;
+        find app/code lib pub/static app/etc var/generation var/di var/view_preprocessed vendor \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php 
+        ```
     - Config permission for folder and file in root magento dir
     
         (Faster)
