@@ -3,7 +3,6 @@ This is our developer docs about [How to install Magento](https://devdocs.magent
 
 ## Package
 - Magento CE: http://pubfiles.nexcess.net/magento/ce-packages/
-- Magento EE: https://drive.google.com/drive/u/1/folders/0B4o2mdOYLZI6bVNETzU0M0RBdFU
  
 ## [Install Magento on Docker](./../docker/sample.md#magento-2)
 
