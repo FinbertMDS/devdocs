@@ -1128,12 +1128,32 @@ site khách thì để bảo đảm về mặt security thì e chỉ cần dùng
 </pre></div></li>
 <li>Trước khi làm kiểm tra xem site của khách hàng có bị chết không? Sau khi mình cài, lỗi phát hiện là trước hay sau khi mình cài vào site khách.<ol>
 <li>Chạy các lệnh của Magento: 
-    <div class="codehilite"><pre><span></span>php bin/magento s:upgrade
+<div class="codehilite"><pre><span></span><span class="c1"># remove code of Old Magestore Extension</span>
+rm -rf app/code/Magestore/*
+<span class="c1"># upload code of new Magestore Extension</span>
+</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># view deploy mode</span>
+php bin/magento deploy:mode:show
+</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># set deploy mode is developer and set permission before process</span>
+php bin/magento deploy:mode:set developer
+find app/code lib var pub/static pub/media vendor -type d -exec chmod <span class="m">775</span> <span class="o">{}</span> <span class="se">\;</span>
+find app/code lib var pub/static pub/media vendor -type f -exec chmod <span class="m">664</span> <span class="o">{}</span> <span class="se">\;</span>
+find app/code lib var pub/static pub/media vendor app/etc <span class="se">\(</span> -type d -or -type f <span class="se">\)</span> -exec chmod g+w <span class="o">{}</span> + <span class="o">&amp;&amp;</span> chmod o+rwx app/etc/env.php
+</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># process implement, upload my extension</span>
+php bin/magento s:upgrade
 php bin/magento s:di:compile
 php bin/magento s:static-content:deploy
 php bin/magento indexer:reindex
 php bin/magento c:c
-php bin/magento deploy:mode:show
+</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># set back deploy mode production and set back permission</span>
+php bin/magento deploy:mode:set production --skip-compilation
+php bin/magento s:static-content:deploy
+find app/code lib var pub/static pub/media vendor -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> <span class="se">\;</span>
+find app/code lib var pub/static pub/media vendor -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> <span class="se">\;</span>
+find app/code lib pub/static app/etc var/generation var/di var/view_preprocessed vendor <span class="se">\(</span> -type d -or -type f <span class="se">\)</span> -exec chmod g-w <span class="o">{}</span> + <span class="o">&amp;&amp;</span> chmod o-rwx app/etc/env.php 
 </pre></div></li>
 </ol>
 </li>
