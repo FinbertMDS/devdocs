@@ -16,3 +16,17 @@ This is our developer docs about [How to Set up SSH keys](https://www.digitaloce
     sudo ufw allow ssh
     sudo ufw allow 22
     ```
+- With Digital Ocean, copy the Public key default is cannot. If you want copy the public key to server, you must [do it](https://www.digitalocean.com/community/questions/ssh-copy-id-not-working-permission-denied-publickey)
+    ```text
+    Log in as root
+    Edit ssh config: 
+    sudo nano /etc/ssh/sshd_config
+    
+    Change this line:
+    PasswordAuthentication no
+    to
+    PasswordAuthentication yes
+    
+    Restart daemon: 
+    sudo systemctl restart sshd
+    ```
