@@ -43,7 +43,6 @@
         # process implement, upload my extension
         php bin/magento s:upgrade
         php bin/magento s:di:compile
-        php bin/magento s:static-content:deploy
         php bin/magento indexer:reindex
         php bin/magento c:c
         ```
@@ -53,7 +52,7 @@
         php bin/magento s:static-content:deploy
         find app/code lib var pub/static pub/media vendor -type d -exec chmod 755 {} \;
         find app/code lib var pub/static pub/media vendor -type f -exec chmod 644 {} \;
-        find app/code lib pub/static app/etc var/generation var/di var/view_preprocessed vendor \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php 
+        find app/code lib var pub/static pub/media vendor app/etc \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php 
         ```
     - Config permission for folder and file in root magento dir
     
