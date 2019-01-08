@@ -73,3 +73,13 @@
     var_dump($item->debug());
     die();
     ```
+    
+4. Reload config php.ini by some ways:
+    1. Reload server: 
+        ```bash
+        sudo service apache2 restart
+        ```
+    2. Reload Php
+        ```bash
+        apachectl graceful
+        ```
