@@ -45,3 +45,4 @@ This is our developer docs about Magento PWA Studio. Our docs includes:
     /sbin/mkswap /var/swap.1
     /sbin/swapon /var/swap.1
     ```
+2. [Document sharing Magento 2.3 - PWA Studio](https://docs.google.com/presentation/d/1nYpelociXXah3v3Ko0o8YnuWxMENDRvh9ztfSUOOrrw/edit?usp=sharing)

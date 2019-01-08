@@ -46,6 +46,7 @@ nav:
         - Create a Test - Practice: magento/test/functional/create_test_practice.md
         - Functional Testing Framework Entities: magento/test/functional/entities.md
     - Install extension Magento by composer: magento/composer.md
+    - Magento 2.3 - PWA Studio: magento/pwa_studio.md
     - Note: magento/note.md
   - Docker:
     - Overview: docker.md
