@@ -1144,7 +1144,6 @@ find app/code lib var pub/static pub/media vendor app/etc <span class="se">\(</s
 <div class="codehilite"><pre><span></span><span class="c1"># process implement, upload my extension</span>
 php bin/magento s:upgrade
 php bin/magento s:di:compile
-php bin/magento s:static-content:deploy
 php bin/magento indexer:reindex
 php bin/magento c:c
 </pre></div>
@@ -1153,7 +1152,7 @@ php bin/magento deploy:mode:set production --skip-compilation
 php bin/magento s:static-content:deploy
 find app/code lib var pub/static pub/media vendor -type d -exec chmod <span class="m">755</span> <span class="o">{}</span> <span class="se">\;</span>
 find app/code lib var pub/static pub/media vendor -type f -exec chmod <span class="m">644</span> <span class="o">{}</span> <span class="se">\;</span>
-find app/code lib pub/static app/etc var/generation var/di var/view_preprocessed vendor <span class="se">\(</span> -type d -or -type f <span class="se">\)</span> -exec chmod g-w <span class="o">{}</span> + <span class="o">&amp;&amp;</span> chmod o-rwx app/etc/env.php 
+find app/code lib var pub/static pub/media vendor app/etc <span class="se">\(</span> -type d -or -type f <span class="se">\)</span> -exec chmod g-w <span class="o">{}</span> + <span class="o">&amp;&amp;</span> chmod o-rwx app/etc/env.php 
 </pre></div></li>
 </ol>
 </li>
