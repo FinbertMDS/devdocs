@@ -25,14 +25,17 @@ This is our developer docs about Magento PWA Studio. Our docs includes:
     1. [multispinner](https://www.npmjs.com/package/multispinner)
     
         node-multispinner is a Node.js module for managing multiple progress indicators (spinners) in CLI apps.
+        
     2. [chokidar](https://www.npmjs.com/package/chokidar)
         
         Listen change in every file to restart Webpack Dev Server.
+        
     3. [portscanner](https://www.npmjs.com/package/portscanner)
     
         Portscanner can check a port, or range of ports, for 'open' or 'closed' statuses.
         
         Random a port when start Webpack Dev Server.
+        
 2. PWA Buildpack
 3. Peregrine
 4. UPWARD

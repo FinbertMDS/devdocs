@@ -82,3 +82,5 @@
         ```bash
         apachectl graceful
         ```
+        
+5. [Ui Component for tags input](https://magento.stackexchange.com/a/227110)
