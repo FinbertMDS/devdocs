@@ -35,6 +35,10 @@ nav:
   - Magento:
     - Overview: magento.md
     - Installation: magento/install.md
+    - Framework:
+        - Overview: magento/framework.md
+        - Prepare: magento/framework/prepare.md
+        - Build: magento/framework/build.md
     - Command line: magento/command.md
     - MFTF:
       - Overview: magento/test.md
@@ -47,6 +51,9 @@ nav:
         - Functional Testing Framework Entities: magento/test/functional/entities.md
     - Install extension Magento by composer: magento/composer.md
     - Magento 2.3 - PWA Studio: magento/pwa_studio.md
+    - Sample:
+      - Overview: magento/sample.md
+      - Magento 2 - Tags Input: magento/sample/tags_input_magento2.md
     - Note: magento/note.md
   - Docker:
     - Overview: docker.md

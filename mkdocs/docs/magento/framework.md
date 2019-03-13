@@ -13,9 +13,9 @@ The Magento application is made up of Modules, Themes, and Language Packages:
 3. [Language packages](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/translations/xlate.html) assist in internationalization(i18n) and localization by providing translations for strings that display on the storefront and Admin.
 
 
-### [Prepare Modules](farmework/module.md)
+### [Prepare Modules](framework/prepare.md)
       
-### Build
+### [Build](framework/build.md)
         
 
 

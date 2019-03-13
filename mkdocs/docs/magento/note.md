@@ -84,3 +84,9 @@
         ```
         
 5. [Ui Component for tags input](https://magento.stackexchange.com/a/227110)
+    
+    Detail about it, you can see [here](./sample/tags_input_magento2.md)
+
+        
+
+        

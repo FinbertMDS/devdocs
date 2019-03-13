@@ -2,6 +2,9 @@
 This is our developer docs about Magento. Our docs includes:
 
 - [Install](magento/install.md)
+- [Framework](magento/framework.md)
+    - [Module](magento/framework/prepare.md)
+    - [Build](magento/framework/build.md)
 - [Command line](magento/command.md)
 - [Magento Functional Testing Framework](magento/test.md)
     - [Functional Testing](magento/test/functional/index.md)
