@@ -92,3 +92,6 @@ Magento uses Zend_Cache to interact with the cache storage. However, Magento als
     php bin/magento cache:clean
     ```
      
+     When declare cache id, you must follow some note:
+        1. Cache Id must be exclusively (only)
+        2. Cache Id should contain all parameters which can affect to data cached.

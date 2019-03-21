@@ -41,6 +41,7 @@ nav:
         - Build: magento/framework/build.md
         - Partial caching: magento/framework/partial_caching.md
         - Full page caching: magento/framework/page_caching.md
+        - Note: magento/framework/note.md
     - Command line: magento/command.md
     - MFTF:
       - Overview: magento/test.md
@@ -56,6 +57,7 @@ nav:
     - Sample:
       - Overview: magento/sample.md
       - Magento 2 - Tags Input: magento/sample/tags_input_magento2.md
+    - Preparation notes for Magento 2 Certified Professional Developer exam: magento/magento2_exam_notes.md
     - Note: magento/note.md
   - Docker:
     - Overview: docker.md

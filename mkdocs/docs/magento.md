@@ -12,4 +12,5 @@ This is our developer docs about Magento. Our docs includes:
     - [Functional Testing](magento/test/functional/index.md)
 - [Install extension Magento by composer](magento/composer.md)
 - [Magento 2.3 - PWA Studio](magento/pwa_studio.md)
+- [Preparation notes for Magento 2 Certified Professional Developer exam](magento/magento2_exam_notes.md)
 - [Note about Magento](magento/note.md)
