@@ -112,13 +112,16 @@
         In mode Compiled, `$diConfig = $env->getDiConfig();` will get config from file php after compiled. Else in mode Developer, `$configData = $this->_loadPrimaryConfig($this->directoryList, $this->driverPool, $argumentMapper, $appMode);` will help magento read config from file xml `app/etc/di.xml`.
         
         At line `$this->factory = $env->getObjectManagerFactory($arguments);`, Magento init factory from `$env` in class `AbstractEnvironment.php`. This factory used to init `$objectManager` and this object be set to this factory `$this->factory->setObjectManager($objectManager);`
+        
     4. at `index.php`
         ```php
         $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
 		$bootstrap->run($app);
         ```
         In `Bootstrap.php`, object manager used to create application.
+        
 - Magento initiation ObjectManager follow design pattern Singleton
+
 - Use object manger to create and retrieve object at anywhere in Magento. 
 	```php
 	$objectClassCreateNew = \Magento\Framework\App\ObjectManager::getInstance()
@@ -146,6 +149,45 @@
         }
     }
 	```
+- Detail more than how Object manager create and retrieve object, how inject interface to `__construct` of one class but Magento still inject extract object implement this interface.
+	
+	1. When call `\Magento\Framework\App\ObjectManager::getInstance()->create($typeClassName)`, Magento create object (view file `vendor/magento/framework/ObjectManager/ObjectManager.php`)
+	```php
+	public function create($type, array $arguments = [])
+    {
+        return $this->_factory->create($this->_config->getPreference($type), $arguments);
+    }
+	```
+	`$this->_factory` created when Object manager created and it is `new Developer($this);` created in file `App/EnvironmentFactory.php`
+	2. in file `vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php`
+	```php
+	public function create($requestedType, array $arguments = [])
+    {
+        $type = $this->config->getInstanceType($requestedType);
+        $parameters = $this->definitions->getParameters($type);
+        if ($parameters == null) {
+            return new $type();
+        }
+        if (isset($this->creationStack[$requestedType])) {
+            $lastFound = end($this->creationStack);
+            $this->creationStack = [];
+            throw new \LogicException("Circular dependency: {$requestedType} depends on {$lastFound} and vice versa.");
+        }
+        $this->creationStack[$requestedType] = $requestedType;
+        try {
+            $args = $this->_resolveArguments($requestedType, $parameters, $arguments);
+            unset($this->creationStack[$requestedType]);
+        } catch (\Exception $e) {
+            unset($this->creationStack[$requestedType]);
+            throw $e;
+        }
+
+        return $this->createObject($type, $args);
+    }
+	```
+	`$type` is instance set up in file `di.xml`. `$parameters` is list of method parameters of `$type`. `$args` is recursive to resolve constructor arguments.
+	
+		![Magento_ObjectManager_CreateObject.png](../libs/Magento_ObjectManager_CreateObject.png)
 ## Di.xml
 ## Magento 2 request flow overview
 1. Some documents: 
