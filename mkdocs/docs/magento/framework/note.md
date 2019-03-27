@@ -1,4 +1,5 @@
 # More information about Magento Framework
+
 ## Object Manager
 - [Object Manager Devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/object-manager.html)
 - Object manager used to create new object instance and retrieve cached object instance all object in Magento at anywhere. View class `vendor/magento/framework/ObjectManagerInterface.php`.
@@ -188,8 +189,15 @@
 	`$type` is instance set up in file `di.xml`. `$parameters` is list of method parameters of `$type`. `$args` is recursive to resolve constructor arguments.
 	
 		![Magento_ObjectManager_CreateObject.png](../libs/Magento_ObjectManager_CreateObject.png)
-## Di.xml
+		
 ## Magento 2 request flow overview
 1. Some documents: 
     - https://www.atwix.com/magento-2/request-flow-overview/
     - https://nathanmcbride.io/magento2/Request-Flow-In-Magento-2
+    
+## CLI Command
+- [Add CLI Command devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/cli-cmds/cli-add.html)
+
+## Events and observers
+- [Events and observers](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/events-and-observers.html)
+- Event and observers in Magento is synchronize. When you call dispatch event with a object, magento will read all observers in all file `events.xml`, call observers listen of this event and execute function `execute` in observers. 

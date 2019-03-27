@@ -20,6 +20,8 @@ The Magento application is made up of Modules, Themes, and Language Packages:
 ### [Partial caching](framework/partial_caching.md)
 
 ### [Full page caching](framework/page_caching.md)
+
+### [Module development](framework/module_development.md)
         
 
 

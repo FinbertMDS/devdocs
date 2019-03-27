@@ -41,6 +41,7 @@ nav:
         - Build: magento/framework/build.md
         - Partial caching: magento/framework/partial_caching.md
         - Full page caching: magento/framework/page_caching.md
+        - Module development: magento/framework/module_development.md
         - Note: magento/framework/note.md
     - Command line: magento/command.md
     - MFTF:
