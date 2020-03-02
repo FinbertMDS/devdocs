@@ -1,4 +1,4 @@
-# Magestore DevDocs Source
+# Finbert DevDocs Source
 This repo is source code of Developer Guide
 
 ## Write the docs
