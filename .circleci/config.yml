@@ -42,7 +42,7 @@ workflows:
   version: 2
   Build and Test:
     jobs:
-      build:
-        branches:
-          only:
-            - develop
+      - build:
+          filters:
+            branches:
+              only: develop
