@@ -1,25 +1,18 @@
-# Docker for Dev docs
+# devdocs
 Docker image for Dev docs written by mkdocs.
 
-## Build images
+## Run in local
 ```bash
-sudo docker-compose build
+docker-compose up -d
 ```
 
-## Run service
-```bash
-sudo docker-compose up -d
-```
+- Dev docs site after run at local, you can view at [here](http://127.0.0.1:8000)
 
-## Stop service
-```bash
-sudo docker-compose down
-```
+## [Github page](https://finbertmds.github.io/devdocs/) 
 
-## SSH
-```bash
-docker exec -u {username} -it {container_name} /bin/bash
-```
+## Note
+1. In this project, use 2 CI: Jenkins and CircleCI. You can see all scripts trigger Jenkins.
 
-### Dev docs site
-[http://127.0.0.1:8000](http://127.0.0.1:8000)
+    - Use Jenkins, you need install at local server
+    - New version of devdocs, auto trigger build from branch develop to branch master, then you can access to view [Github page](https://finbertmds.github.io/devdocs/) 
+2. This project use Docker to run in local
