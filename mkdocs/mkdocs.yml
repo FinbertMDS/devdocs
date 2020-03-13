@@ -8,58 +8,32 @@ nav:
     - Principle: agile/principle.md
     - Planning: agile/planning.md
     - Success Story: agile/success_story.md
-  - Ubuntu:
-    - Overview: ubuntu.md
-    - Command line: ubuntu/command.md
-    - Bash scripts: ubuntu/bash.md
-    - SSH: ubuntu/ssh.md
-    - SSL:
-      - Overview: ubuntu/ssl.md
-      - Create SSL: ubuntu/ssl/ssl_create.md
-      - SSL for Magento site: ubuntu/ssl/ssl_magento_setup.md
-    - Note: ubuntu/note.md
-  - Server:
-    - Overview: server.md
-    - Domain: server/domain.md
-    - SSL: server/ssl.md
-    - SSH: server/ssh.md
-    - Note: server/note.md
-  - Nginx:
-    - Overview: nginx.md
-    - Web Server: nginx/web_server.md
-    - Reverse Proxy: nginx/reverse_proxy.md
-  - Git:
-    - Overview: git.md
-    - Git Internals: git/internals.md
-    - Note: git/note.md
-  - Magento:
-    - Overview: magento.md
-    - Installation: magento/install.md
-    - Framework:
-        - Overview: magento/framework.md
-        - Prepare: magento/framework/prepare.md
-        - Build: magento/framework/build.md
-        - Partial caching: magento/framework/partial_caching.md
-        - Full page caching: magento/framework/page_caching.md
-        - Module development: magento/framework/module_development.md
-        - Note: magento/framework/note.md
-    - Command line: magento/command.md
-    - MFTF:
-      - Overview: magento/test.md
-      - Functional Testing:
-        - Overview: magento/test/functional/index.md
-        - Installation: magento/test/functional/install.md
-        - Test Run: magento/test/functional/run.md
-        - Create a Test - Theory: magento/test/functional/create_test_theory.md
-        - Create a Test - Practice: magento/test/functional/create_test_practice.md
-        - Functional Testing Framework Entities: magento/test/functional/entities.md
-    - Install extension Magento by composer: magento/composer.md
-    - Magento 2.3 - PWA Studio: magento/pwa_studio.md
-    - Sample:
-      - Overview: magento/sample.md
-      - Magento 2 - Tags Input: magento/sample/tags_input_magento2.md
-    - Preparation notes for Magento 2 Certified Professional Developer exam: magento/magento2_exam_notes.md
-    - Note: magento/note.md
+  - Operating System:
+    - Ubuntu:
+      - Overview: ubuntu.md
+      - Command line: ubuntu/command.md
+      - Bash scripts: ubuntu/bash.md
+      - SSH: ubuntu/ssh.md
+      - SSL:
+        - Overview: ubuntu/ssl.md
+        - Create SSL: ubuntu/ssl/ssl_create.md
+        - SSL for Magento site: ubuntu/ssl/ssl_magento_setup.md
+      - Note: ubuntu/note.md
+    - Server:
+      - Overview: server.md
+      - Domain: server/domain.md
+      - SSL: server/ssl.md
+      - SSH: server/ssh.md
+      - Note: server/note.md
+  - Tools:
+    - Nginx:
+      - Overview: nginx.md
+      - Web Server: nginx/web_server.md
+      - Reverse Proxy: nginx/reverse_proxy.md
+    - Git:
+      - Overview: git.md
+      - Git Internals: git/internals.md
+      - Note: git/note.md
   - Docker:
     - Overview: docker.md
     - Install: docker/install.md
@@ -68,15 +42,64 @@ nav:
     - Sample: docker/sample.md
     - Documents: docker/documents.md
     - Note: docker/note.md
-  - Jenkins:
-    - Overview: jenkins.md
-    - Install: jenkins/install.md
-    - Documents: jenkins/documents.md
-    - Sample: jenkins/sample.md
-    - Note: jenkins/note.md
-  - Design Pattern:
+  - DevOps:
+    - CI-CD:
+      - Jenkins:
+        - Overview: jenkins.md
+        - Install: jenkins/install.md
+        - Documents: jenkins/documents.md
+        - Sample: jenkins/sample.md
+        - Note: jenkins/note.md
+  - Design Patterns:
     - Overview: design_pattern.md
     - Observer: design_pattern/observer.md
+  - Microservices:
+    - Overview: microservices.md
+    - Documents: microservices/documents.md
+    - Sample: microservices/sample.md
+    - Note: microservices/note.md
+  - Programming languages:
+    - C#:
+      - Overview: cplus.md
+    - Java:
+      - Overview: java.md
+    - PHP:
+      - Overview: php.md
+    - React:
+      - Overview: reactjs.md
+    - React Native:
+      - Overview: react_native.md
+      - Note: react_native/note.md
+    - Python:
+      - Overview: python.md
+  - Frameworks:
+    - Magento:
+      - Overview: magento.md
+      - Installation: magento/install.md
+      - Framework:
+          - Overview: magento/framework.md
+          - Prepare: magento/framework/prepare.md
+          - Build: magento/framework/build.md
+          - Partial caching: magento/framework/partial_caching.md
+          - Full page caching: magento/framework/page_caching.md
+          - Module development: magento/framework/module_development.md
+          - Note: magento/framework/note.md
+      - Command line: magento/command.md
+      - MFTF:
+        - Overview: magento/test.md
+        - Functional Testing:
+          - Overview: magento/test/functional/index.md
+          - Installation: magento/test/functional/install.md
+          - Test Run: magento/test/functional/run.md
+          - Create a Test - Theory: magento/test/functional/create_test_theory.md
+          - Create a Test - Practice: magento/test/functional/create_test_practice.md
+          - Functional Testing Framework Entities: magento/test/functional/entities.md
+      - Install extension Magento by composer: magento/composer.md
+      - Magento 2.3 - PWA Studio: magento/pwa_studio.md
+      - Sample:
+        - Magento 2 - Tags Input: magento/sample/tags_input_magento2.md
+      - Preparation notes for Magento 2 Certified Professional Developer exam: magento/magento2_exam_notes.md
+      - Note: magento/note.md
   - Mkdocs: mkdocs.md
 
 markdown_extensions:

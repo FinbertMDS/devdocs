@@ -2,15 +2,9 @@ version: '3'
 
 services:
   mkdocs:
-    build: ./mkdocs
     container_name: mkdocs
-    image: devdocs/mkdocs
+    image: squidfunk/mkdocs-material
     ports:
       - 8000:8000
     volumes:
-      - ./mkdocs:/workdir/mkdocs
-    working_dir: /workdir/mkdocs
-    networks:
-      - webnet
-networks:
-  webnet:
+      - ./mkdocs:/docs

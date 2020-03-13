@@ -1,0 +1,45 @@
+version: 2 # use CircleCI 2.0
+jobs:
+  build:
+    docker:
+      - image: python:3.7
+
+    steps:
+      - checkout # special step to check out source code to working directory 
+
+      - run:
+          name: Set environment variable GIT_COMMIT_DESC
+          command: |
+            echo 'export GIT_COMMIT_DESC=$(git log -n 1 ${CIRCLE_SHA1} --pretty=format:%s)' >> $BASH_ENV
+            source $BASH_ENV
+
+      - run:
+          name: Install dependencies Mkdocs
+          command: |
+            sh ./circleci/scripts/install_lib.sh
+
+      - run:
+          name: Build docs
+          command: |
+            sh ./circleci/scripts/build.sh
+
+      - run:
+          name: Trigger project deployment
+          command: |
+            git clone --depth 1 https://${GITHUB_PERSONAL_TOKEN}@github.com/FinbertMDS/devdocs.git
+            rm -rf devdocs/docs/*
+            cp -r docs/* devdocs/docs
+            cd devdocs
+            git add -A
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "ngovanhuy.cntt2@gmail.com"
+            git config user.name "Deployment Bot"
+            git commit --allow-empty -m "${GIT_COMMIT_DESC}"
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/FinbertMDS/devdocs.git master
+
+workflows:
+  version: 2
+  Build and Test:
+    jobs:
+      - build

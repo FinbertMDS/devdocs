@@ -9,3 +9,4 @@ This is our developer docs about Some note about React native
 
     - All source, you can find at [here](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/react_native/public)
 
+2. [Putting native in React Native on Android](https://brightinventions.pl/blog/write-native-in-react-native/)
