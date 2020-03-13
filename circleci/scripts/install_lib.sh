@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pip install --upgrade pip
-pip install mkdocs
+sudo pip install --upgrade pip
+sudo pip install mkdocs
 cd mkdocs
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
