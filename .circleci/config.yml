@@ -2,7 +2,7 @@ version: 2 # use CircleCI 2.0
 jobs:
   build:
     docker:
-      - image: python:3.7
+      - image: circleci/python:3.6.2-jessie
 
     steps:
       - checkout # special step to check out source code to working directory 
