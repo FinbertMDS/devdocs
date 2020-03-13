@@ -1,6 +1,10 @@
 version: 2 # use CircleCI 2.0
 jobs:
   build:
+    branches:
+      only:
+        - develop
+
     docker:
       - image: circleci/python:3.6.2-jessie
 
