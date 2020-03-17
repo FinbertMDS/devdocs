@@ -3,7 +3,7 @@ Docker image for Dev docs written by mkdocs.
 
 ## Run in local
 ```bash
-docker-compose up -d
+docker-compose up
 ```
 
 - Dev docs site after run at local, you can view at [here](http://127.0.0.1:8000)

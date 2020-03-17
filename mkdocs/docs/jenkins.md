@@ -1,6 +1,6 @@
 # Overview
 
-This is our developer docs about Jenkins. Our docs inclues:
+This is our developer docs about Jenkins. Our docs includes:
 
 - [Install](jenkins/install.md)
 - [Documents](jenkins/documents.md)

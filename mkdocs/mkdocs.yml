@@ -4,38 +4,38 @@ theme:
 nav:
   - index.md
   - Agile:
-    - Overview: agile.md
+    - agile.md
     - Principle: agile/principle.md
     - Planning: agile/planning.md
     - Success Story: agile/success_story.md
   - Operating System:
     - Ubuntu:
-      - Overview: ubuntu.md
+      - ubuntu.md
       - Command line: ubuntu/command.md
       - Bash scripts: ubuntu/bash.md
       - SSH: ubuntu/ssh.md
       - SSL:
-        - Overview: ubuntu/ssl.md
+        - ubuntu/ssl.md
         - Create SSL: ubuntu/ssl/ssl_create.md
         - SSL for Magento site: ubuntu/ssl/ssl_magento_setup.md
       - Note: ubuntu/note.md
     - Server:
-      - Overview: server.md
+      - server.md
       - Domain: server/domain.md
       - SSL: server/ssl.md
       - SSH: server/ssh.md
       - Note: server/note.md
   - Tools:
     - Nginx:
-      - Overview: nginx.md
+      - nginx.md
       - Web Server: nginx/web_server.md
       - Reverse Proxy: nginx/reverse_proxy.md
     - Git:
-      - Overview: git.md
+      - git.md
       - Git Internals: git/internals.md
       - Note: git/note.md
   - Docker:
-    - Overview: docker.md
+    - docker.md
     - Install: docker/install.md
     - Get started: docker/get_started.md
     - Develop with Docker: docker/develop.md
@@ -44,40 +44,45 @@ nav:
     - Note: docker/note.md
   - DevOps:
     - CI-CD:
+      - ci_cd.md
       - Jenkins:
-        - Overview: jenkins.md
+        - jenkins.md
         - Install: jenkins/install.md
         - Documents: jenkins/documents.md
         - Sample: jenkins/sample.md
         - Note: jenkins/note.md
+      - CircleCI:
+        - circleci.md
+        - Note: circleci/note.md
   - Design Patterns:
-    - Overview: design_pattern.md
+    - design_pattern.md
     - Observer: design_pattern/observer.md
   - Microservices:
-    - Overview: microservices.md
+    - microservices.md
     - Documents: microservices/documents.md
     - Sample: microservices/sample.md
     - Note: microservices/note.md
   - Programming languages:
+    - programming_language.md
     - C#:
-      - Overview: cplus.md
+      - cplus.md
     - Java:
-      - Overview: java.md
+      - java.md
     - PHP:
-      - Overview: php.md
+      - php.md
     - React:
-      - Overview: reactjs.md
+      - reactjs.md
     - React Native:
-      - Overview: react_native.md
+      - react_native.md
       - Note: react_native/note.md
     - Python:
-      - Overview: python.md
+      - python.md
   - Frameworks:
     - Magento:
-      - Overview: magento.md
+      - magento.md
       - Installation: magento/install.md
       - Framework:
-          - Overview: magento/framework.md
+          - magento/framework.md
           - Prepare: magento/framework/prepare.md
           - Build: magento/framework/build.md
           - Partial caching: magento/framework/partial_caching.md
@@ -86,9 +91,9 @@ nav:
           - Note: magento/framework/note.md
       - Command line: magento/command.md
       - MFTF:
-        - Overview: magento/test.md
+        - magento/test.md
         - Functional Testing:
-          - Overview: magento/test/functional/index.md
+          - magento/test/functional/index.md
           - Installation: magento/test/functional/install.md
           - Test Run: magento/test/functional/run.md
           - Create a Test - Theory: magento/test/functional/create_test_theory.md
