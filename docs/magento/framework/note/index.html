@@ -1,0 +1,2095 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Note - Developer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#more-information-about-magento-framework" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Developer Documentation" aria-label="Developer Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Developer Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Note
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Developer Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Developer Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Agile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Agile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../agile/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../agile/principle/" title="Principle" class="md-nav__link">
+      Principle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../agile/planning/" title="Planning" class="md-nav__link">
+      Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../agile/success_story/" title="Success Story" class="md-nav__link">
+      Success Story
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Operating System
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Operating System
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Ubuntu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Ubuntu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/command/" title="Command line" class="md-nav__link">
+      Command line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/bash/" title="Bash scripts" class="md-nav__link">
+      Bash scripts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/ssh/" title="SSH" class="md-nav__link">
+      SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-5" type="checkbox" id="nav-3-1-5">
+    
+    <label class="md-nav__link" for="nav-3-1-5">
+      SSL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-5">
+        SSL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/ssl/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/ssl/ssl_create/" title="Create SSL" class="md-nav__link">
+      Create SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/ssl/ssl_magento_setup/" title="SSL for Magento site" class="md-nav__link">
+      SSL for Magento site
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ubuntu/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Server
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Server
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../server/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../server/domain/" title="Domain" class="md-nav__link">
+      Domain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../server/ssl/" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../server/ssh/" title="SSH" class="md-nav__link">
+      SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../server/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Nginx
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Nginx
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../nginx/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../nginx/web_server/" title="Web Server" class="md-nav__link">
+      Web Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../nginx/reverse_proxy/" title="Reverse Proxy" class="md-nav__link">
+      Reverse Proxy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../git/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../git/internals/" title="Git Internals" class="md-nav__link">
+      Git Internals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../git/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/install/" title="Install" class="md-nav__link">
+      Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/get_started/" title="Get started" class="md-nav__link">
+      Get started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/develop/" title="Develop with Docker" class="md-nav__link">
+      Develop with Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/sample/" title="Sample" class="md-nav__link">
+      Sample
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/documents/" title="Documents" class="md-nav__link">
+      Documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../docker/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      CI-CD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        CI-CD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1">
+    
+    <label class="md-nav__link" for="nav-6-1-1">
+      Jenkins
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-1">
+        Jenkins
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jenkins/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jenkins/install/" title="Install" class="md-nav__link">
+      Install
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jenkins/documents/" title="Documents" class="md-nav__link">
+      Documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jenkins/sample/" title="Sample" class="md-nav__link">
+      Sample
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../jenkins/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Design Patterns
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Design Patterns
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design_pattern/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../design_pattern/observer/" title="Observer" class="md-nav__link">
+      Observer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Microservices
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Microservices
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../microservices/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../microservices/documents/" title="Documents" class="md-nav__link">
+      Documents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../microservices/sample/" title="Sample" class="md-nav__link">
+      Sample
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../microservices/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Programming languages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Programming languages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
+    
+    <label class="md-nav__link" for="nav-9-1">
+      C#
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-1">
+        C#
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cplus/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
+    
+    <label class="md-nav__link" for="nav-9-2">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-2">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../java/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3">
+    
+    <label class="md-nav__link" for="nav-9-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../php/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+    
+    <label class="md-nav__link" for="nav-9-4">
+      React
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-4">
+        React
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reactjs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5">
+    
+    <label class="md-nav__link" for="nav-9-5">
+      React Native
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-5">
+        React Native
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../react_native/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../react_native/note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
+    
+    <label class="md-nav__link" for="nav-9-6">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../python/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      Frameworks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Frameworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-1" type="checkbox" id="nav-10-1" checked>
+    
+    <label class="md-nav__link" for="nav-10-1">
+      Magento
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-1">
+        Magento
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-1-3" type="checkbox" id="nav-10-1-3" checked>
+    
+    <label class="md-nav__link" for="nav-10-1-3">
+      Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-10-1-3">
+        Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prepare/" title="Prepare" class="md-nav__link">
+      Prepare
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../partial_caching/" title="Partial caching" class="md-nav__link">
+      Partial caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../page_caching/" title="Full page caching" class="md-nav__link">
+      Full page caching
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../module_development/" title="Module development" class="md-nav__link">
+      Module development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Note
+      </label>
+    
+    <a href="./" title="Note" class="md-nav__link md-nav__link--active">
+      Note
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-manager" class="md-nav__link">
+    Object Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magento-2-request-flow-overview" class="md-nav__link">
+    Magento 2 request flow overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-command" class="md-nav__link">
+    CLI Command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-observers" class="md-nav__link">
+    Events and observers
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../command/" title="Command line" class="md-nav__link">
+      Command line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-1-5" type="checkbox" id="nav-10-1-5">
+    
+    <label class="md-nav__link" for="nav-10-1-5">
+      MFTF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-10-1-5">
+        MFTF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-1-5-2" type="checkbox" id="nav-10-1-5-2">
+    
+    <label class="md-nav__link" for="nav-10-1-5-2">
+      Functional Testing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-10-1-5-2">
+        Functional Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/run/" title="Test Run" class="md-nav__link">
+      Test Run
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/create_test_theory/" title="Create a Test - Theory" class="md-nav__link">
+      Create a Test - Theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/create_test_practice/" title="Create a Test - Practice" class="md-nav__link">
+      Create a Test - Practice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../test/functional/entities/" title="Functional Testing Framework Entities" class="md-nav__link">
+      Functional Testing Framework Entities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../composer/" title="Install extension Magento by composer" class="md-nav__link">
+      Install extension Magento by composer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pwa_studio/" title="Magento 2.3 - PWA Studio" class="md-nav__link">
+      Magento 2.3 - PWA Studio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-1-8" type="checkbox" id="nav-10-1-8">
+    
+    <label class="md-nav__link" for="nav-10-1-8">
+      Sample
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-10-1-8">
+        Sample
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sample/tags_input_magento2/" title="Magento 2 - Tags Input" class="md-nav__link">
+      Magento 2 - Tags Input
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../magento2_exam_notes/" title="Preparation notes for Magento 2 Certified Professional Developer exam" class="md-nav__link">
+      Preparation notes for Magento 2 Certified Professional Developer exam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../note/" title="Note" class="md-nav__link">
+      Note
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../mkdocs/" title="Mkdocs" class="md-nav__link">
+      Mkdocs
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-manager" class="md-nav__link">
+    Object Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magento-2-request-flow-overview" class="md-nav__link">
+    Magento 2 request flow overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-command" class="md-nav__link">
+    CLI Command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-observers" class="md-nav__link">
+    Events and observers
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="more-information-about-magento-framework">More information about Magento Framework<a class="headerlink" href="#more-information-about-magento-framework" title="Permanent link">&para;</a></h1>
+<h2 id="object-manager">Object Manager<a class="headerlink" href="#object-manager" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://devdocs.magento.com/guides/v2.3/extension-dev-guide/object-manager.html">Object Manager Devdocs</a></li>
+<li>Object manager used to create new object instance and retrieve cached object instance all object in Magento at anywhere. View class <code class="codehilite"><span class="err">vendor/magento/framework/ObjectManagerInterface.php</span></code>.
+    <div class="codehilite"><pre><span></span><code><span class="x">interface ObjectManagerInterface</span>
+<span class="x">{</span>
+<span class="x">    /**</span>
+<span class="x">     * Create new object instance</span>
+<span class="x">     *</span>
+<span class="x">     * @param string $type</span>
+<span class="x">     * @param array $arguments</span>
+<span class="x">     * @return mixed</span>
+<span class="x">     */</span>
+<span class="x">    public function create($type, array $arguments = []);</span>
+
+<span class="x">    /**</span>
+<span class="x">     * Retrieve cached object instance</span>
+<span class="x">     *</span>
+<span class="x">     * @param string $type</span>
+<span class="x">     * @return mixed</span>
+<span class="x">     */</span>
+<span class="x">    public function get($type);</span>
+
+<span class="x">    /**</span>
+<span class="x">     * Configure object manager</span>
+<span class="x">     *</span>
+<span class="x">     * @param array $configuration</span>
+<span class="x">     * @return void</span>
+<span class="x">     */</span>
+<span class="x">    public function configure(array $configuration);</span>
+<span class="x">}</span>
+</code></pre></div></li>
+<li>
+<p>Detail more than about Object manager, how Magento initiation Object manager.</p>
+<ol>
+<li>at <code class="codehilite"><span class="err">index.php</span></code>, 
+    <div class="codehilite"><pre><span></span><code><span class="x">$bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);</span>
+</code></pre></div></li>
+<li>
+<p>at <code class="codehilite"><span class="err">vendor/magento/framework/App/Bootstrap.php</span></code>
+    <div class="codehilite"><pre><span></span><code><span class="x">public static function create($rootDir, array $initParams, ObjectManagerFactory $factory = null)</span>
+<span class="x">{</span>
+<span class="x">    self::populateAutoloader($rootDir, $initParams);</span>
+<span class="x">    if ($factory === null) {</span>
+<span class="x">        $factory = self::createObjectManagerFactory($rootDir, $initParams);</span>
+<span class="x">    }</span>
+
+<span class="x">    return new self($factory, $rootDir, $initParams);</span>
+<span class="x">}</span>
+<span class="x">...</span>
+<span class="x">public static function createObjectManagerFactory($rootDir, array $initParams)</span>
+<span class="x">{</span>
+<span class="x">    $dirList = self::createFilesystemDirectoryList($rootDir, $initParams);</span>
+<span class="x">    $driverPool = self::createFilesystemDriverPool($initParams);</span>
+<span class="x">    $configFilePool = self::createConfigFilePool();</span>
+<span class="x">    return new ObjectManagerFactory($dirList, $driverPool, $configFilePool);</span>
+<span class="x">}</span>
+<span class="x">...</span>
+<span class="x">public function __construct(ObjectManagerFactory $factory, $rootDir, array $initParams)</span>
+<span class="x">{</span>
+<span class="x">    $this-&gt;factory = $factory;</span>
+<span class="x">    $this-&gt;rootDir = $rootDir;</span>
+<span class="x">    $this-&gt;server = $initParams;</span>
+<span class="x">    $this-&gt;objectManager = $this-&gt;factory-&gt;create($this-&gt;server);</span>
+<span class="x">}</span>
+</code></pre></div>
+    Magento init ObjectManagerFactory, and from ObjectManagerFactory init ObjectManagerInterface.</p>
+</li>
+<li>
+<p>at <code class="codehilite"><span class="err">vendor/magento/framework/App/ObjectManagerFactory.php</span></code>
+    <div class="codehilite"><pre><span></span><code><span class="x">public function create(array $arguments)</span>
+<span class="x">{</span>
+<span class="x">    /** @var EnvironmentFactory $envFactory */</span>
+<span class="x">    $envFactory = new $this-&gt;envFactoryClassName($relations, $definitions);</span>
+<span class="x">    /** @var EnvironmentInterface $env */</span>
+<span class="x">    $env = $envFactory-&gt;createEnvironment();</span>
+
+<span class="x">    /** @var ConfigInterface $diConfig */</span>
+<span class="x">    $diConfig = $env-&gt;getDiConfig();</span>
+
+<span class="x">    if ($env-&gt;getMode() != Environment\Compiled::MODE) {</span>
+<span class="x">        $configData = $this-&gt;_loadPrimaryConfig($this-&gt;directoryList, $this-&gt;driverPool, $argumentMapper, $appMode);</span>
+<span class="x">        if ($configData) {</span>
+<span class="x">            $diConfig-&gt;extend($configData);</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+
+<span class="x">    $this-&gt;factory = $env-&gt;getObjectManagerFactory($arguments);</span>
+<span class="x">    /** @var \Magento\Framework\ObjectManagerInterface $objectManager */</span>
+<span class="x">    $objectManager = new $this-&gt;_locatorClassName($this-&gt;factory, $diConfig, $sharedInstances);</span>
+<span class="x">    $this-&gt;factory-&gt;setObjectManager($objectManager);</span>
+<span class="x">    $env-&gt;configureObjectManager($diConfig, $sharedInstances);</span>
+
+<span class="x">    return $objectManager;</span>
+<span class="x">}</span>
+</code></pre></div>
+    Magento EnvironmentInterface distinguish mode: <code class="codehilite"><span class="err">Environment\Compiled::MODE</span></code> or else. At <code class="codehilite"><span class="err">vendor/magento/framework/App/EnvironmentFactory.php</span></code>
+    <div class="codehilite"><pre><span></span><code><span class="x">public function createEnvironment()</span>
+<span class="x">{</span>
+<span class="x">    switch ($this-&gt;getMode()) {</span>
+<span class="x">        case Compiled::MODE:</span>
+<span class="x">            return new Compiled($this);</span>
+<span class="x">            break;</span>
+<span class="x">        default:</span>
+<span class="x">            return new Developer($this);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div>
+    Mode Compiled after run command <code class="codehilite"><span class="err">php bin/magento setup:di:compile</span></code>, Magento will compile all config to one file php contain config at folder <code class="codehilite"><span class="err">generated/metadata</span></code> with every area: global, .... It usually map with Magento application mode as production. In Magento application mode as developer, folder <code class="codehilite"><span class="err">generated/metadata</span></code> will be deleted.</p>
+<p>In mode Compiled, <code class="codehilite"><span class="err">$diConfig = $env-&gt;getDiConfig();</span></code> will get config from file php after compiled. Else in mode Developer, <code class="codehilite"><span class="err">$configData = $this-&gt;_loadPrimaryConfig($this-&gt;directoryList, $this-&gt;driverPool, $argumentMapper, $appMode);</span></code> will help magento read config from file xml <code class="codehilite"><span class="err">app/etc/di.xml</span></code>.</p>
+<p>At line <code class="codehilite"><span class="err">$this-&gt;factory = $env-&gt;getObjectManagerFactory($arguments);</span></code>, Magento init factory from <code class="codehilite"><span class="err">$env</span></code> in class <code class="codehilite"><span class="err">AbstractEnvironment.php</span></code>. This factory used to init <code class="codehilite"><span class="err">$objectManager</span></code> and this object be set to this factory <code class="codehilite"><span class="err">$this-&gt;factory-&gt;setObjectManager($objectManager);</span></code></p>
+</li>
+<li>
+<p>at <code class="codehilite"><span class="err">index.php</span></code>
+    <div class="codehilite"><pre><span></span><code><span class="x">$app = $bootstrap-&gt;createApplication(\Magento\Framework\App\Http::class);</span>
+<span class="x">$bootstrap-&gt;run($app);</span>
+</code></pre></div>
+    In <code class="codehilite"><span class="err">Bootstrap.php</span></code>, object manager used to create application.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Magento initiation ObjectManager follow design pattern Singleton</p>
+</li>
+<li>
+<p>Use object manger to create and retrieve object at anywhere in Magento. 
+    <div class="codehilite"><pre><span></span><code><span class="x">$objectClassCreateNew = \Magento\Framework\App\ObjectManager::getInstance()</span>
+<span class="x">            -&gt;create($typeClassName);</span>
+</code></pre></div>
+    <div class="codehilite"><pre><span></span><code><span class="x">$objectClassRetrieve = \Magento\Framework\App\ObjectManager::getInstance()</span>
+<span class="x">            -&gt;get($typeClassName);</span>
+</code></pre></div>
+    <div class="codehilite"><pre><span></span><code><span class="x">private $_objectManager;</span>
+
+<span class="x">public function __construct(</span>
+<span class="x">    \Magento\Framework\ObjectManagerInterface $objectmanager</span>
+<span class="x">){</span>
+<span class="x">    $this-&gt;_objectManager = $objectmanager;</span>
+<span class="x">}</span>
+
+<span class="x">public function getExample()</span>
+<span class="x">{</span>
+<span class="x">    $customerSession = $this-&gt;_objectManager-&gt;create(&quot;Magento\Customer\Model\Session&quot;);</span>
+<span class="x">    if ($customerSession-&gt;isLoggedIn()) {</span>
+<span class="x">        $customerData = $customerSession-&gt;getCustomer()-&gt;getData();</span>
+<span class="x">        /*Your logic*/</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Detail more than how Object manager create and retrieve object, how inject interface to <code class="codehilite"><span class="err">__construct</span></code> of one class but Magento still inject extract object implement this interface.</p>
+<ol>
+<li>When call <code class="codehilite"><span class="err">\Magento\Framework\App\ObjectManager::getInstance()-&gt;create($typeClassName)</span></code>, Magento create object (view file <code class="codehilite"><span class="err">vendor/magento/framework/ObjectManager/ObjectManager.php</span></code>)
+<div class="codehilite"><pre><span></span><code><span class="x">public function create($type, array $arguments = [])</span>
+<span class="x">{</span>
+<span class="x">    return $this-&gt;_factory-&gt;create($this-&gt;_config-&gt;getPreference($type), $arguments);</span>
+<span class="x">}</span>
+</code></pre></div>
+<code class="codehilite"><span class="err">$this-&gt;_factory</span></code> created when Object manager created and it is <code class="codehilite"><span class="err">new Developer($this);</span></code> created in file <code class="codehilite"><span class="err">App/EnvironmentFactory.php</span></code></li>
+<li>
+<p>in file <code class="codehilite"><span class="err">vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php</span></code>
+<div class="codehilite"><pre><span></span><code><span class="x">public function create($requestedType, array $arguments = [])</span>
+<span class="x">{</span>
+<span class="x">    $type = $this-&gt;config-&gt;getInstanceType($requestedType);</span>
+<span class="x">    $parameters = $this-&gt;definitions-&gt;getParameters($type);</span>
+<span class="x">    if ($parameters == null) {</span>
+<span class="x">        return new $type();</span>
+<span class="x">    }</span>
+<span class="x">    if (isset($this-&gt;creationStack[$requestedType])) {</span>
+<span class="x">        $lastFound = end($this-&gt;creationStack);</span>
+<span class="x">        $this-&gt;creationStack = [];</span>
+<span class="x">        throw new \LogicException(&quot;Circular dependency: {$requestedType} depends on {$lastFound} and vice versa.&quot;);</span>
+<span class="x">    }</span>
+<span class="x">    $this-&gt;creationStack[$requestedType] = $requestedType;</span>
+<span class="x">    try {</span>
+<span class="x">        $args = $this-&gt;_resolveArguments($requestedType, $parameters, $arguments);</span>
+<span class="x">        unset($this-&gt;creationStack[$requestedType]);</span>
+<span class="x">    } catch (\Exception $e) {</span>
+<span class="x">        unset($this-&gt;creationStack[$requestedType]);</span>
+<span class="x">        throw $e;</span>
+<span class="x">    }</span>
+
+<span class="x">    return $this-&gt;createObject($type, $args);</span>
+<span class="x">}</span>
+</code></pre></div>
+<code class="codehilite"><span class="err">$type</span></code> is instance set up in file <code class="codehilite"><span class="err">di.xml</span></code>. <code class="codehilite"><span class="err">$parameters</span></code> is list of method parameters of <code class="codehilite"><span class="err">$type</span></code>. <code class="codehilite"><span class="err">$args</span></code> is recursive to resolve constructor arguments.</p>
+<p><img alt="Magento_ObjectManager_CreateObject.png" src="../../libs/Magento_ObjectManager_CreateObject.png" /></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="magento-2-request-flow-overview">Magento 2 request flow overview<a class="headerlink" href="#magento-2-request-flow-overview" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Some documents: <ul>
+<li><a href="https://www.atwix.com/magento-2/request-flow-overview/">https://www.atwix.com/magento-2/request-flow-overview/</a></li>
+<li><a href="https://nathanmcbride.io/magento2/Request-Flow-In-Magento-2">https://nathanmcbride.io/magento2/Request-Flow-In-Magento-2</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="cli-command">CLI Command<a class="headerlink" href="#cli-command" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://devdocs.magento.com/guides/v2.3/extension-dev-guide/cli-cmds/cli-add.html">Add CLI Command devdocs</a></li>
+</ul>
+<h2 id="events-and-observers">Events and observers<a class="headerlink" href="#events-and-observers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://devdocs.magento.com/guides/v2.3/extension-dev-guide/events-and-observers.html">Events and observers</a></li>
+<li>Event and observers in Magento is synchronize. When you call dispatch event with a object, magento will read all observers in all file <code class="codehilite"><span class="err">events.xml</span></code>, call observers listen of this event and execute function <code class="codehilite"><span class="err">execute</span></code> in observers. </li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../module_development/" title="Module development" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Module development
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../command/" title="Command line" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Command line
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
