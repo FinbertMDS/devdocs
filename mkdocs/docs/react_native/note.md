@@ -10,3 +10,62 @@ This is our developer docs about Some note about React native
     - All source, you can find at [here](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/react_native/public)
 
 2. [Putting native in React Native on Android](https://brightinventions.pl/blog/write-native-in-react-native/)
+
+3. Thao tác với ảnh trong Android
+
+    - Sử dụng thư viện [Image Picker](https://github.com/react-native-community/react-native-image-picker) để lấy ảnh từ trong thư viện và chụp ảnh từ camera.
+    
+    Tuy nhiên, Android dù chụp ảnh ngang hay dọc thì đều lưu ở cùng width và height, chỉ khác nhau ở thuộc tính của Image về Orientation. (Nếu sử dụng Android studio, hay các công cụ lấy ảnh trực tiếp từ điện thoại sẽ lấy được ảnh gốc và có thể bị ngược, không giống với khi nhìn trong điện thoại).
+
+    Tham khảo [bài viết này](https://qiita.com/RichardImaokaJP/items/385beb77eb39243e50a6)
+    
+    ![](./public/photo_images_orient_flag.gif)
+
+
+
+    Sử dụng thư viện [Exif](https://www.npmjs.com/package/react-native-exif) để lấy được thông tin như `ImageWidth`, `ImageHeight`, `Orientation`. Từ đó dựa vào Orientation để xác định Width, Height giống với khi view trên điện thoại.
+
+    ```js
+    // ExifInterface
+    let Const = {
+        ORIENTATION: {
+            ORIENTATION_UNDEFINED: 0,
+
+            ORIENTATION_NORMAL: 1,
+            ORIENTATION_ROTATE_90: 6,
+            ORIENTATION_ROTATE_180: 3,
+            ORIENTATION_ROTATE_270: 8,
+
+            ORIENTATION_FLIP_HORIZONTAL: 2,
+            ORIENTATION_TRANSPOSE: 5,
+            ORIENTATION_FLIP_VERTICAL: 4,
+            ORIENTATION_TRANSVERSE: 7,
+        },
+    };
+
+    static getRealWidthHeight(widthValue, heightValue, orientationInt) {
+        let result = {
+        width: widthValue,
+        height: heightValue
+        };
+        switch (orientationInt) {
+        case Const.ORIENTATION.ORIENTATION_ROTATE_90:
+        case Const.ORIENTATION.ORIENTATION_ROTATE_270:
+        case Const.ORIENTATION.ORIENTATION_TRANSPOSE:
+        case Const.ORIENTATION.ORIENTATION_TRANSVERSE:
+            result = {
+            width: heightValue,
+            height: widthValue
+            };
+            break;
+        case Const.ORIENTATION.ORIENTATION_ROTATE_180:
+        case Const.ORIENTATION.ORIENTATION_FLIP_HORIZONTAL:
+        case Const.ORIENTATION.ORIENTATION_FLIP_VERTICAL:
+            break;
+        
+        default:
+            break;
+        }
+        return result;
+    }
+    ```
