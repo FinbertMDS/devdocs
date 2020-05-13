@@ -1971,50 +1971,6 @@
 <p>Tham khảo <a href="https://qiita.com/RichardImaokaJP/items/385beb77eb39243e50a6">bài viết này</a></p>
 <p><img alt="" src="../public/photo_images_orient_flag.gif" /></p>
 <p>Sử dụng thư viện <a href="https://www.npmjs.com/package/react-native-exif">Exif</a> để lấy được thông tin như <code>ImageWidth</code>, <code>ImageHeight</code>, <code>Orientation</code>. Từ đó dựa vào Orientation để xác định Width, Height giống với khi view trên điện thoại.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// ExifInterface</span>
-<span class="kd">let</span> <span class="nx">Const</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">ORIENTATION</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">ORIENTATION_UNDEFINED</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-
-        <span class="nx">ORIENTATION_NORMAL</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_ROTATE_90</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_ROTATE_180</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_ROTATE_270</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
-
-        <span class="nx">ORIENTATION_FLIP_HORIZONTAL</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_TRANSPOSE</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_FLIP_VERTICAL</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="nx">ORIENTATION_TRANSVERSE</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
-    <span class="p">},</span>
-<span class="p">};</span>
-
-<span class="kr">static</span> <span class="nx">getRealWidthHeight</span><span class="p">(</span><span class="nx">widthValue</span><span class="p">,</span> <span class="nx">heightValue</span><span class="p">,</span> <span class="nx">orientationInt</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">width</span><span class="o">:</span> <span class="nx">widthValue</span><span class="p">,</span>
-    <span class="nx">height</span><span class="o">:</span> <span class="nx">heightValue</span>
-    <span class="p">};</span>
-    <span class="k">switch</span> <span class="p">(</span><span class="nx">orientationInt</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_ROTATE_90</span><span class="o">:</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_ROTATE_270</span><span class="o">:</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_TRANSPOSE</span><span class="o">:</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_TRANSVERSE</span><span class="o">:</span>
-        <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">width</span><span class="o">:</span> <span class="nx">heightValue</span><span class="p">,</span>
-        <span class="nx">height</span><span class="o">:</span> <span class="nx">widthValue</span>
-        <span class="p">};</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_ROTATE_180</span><span class="o">:</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_FLIP_HORIZONTAL</span><span class="o">:</span>
-    <span class="k">case</span> <span class="nx">Const</span><span class="p">.</span><span class="nx">ORIENTATION</span><span class="p">.</span><span class="nx">ORIENTATION_FLIP_VERTICAL</span><span class="o">:</span>
-        <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">default</span><span class="o">:</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-
 </li>
 </ol>
                 
