@@ -33,6 +33,7 @@ nav:
     - Git:
       - git.md
       - Git Internals: git/internals.md
+      - Git Flow: git/git_flow.md
       - Note: git/note.md
   - Docker:
     - docker.md
