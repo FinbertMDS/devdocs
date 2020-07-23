@@ -3,7 +3,7 @@ This is our developer docs about Magento PWA Studio. Our docs includes:
 
 ## Install
 1. Install Magento 2.3 Without Sample Data
-    - [Install on Docker](https://github.com/FinbertMagestore/docker-magento-multiple/tree/pwa-studio)
+    - [Install on Docker](https://github.com/FinbertMDS/docker-magento-multiple/tree/pwa-studio)
     - [Document Magento](https://magento-research.github.io/pwa-studio/venia-pwa-concept/install-sample-data/)
         - Prerequisites: Php 7.1, Magento without sample data then Install Venia sample data.
         - Install:
@@ -17,7 +17,7 @@ This is our developer docs about Magento PWA Studio. Our docs includes:
                 bin/magento setup:upgrade
                 ```
 
-2. [Install PWA Studio](https://github.com/FinbertMagestore/docker-magento-multiple/blob/develop/bin/install_pwa_studio_client.sh)
+2. [Install PWA Studio](https://github.com/FinbertMDS/docker-magento-multiple/blob/develop/bin/install_pwa_studio_client.sh)
     
 ## Research
 1. Scripts

@@ -21,7 +21,7 @@ This is our developer docs about How to remote to server Ubuntu
     ```
 4. Connect to server by command
     ```bash
-    ssh -i server.pem ubuntu@demo-omc1.magestore.com -p 2213
+    ssh -i server.pem ubuntu@url.com -p 2213
     ```
     
     https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html

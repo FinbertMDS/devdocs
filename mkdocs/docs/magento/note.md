@@ -1,6 +1,6 @@
 # Note about Magento
 
-1. [Libs for Magento](https://github.com/FinbertMagestore/devdocs/tree/develop/mkdocs/docs/magento/libs)
+1. [Libs for Magento](https://github.com/FinbertMDS/devdocs/tree/develop/mkdocs/docs/magento/libs)
 
     Example:
     
@@ -24,9 +24,9 @@
     - Trước khi làm kiểm tra xem site của khách hàng có bị chết không? Sau khi mình cài, lỗi phát hiện là trước hay sau khi mình cài vào site khách.
         1. Chạy các lệnh của Magento: 
         ```bash
-        # remove code of Old Magestore Extension
-        rm -rf app/code/Magestore/*
-        # upload code of new Magestore Extension
+        # remove code of Old test Extension
+        rm -rf app/code/test/*
+        # upload code of new test Extension
         ```
         ```bash
         # view deploy mode
