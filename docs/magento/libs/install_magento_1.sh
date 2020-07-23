@@ -38,13 +38,3 @@ if [ ! -f "/var/www/html/"$MAGENTO_DOWNLOAD_FILENAME ]; then
 fi
 tar -xvzf "/var/www/html/"$MAGENTO_DOWNLOAD_FILENAME -C $MAGENTO_DIR
 
-cd /media/finbert/DATA/projects/magestore/m1/
-cp -a BarcodeSuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a CoreSuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a FulfilSuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a Inventory-M1-Lib/* $MAGENTO_SERVER_DIR
-cp -a InventorySuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a PurchaseOrderSuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a ReportSuccess-M1/* $MAGENTO_SERVER_DIR
-cp -a Webpos-M1-Rebuild/* $MAGENTO_SERVER_DIR
-

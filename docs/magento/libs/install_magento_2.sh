@@ -75,40 +75,8 @@ sudo php bin/magento cache:flush
 sudo chmod -R 777 ./
 
 echo "install extension magento 2"
-cd /media/finbert/DATA/projects/magestore/m2/
-cp -a OS-Inventorysuccess-M2/* $MAGENTO_DIR
-cp -a PurchaseOrderSuccess-M2/* $MAGENTO_DIR
-if  [ $1 != "pwa" ]; then
-    cp -a WebPOS-Magento2-New/* $MAGENTO_DIR
-fi
-cp -a ReportSuccess-M2/* $MAGENTO_DIR
-DIRECTORY=$MAGENTO_DIR"/app/code/Magestore/OrderSuccess/"
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir $DIRECTORY
-fi
-cp -a OrderSuccess/* $MAGENTO_DIR"/app/code/Magestore/OrderSuccess/"
-DIRECTORY=$MAGENTO_DIR"/app/code/Magestore/FulfilReport-M2/"
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir $DIRECTORY
-fi
-cp -a FulfilReport-M2/* $MAGENTO_DIR"/app/code/Magestore/FulfilReport-M2/"
-cp -a FulfilSuccess-M2/* $MAGENTO_DIR
-DIRECTORY=$MAGENTO_DIR"/app/code/Magestore/SupplierSuccess/"
-if [ ! -d "$DIRECTORY" ]; then
-    mkdir $DIRECTORY
-fi
-cp -a SupplierSuccess/* $MAGENTO_DIR"/app/code/Magestore/SupplierSuccess/"
-cp -a Storecredit-Magento2/* $MAGENTO_DIR
-cp -a Giftcard-Magento2/* $MAGENTO_DIR
-cp -a Storepickup-Magento2/* $MAGENTO_DIR
-cp -a Rewardpoints-Standard-Magento2/* $MAGENTO_DIR
 
 echo "install extension pwa"
-if  [ $1 = "pwa" ]; then
-   cd /media/finbert/DATA/projects/magestore/pwa/
-   cp -a omc-2.0/* $MAGENTO_DIR
-   cp -a pwapos-omc-2.0/* $MAGENTO_DIR
-fi
 
 cd $MAGENTO_DIR
 sudo chmod -R 777 ./

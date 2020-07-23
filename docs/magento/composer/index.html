@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
       
       
     
@@ -42,6 +42,7 @@
   
     <body dir="ltr">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -2029,7 +2030,7 @@
 <p>Dùng <a href="https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md">Satis</a> để build 1 file packages.json tĩnh bao gồm tất cả các repository cần thiết</p>
 </li>
 <li>
-<p>Build Satis và đặt trên domain: <a href="https://packages.magestore.com">https://packages.magestore.com</a> Phần quyền server chỉ cho phép IP của Magestore đọc đến server này (đặc biệt là file packages.json)
+<p>Build Satis và đặt trên domain. Phần quyền server chỉ cho phép IP đọc đến server này (đặc biệt là file packages.json)
 Ví dụ dùng .htaccess:
 <div class="highlight"><pre><span></span><code>order deny,allow
 deny from all
@@ -2037,15 +2038,15 @@ allow from 128.199.161.147
 </code></pre></div></p>
 </li>
 <li>
-<p>Trỏ domain : <a href="https://repo.magestore.com">https://repo.magestore.com</a> đến 1 thư mục chưa file packages.json rỗng dạng:
+<p>Trỏ domain đến 1 thư mục chưa file packages.json rỗng dạng:
 <div class="highlight"><pre><span></span><code>{
     &quot;packages&quot;: []
 }
 </code></pre></div></p>
 </li>
 <li>
-<p>Phân quyền thư mục repo để: Chặn toàn bộ quyền truy cập đến thư mục (chuyển hướng về trang chủ magestore chẳng hạn), riêng request đến <a href="https://repo.magestore.com/packages.json">https://repo.magestore.com/packages.json</a> thì redirect về 1 action trên magento 2  (site Magstore) để thực hiện authorization + build content cho packages.json
-Ví dụ action: https:/magestore.com/mscomposer/packages/find/</p>
+<p>Phân quyền thư mục repo để: Chặn toàn bộ quyền truy cập đến thư mục (chuyển hướng về trang chủ chẳng hạn), riêng request đến <a href="http://url/packages.json">http://url/packages.json</a> thì redirect về 1 action trên magento 2  (site) để thực hiện authorization + build content cho packages.json
+Ví dụ action: https:/url/mscomposer/packages/find/</p>
 </li>
 <li>
 <p>Tại action này sẽ yêu cầu nhập thông tin authorization để xác thực. Thông tin gồm public key + private key user generate từ account (Giống magento/amasty )</p>
@@ -2055,7 +2056,7 @@ Ví dụ action: https:/magestore.com/mscomposer/packages/find/</p>
 Danh sách package define ở bước 1 (all package của repo) và filter đi chỉ cho truy cập các package mà khách hàng đã mua</p>
 </li>
 <li>
-<p>Hệ thông quản lý packages trên magestore sẽ bao gồm:</p>
+<p>Hệ thông quản lý packages sẽ bao gồm:</p>
 </li>
 <li>[Frontend] 1 page để customer view list các package họ có thể cài qua composer</li>
 <li>[Frontend] 1 page cho customer generate access keys: <a href="https://prnt.sc/kqaanl">https://prnt.sc/kqaanl</a></li>
@@ -2133,15 +2134,15 @@ Có thể auto generate file config cho Satis để tự build lại package khi
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
-      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
