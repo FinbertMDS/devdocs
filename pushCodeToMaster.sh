@@ -29,7 +29,7 @@ then
     COMMIT_MESSAGE=$(git log -n 1 origin/develop --pretty=format:%s)
 fi
 git commit -m "$COMMIT_MESSAGE"
-URL_GITHUB='https://FinbertMagestore:'$TOKEN_GITHUB'@github.com/FinbertMagestore/devdocs.git'
+URL_GITHUB='https://FinbertMDS:'$TOKEN_GITHUB'@github.com/FinbertMDS/devdocs.git'
 git remote set-url origin $URL_GITHUB
 git push origin master
 git checkout develop
