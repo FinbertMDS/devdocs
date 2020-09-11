@@ -24,3 +24,36 @@ This is our developer docs about Some note about React native
 
 
     Sử dụng thư viện [Exif](https://www.npmjs.com/package/react-native-exif) để lấy được thông tin như `ImageWidth`, `ImageHeight`, `Orientation`. Từ đó dựa vào Orientation để xác định Width, Height giống với khi view trên điện thoại.
+
+4. Khi chạy debug bị lỗi
+
+```text
+error: bundling failed: Error: Unable to resolve module `path` from `\node_modules\react-native-dotenv\index.js`: Module `path` does not exist in the Haste
+module map
+
+This might be related to https://github.com/facebook/react-native/issues/4968
+To resolve try the following:
+  1. Clear watchman watches: `watchman watch-del-all`.
+  2. Delete the `node_modules` folder: `rm -rf node_modules && npm install`.
+  3. Reset Metro Bundler cache: `rm -rf /tmp/metro-bundler-cache-*` or `npm start -- --reset-cache`.
+  4. Remove haste cache: `rm -rf /tmp/haste-map-react-native-packager-*`.
+```
+
+Giải pháp là [xem ở đây](https://github.com/zetachang/react-native-dotenv/issues/39#issuecomment-457122779)
+```text
+1. Remove cache
+    So if cache is the case you can try:
+
+    on macOS:
+    rm -rf $TMPDIR/haste-map-*
+    rm -rf $TMPDIR/metro-cache-*
+
+    on Windows:
+    remove haste-map-* cache files in the C:\Users{User}\AppData\Local\Temp folder
+
+    For production build --reset-cache flag can be used, i.e:
+    react-native bundle --reset-cache
+
+2. Run debug without cache
+    npm start -- --reset-cache
+```
